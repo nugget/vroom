@@ -1,0 +1,180 @@
+Return-Path: <nugget@macnugget.org>
+X-Spam-Checker-Version: SpamAssassin 3.2.5 (2008-06-10) on
+	carrera.macnugget.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-4.4 required=5.0 tests=ALL_TRUSTED,BAYES_00,
+	DKIM_SIGNED,DKIM_VERIFIED,HTML_MESSAGE autolearn=ham version=3.2.5
+X-Original-To: nugget@macnugget.org
+Delivered-To: nugget@macnugget.org
+Received: from carrera.macnugget.org (localhost [127.0.0.1])
+	by carrera.macnugget.org (Postfix) with ESMTP id 31F2B4AC7E
+	for <nugget@macnugget.org>; Tue, 28 Apr 2009 15:55:04 -0500 (CDT)
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed; d=macnugget.org; h=
+	message-id:from:to:content-type:mime-version:subject:date; s=
+	selector1; bh=Ik8PK/c2YI9cPOMYnq9H3vEJ1NI=; b=BGprk0JJzrEa/ZPptA
+	MD0LVpgITGt7+aR+LyPaOym4gY9Az7juj1CmmGeIKhSlFfTwZTYGn+NV4auU+VYB
+	SYKp+hpLVEETjnEXXVXTnwfWoxGUIsTNzfXkU5crsbN4lRIBrsBYBemkE6im9ZSw
+	YwozG8DgSyKugqKxt4J/T3DIs=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=macnugget.org; h=message-id:from
+	:to:content-type:mime-version:subject:date; q=dns; s=selector1;
+	 b=Jw6RIJ7HPXXYj9EtPvQZAf/sOL16ohA5kBxxk0adV4/O8nd/kju5zjiPpHfRK
+	bxvASzTxbmK42Ok0AOVZRCrvQlwvQxonUC2B5ohZqoz1HuWuIx+b7hqetFodEQHr
+	yEI+GdoI/hURLn+74w6GBOYnWTvW7rQGOgXaSYQUCl8lj8=
+Received: from [10.136.39.98] (unknown [166.132.254.174])
+	(using TLSv1 with cipher AES128-SHA (128/128 bits))
+	(Client did not present a certificate)
+	by carrera.macnugget.org (Postfix) with ESMTPSA id BF1784AC79
+	for <nugget@macnugget.org>; Tue, 28 Apr 2009 15:55:02 -0500 (CDT)
+Message-Id: <9CB3E43E-4288-44F8-8CF2-AF71E6F2058B@macnugget.org>
+From: David McNett <nugget@macnugget.org>
+To: David McNett <nugget@macnugget.org>
+Content-Type: multipart/alternative;
+	boundary=Apple-Mail-3-651893578
+X-Mailer: iPhone Mail (5H11)
+Mime-Version: 1.0 (iPhone Mail 5H11)
+Subject: Road Trip Export Data for '2007 Porsche 911 C2S' on Apr 28, 2009
+Date: Tue, 28 Apr 2009 15:54:27 -0500
+
+
+--Apple-Mail-3-651893578
+Content-Type: text/plain;
+	charset=us-ascii;
+	format=flowed;
+	delsp=yes
+Content-Transfer-Encoding: 7bit
+
+Road Trip Export Data in CSV format.
+
+Backup
+
+To backup your Road Trip data, simply send this email to yourself and  
+archive it in your mailbox.
+
+Restore
+
+To restore this data into Road Trip, forward this email to your iPhone  
+or iPod, then click this link from your device.
+
+You can also use the CSV Importing Tool to import the CSV data below.  
+Visit http://darrensoft.ca/roadtrip for more details.
+
+Transfer to Excel
+
+To transfer this data to Excel, select and copy the data below, paste  
+into a new document in Notepad or TextEdit, and save the file with  
+a .CSV file extension. Visit http://darrensoft.ca/roadtrip/ for  
+detailed instructions.
+
+---- Begin Copy and Paste here. File: RoadTrip.csv ----
+
+ROAD TRIP CSV
+Version,Language
+130,en
+
+
+FUEL RECORDS
+Odometer (mi.),Trip Distance,Date,Fill Amount,Fill Units,Price per  
+Unit,Total Price,Partial  
+Fill,MPG,Note,Octane,Location,Payment,Conditions,Reset,Categories,Flags
+199.0,199.0,"2007-2-15",10.983,Gal,2.300,25.26,,0.000,,,,,,Reset,,9
+399.0,200.0,"2007-2-17",13.137,Gal,2.300,30.22,,15.224,,,,,,,,0
+32432.0,32033.0,"2009-4-18",10.163,Gal, 
+2.239,22.75,,3151.924,,"Premium","Sac N Pac By H2R","American  
+Express","Track",,,0
+32556.0,124.0,"2009-4-26",13.974,Gal, 
+2.239,31.29,,8.874,,"Premium","Sac N Pac By H2R","American  
+Express","Track",,,0
+
+
+MAINTENANCE RECORDS
+Description,Date,Odometer  
+(mi.),Cost,Note,Location,Type,Subtype,Payment,Categories,Reminder  
+Interval,Reminder Distance,Flags
+"Oil Change","2009-4-28",32556.0,45.00,"Moo","Sac N Pac By  
+H2R",Service,,"American Express","Business,Test",,0.0,0
+
+
+ROAD TRIPS
+Name,Start Date,Start Odometer (mi.),End Date,End Odometer,Note,Distance
+"Spring 2009","2009-1-01",399.0,"2009-4-30",32556.0,,32157.0
+"My First Road Trip","2009-4-02",399.0,,0.0,,0.0
+
+
+VEHICLE
+Name,Odometer,Units,Notes
+"2007 Porsche 911 C2S","mi","MPG","License Plate: TX-BOFH
+VIN:WP0CB29937S776108
+
+Insurance Name:
+Policy No.:
+Phone:
+Notes:
+"
+---- End Copy and Paste ----
+
+
+
+Sent from my iPhone
+--Apple-Mail-3-651893578
+Content-Type: text/html;
+	charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><body bgcolor=3D"#FFFFFF"><div><p>Road Trip Export Data in CSV =
+format.</p><h3>Backup</h3><p>To backup your Road Trip data, simply send =
+this email to yourself and archive it in your =
+mailbox.</p><h3>Restore</h3><p>To restore this data into Road Trip, =
+forward this email to your iPhone or iPod, then <b><a =
+href=3D"desroadtrip://roadtrip.darrenstone.ca/import?version=3D130%26forma=
+t=3D1#Um9hZFRyaXAsMTMwCkNhck1vZGVsLDIwMDclMjBQb3JzY2hlJTIwOTExJTIwQzJTLDAs=
+MCwwLExpY2Vuc2UlMjBQbGF0ZTolMjBUWC1CT0ZIJTBBVklOOldQMENCMjk5MzdTNzc2MTA4JT=
+BBJTBBSW5zdXJhbmNlJTIwTmFtZTolMEFQb2xpY3klMjBOby46JTBBUGhvbmU6JTBBTm90ZXM6=
+JTBBCkZ1ZWxSZWNvcmRzLDEzMCw0CmYsMzI1NTYsMjAwOS00LTI2LDEzLjk3NCwwLDIuMjM5LD=
+EsLFByZW1pdW0sU2FjJTIwTiUyMFBhYyUyMEJ5JTIwSDJSLEFtZXJpY2FuJTIwRXhwcmVzcyxU=
+cmFjaywwLCwwLjAwMDAwMApmLDMyNDMyLDIwMDktNC0xOCwxMC4xNjMsMCwyLjIzOSwxLCxQcm=
+VtaXVtLFNhYyUyME4lMjBQYWMlMjBCeSUyMEgyUixBbWVyaWNhbiUyMEV4cHJlc3MsVHJhY2ss=
+MCwsMC4wMDAwMDAKZiwzOTksMjAwNy0yLTE3LDEzLjEzNywwLDIuMzAwLDEsLCwsLCwwLCwwLj=
+AwMDAwMApmLDE5OSwyMDA3LTItMTUsMTAuOTgzLDAsMi4zMDAsMSwsLCwsLDksLDAuMDAwMDAw=
+Ck1haW50ZW5hbmNlUmVjb3JkcywxMzAsMQptLDMyNTU2LDIwMDktNC0yOCxPaWwlMjBDaGFuZ2=
+UsNDUuMDAsTW9vLFNhYyUyME4lMjBQYWMlMjBCeSUyMEgyUiwwLCxBbWVyaWNhbiUyMEV4cHJl=
+c3MsQnVzaW5lc3MlMkNUZXN0LCwwLjAsMApSb2FkVHJpcFJlY29yZHMsMTMwLDIKcixNeSUyME=
+ZpcnN0JTIwUm9hZCUyMFRyaXAsMjAwOS00LTIsMCwsMCwKcixTcHJpbmclMjAyMDA5LDIwMDkt=
+MS0xLDAsMjAwOS00LTMwLDAsCg=3D=3D">click this link from your =
+device.</a></b></p><p>You can also use the <b>CSV Importing Tool</b> to =
+import the CSV data below.  Visit <a =
+href=3D"http://darrensoft.ca/roadtrip">http://darrensoft.ca/roadtrip</a> =
+for more details.</p><h3>Transfer to Excel</h3><p>To transfer this data =
+to Excel, select and copy the data below, paste into a new document in =
+Notepad or TextEdit, and save the file with a <b>.CSV</b> file =
+extension.  Visit <a href=3D"http://darrensoft.ca/roadtrip/"><a =
+href=3D"http://darrensoft.ca/roadtrip/">http://darrensoft.ca/roadtrip/</a>=
+</a> for detailed instructions.</p><p><i>---- Begin Copy and Paste here. =
+ File: RoadTrip.csv ----</i></p><p></p><pre>ROAD TRIP =
+CSV<br>Version,Language<br>130,en<br><br><br>FUEL RECORDS<br>Odometer =
+(mi.),Trip Distance,Date,Fill Amount,Fill Units,Price per Unit,Total =
+Price,Partial =
+Fill,MPG,Note,Octane,Location,Payment,Conditions,Reset,Categories,Flags<br=
+>199.0,199.0,"2007-2-15",10.983,Gal,2.300,25.26,,0.000,,,,,,Reset,,9<br>39=
+9.0,200.0,"2007-2-17",13.137,Gal,2.300,30.22,,15.224,,,,,,,,0<br>32432.0,3=
+2033.0,"2009-4-18",10.163,Gal,2.239,22.75,,3151.924,,"Premium","Sac N =
+Pac By H2R","American =
+Express","Track",,,0<br>32556.0,124.0,"2009-4-26",13.974,Gal,2.239,31.29,,=
+8.874,,"Premium","Sac N Pac By H2R","American =
+Express","Track",,,0<br><br><br>MAINTENANCE =
+RECORDS<br>Description,Date,Odometer =
+(mi.),Cost,Note,Location,Type,Subtype,Payment,Categories,Reminder =
+Interval,Reminder Distance,Flags<br>"Oil =
+Change","2009-4-28",32556.0,45.00,"Moo","Sac N Pac By =
+H2R",Service,,"American Express","Business,Test",,0.0,0<br><br><br>ROAD =
+TRIPS<br>Name,Start Date,Start Odometer (mi.),End Date,End =
+Odometer,Note,Distance<br>"Spring =
+2009","2009-1-01",399.0,"2009-4-30",32556.0,,32157.0<br>"My First Road =
+Trip","2009-4-02",399.0,,0.0,,0.0<br><br><br>VEHICLE<br>Name,Odometer,Unit=
+s,Notes<br>"2007 Porsche 911 C2S","mi","MPG","License Plate: =
+TX-BOFH<br>VIN:WP0CB29937S776108<br><br>Insurance Name:<br>Policy =
+No.:<br>Phone:<br>Notes:<br>"<br></pre><p><i>---- End Copy and Paste =
+----</i></p></div><div></div><div><br><br>Sent from my =
+iPhone</div></body></html>=
+
+--Apple-Mail-3-651893578--
+
