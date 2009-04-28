@@ -57,28 +57,69 @@ proc main {} {
 
 	# Now we can pull in our other data for the vehicles
 	set live 0
+	set partial 0
+	set wrap_it_up 0
+
 	foreach line [split $data "\n"] {
 		if {$line == "ROAD TRIP CSV"} {
 			set live 1
+			set wbuf ""
 			set section VERSIONS
+			set partial 0
 		}
 		if {[string match "---- End Copy and Paste ----" $line]} {
 			set live 0
 		}
 
+
 		if {$live} {
 			switch $section {
-				VERSIONS {
-				}
 				FILLUPS {
-				}
-				SERVICES {
-				}
-				TRIPS {
-				}
-				VEHICLES {
+					puts $line
+					if {![regexp {Trip Distance|Total Price|MPG,Note|FUEL RECORDS|MAINTENANCE RECORDS} $line] && $line != ""} {
+						puts "  Looking at this line"
+						append wbuf "$line\n"
+
+						if {!$partial} {
+							set partial [is_line_incomplete $line]
+							puts "  Not in a partial buf, this line is $partial partiality"
+							if {!$partial} {
+								puts "  Stands alone, let's wrap it up"
+								set wrap_it_up 1
+							}
+						} else {
+							puts "  Building a buf from multiple lines"
+							if {[is_line_incomplete $line]} {
+								puts "  I think this is the last line in the block"
+								set wrap_it_up 1
+							}
+						}
+						if {$wrap_it_up} {
+							# Two partials make a whole!
+							puts "--\n$wbuf\n--"
+
+							unset -nocomplain data
+							lassign [::csv::split $wbuf] data(odometer) data(trip_odometer) data(fillup_date) data(fill_amount) data(fill_units) data(unit_price) data(total_price) data(partial_fill) data(mpg) data(note) data(octane) data(location) data(payment) data(conditions) data(reset) data(categories) data(flags)
+
+							add_fillup [array get data]
+
+							set partial 0
+							set wbuf ""
+							set wrap_it_up 0
+						}
+					}
 				}
 			}
+		}
+		if {$line == "FUEL RECORDS"} {
+			set section FILLUPS
+			set wbuf ""
+			set partial 0
+		}
+		if {$line == "MAINTENANCE RECORDS"} {
+			set section FIXES
+			set wbuf ""
+			set partial 0
 		}
 	}
 }

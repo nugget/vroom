@@ -36,6 +36,18 @@ proc simplesqlquery {db sql} {
 	return $return
 }
 
+
+proc is_line_incomplete {line} {
+	set trimmed [regsub -all {[^\"]} $line ""]
+	set quotes [string length $trimmed]
+
+	if {$quotes == 0} {
+		return 0
+	}
+	return [expr $quotes % 2]
+}
+
+
 proc pg_exec_or_exception {db sql} {
 	set result [pg_exec $db $sql]
 	set status [pg_result $result -status]
@@ -64,4 +76,12 @@ proc add_vehicle { name units_odometer units_economy notes } {
 		return $vehicle_id
 	}
 	return -1
+}
+
+proc add_fillup { hash_data } {
+	array set data $hash_data
+
+	parray data
+
+	return
 }
