@@ -16,8 +16,9 @@ proc main {} {
 	global dbh
 	set dbh [pg_connect -connlist [array get ::DB]]
 
-	set data [read_file "rt.mail"]
+	set vehicle_id NULL
 
+	set data [read_file "rt.mail"]
 
 	# First we need to pull out vehicle information (naturally at the bottom)
 	set live 0
@@ -31,7 +32,7 @@ proc main {} {
 			set live 0
 		}
 		if {$live == 1} {
-			puts $line
+			# puts $line
 			if {[string range $line 0 0] == "\""} {
 				if {$line == "\""} {
 					set vehicle 0
@@ -39,7 +40,7 @@ proc main {} {
 					# set vbuf [string map {"\n" "\\n"} $vbuf]
 
 					set vals [::csv::split $vbuf]
-					add_vehicle [lindex $vals 0] [lindex $vals 1] [lindex $vals 2] [lindex $vals 3]
+					set vehicle_id [add_vehicle [lindex $vals 0] [lindex $vals 1] [lindex $vals 2] [lindex $vals 3]]
 
 				} else {
 					set vehicle 1
@@ -51,6 +52,8 @@ proc main {} {
 
 		}
 	}
+
+	puts "Importing data for vehicle id $vehicle_id"
 
 	# Now we can pull in our other data for the vehicles
 	set live 0
