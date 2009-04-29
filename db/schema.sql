@@ -33,7 +33,7 @@ CREATE TABLE expenses (
   name varchar NOT NULL,
   service_date date NOT NULL,
   odometer numeric(8,1) NOT NULL,
-  cost numeric (5,2) NOT NULL,
+  cost numeric (8,2) NOT NULL,
   note text,
   location varchar,
   type varchar,
