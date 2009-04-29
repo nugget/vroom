@@ -83,8 +83,8 @@ proc add_fillup { vehicle_id hash_data } {
 
 	array set data $hash_data
 
-	set fields_varchar [list fillup_date fill_units unit_price total_price partial_fill note octane location payment conditions reset categories]
-	set fields_numeric [list odometer trip_odometer fill_amount mpg flags]
+	set fields_varchar [list fillup_date fill_units partial_fill note octane location payment conditions reset categories]
+	set fields_numeric [list odometer trip_odometer total_price unit_price fill_amount mpg flags]
 
 	if {$data(partial_fill) == ""} {
 		set data(partial_fill) "t"
@@ -122,18 +122,27 @@ proc add_fillup { vehicle_id hash_data } {
 	return -1
 }
 
+proc csv_quote {buf} {
+	if {$buf == ""} {
+		return ""
+	}
+
+	set buf [string map {{"} {""}} $buf]
+	return "\"$buf\""
+}
+
 proc csv_version {} {
 	global dbh
 
 	set outbuf ""
 
-	append outbuf "ROAD TRIP CSV"
-	append outbuf "Version,Language"
+	append outbuf "ROAD TRIP CSV\n"
+	append outbuf "Version,Language\n"
 
 	pg_select $dbh "SELECT version_id,language FROM versions ORDER BY version_id DESC LIMIT 1" buf {
-		append outbuf "$buf(version_id),$buf(language)"
+		append outbuf "$buf(version_id),$buf(language)\n"
 	}
-	append outbuf ""
+	append outbuf "\n"
 
 	return $outbuf
 }
@@ -144,8 +153,8 @@ proc csv_fillups {vehicle_id} {
 	set outbuf ""
 
 	append outbuf "FUEL RECORDS\n"
-	append outbuf "Odometer (mi.),Trip Distance,Date,Fill Amount,Fill Units,Price per\n"
-	append outbuf "Unit,Total Price,Partial\n"
+	append outbuf "Odometer (mi.),Trip Distance,Date,Fill Amount,Fill Units,Price per "
+	append outbuf "Unit,Total Price,Partial "
 	append outbuf "Fill,MPG,Note,Octane,Location,Payment,Conditions,Reset,Categories,Flags\n"
 
 	pg_select $dbh "SELECT * FROM fillups WHERE vehicle_id = [sanitize_number $vehicle_id] ORDER BY odometer" buf {
@@ -161,7 +170,23 @@ proc csv_fillups {vehicle_id} {
 			set reset "Reset"
 		}
 
-		append outbuf [::csv::join [list $buf(odometer) $buf(trip_odometer) $buf(fillup_date) $buf(fill_amount) $buf(fill_units) $buf(unit_price) $buf(total_price) $pf $buf(mpg) $buf(note) $buf(octane) $buf(location) $buf(payment) $buf(conditions) $reset $buf(flags)]]
+		append outbuf "$buf(odometer),"
+		append outbuf "$buf(trip_odometer),"
+		append outbuf "[csv_quote $buf(fillup_date)],"
+		append outbuf "$buf(fill_amount),"
+		append outbuf "$buf(fill_units),"
+		append outbuf "$buf(unit_price),"
+		append outbuf "$buf(total_price),"
+		append outbuf "$pf,"
+		append outbuf "$buf(mpg),"
+		append outbuf "[csv_quote $buf(note)],"
+		append outbuf "[csv_quote $buf(octane)],"
+		append outbuf "[csv_quote $buf(location)],"
+		append outbuf "[csv_quote $buf(payment)],"
+		append outbuf "[csv_quote $buf(conditions)],"
+		append outbuf "$reset,"
+		append outbuf "[csv_quote $buf(categories)],"
+		append outbuf "$buf(flags)"
 		append outbuf "\n"
 	}
 	append outbuf "\n"
@@ -174,23 +199,80 @@ proc csv_expenses {vehicle_id} {
 
 	set outbuf ""
 
-	append outbuf "MAINTENANCE RECORDS"
-	append outbuf "Description,Date,Odometer"
-	append outbuf "(mi.),Cost,Note,Location,Type,Subtype,Payment,Categories,Reminder"
-	append outbuf "Interval,Reminder Distance,Flags"
+	append outbuf "MAINTENANCE RECORDS\n"
+	append outbuf "Description,Date,Odometer "
+	append outbuf "(mi.),Cost,Note,Location,Type,Subtype,Payment,Categories,Reminder "
+	append outbuf "Interval,Reminder Distance,Flags\n"
 
 	pg_select $dbh "SELECT * FROM expenses WHERE vehicle_id = [sanitize_number $vehicle_id] ORDER BY service_date" buf {
-		append outbuf [::csv::join $buf(name) $buf(service_date) $buf(odometer) $buf(cost) $buf(note) $buf(location) $buf(type) $buf(subtype) $buf(payment) $buf(categories) $buf(reminder_interval) $buf(reminder_distance) $buf(flags)]
+		append outbuf "[csv_quote $buf(name)],"
+		append outbuf "[csv_quote $buf(service_date)],"
+		append outbuf "$buf(odometer),"
+		append outbuf "$buf(cost),"
+		append outbuf "[csv_quote $buf(note)],"
+		append outbuf "[csv_quote $buf(location)],"
+		append outbuf "[csv_quote $buf(type)],"
+		append outbuf "[csv_quote $buf(subtype)],"
+		append outbuf "[csv_quote $buf(payment)],"
+		append outbuf "[csv_quote $buf(categories)],"
+		append outbuf "[csv_quote $buf(reminder_interval)],"
+		append outbuf "$buf(reminder_distance),"
+		append outbuf "$buf(flags)"
+		append outbuf "\n"
 	}
-	append outbuf ""
+	append outbuf "\n"
 
 	return $outbuf
 }
 
+proc csv_trips {vehicle_id} {
+	global dbh
+
+	set outbuf ""
+
+	append outbuf "ROAD TRIPS\n"
+	append outbuf "Name,Start Date,Start Odometer (mi.),End Date,End Odometer,Note,Distance\n"
+
+	pg_select $dbh "SELECT * FROM trips WHERE vehicle_id = [sanitize_number $vehicle_id] ORDER BY start_date" buf {
+		append outbuf "[csv_quote $buf(name)],"
+		append outbuf "[csv_quote $buf(start_date)],"
+		append outbuf "$buf(start_odometer),"
+		append outbuf "[csv_quote $buf(end_date)],"
+		append outbuf "$buf(end_odometer),"
+		append outbuf "[csv_quote $buf(note)],"
+		append outbuf "$buf(distance)"
+		append outbuf "\n"
+	}
+	append outbuf "\n"
+
+	return $outbuf
+}
+
+proc csv_vehicle {vehicle_id} {
+	global dbh
+
+	set outbuf ""
+
+	append outbuf "VEHICLE\n"
+	append outbuf "Name,Odometer,Units,Notes\n"
+
+	pg_select $dbh "SELECT * FROM vehicles WHERE vehicle_id = [sanitize_number $vehicle_id]" buf {
+		append outbuf "[csv_quote $buf(name)],"
+		append outbuf "[csv_quote $buf(units_odometer)],"
+		append outbuf "[csv_quote $buf(units_economy)],"
+		append outbuf "[csv_quote $buf(notes)]"
+		append outbuf "\n"
+	}
+	append outbuf "\n"
+
+	return $outbuf
+}
 
 proc csv_out {vehicle_id} {
 	puts [csv_version]
 	puts [csv_fillups $vehicle_id]
 	puts [csv_expenses $vehicle_id]
+	puts [csv_trips $vehicle_id]
+	puts [csv_vehicle $vehicle_id]
 
 }
