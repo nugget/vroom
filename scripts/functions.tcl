@@ -144,6 +144,7 @@ proc add_fillup { hash_data } {
 	set fields_numeric [list odometer trip_odometer total_price unit_price fill_amount mpg flags vehicle_id]
 
 	set data(partial_fill) [sql_boolean $data(partial_fill)]
+	set data(reset)        [sql_boolean $data(reset)]
 
 	set id [simplesqlquery $dbh "SELECT fillup_id FROM fillups WHERE odometer = [sanitize_number $data(odometer)]"]
 
@@ -151,6 +152,8 @@ proc add_fillup { hash_data } {
 		set sql "INSERT INTO fillups ([sql_field_list $fields_varchar], [sql_field_list $fields_numeric]) "
 		append sql "VALUES ([sql_value_list varchar $fields_varchar [array get data]], [sql_value_list numeric $fields_numeric [array get data]]);"
 
+		parray data
+		puts "\n$sql\n"
 		if {[pg_exec_or_exception $dbh $sql]} {
 			set id [simplesqlquery $dbh "SELECT fillup_id FROM fillups WHERE odometer = [sanitize_number $data(odometer)]"]
 			puts "Added new fillup id $id ($data(fillup_date) $data(note))"
