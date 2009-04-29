@@ -37,7 +37,6 @@ proc main {} {
 				if {$line == "\""} {
 					set vehicle 0
 					append vbuf $line
-					# set vbuf [string map {"\n" "\\n"} $vbuf]
 
 					set vals [::csv::split $vbuf]
 					set vehicle_id [add_vehicle [lindex $vals 0] [lindex $vals 1] [lindex $vals 2] [lindex $vals 3]]
@@ -78,7 +77,11 @@ proc main {} {
 					puts $line
 					if {![regexp {Trip Distance|Total Price|MPG,Note|FUEL RECORDS|MAINTENANCE RECORDS} $line] && $line != ""} {
 						puts "  Looking at this line"
-						append wbuf "$line\n"
+						if {$line == ""} {
+							append wbuf "\n"
+						} else {
+							append wbuf "$line"
+						}
 
 						if {!$partial} {
 							set partial [is_line_incomplete $line]
@@ -95,13 +98,16 @@ proc main {} {
 							}
 						}
 						if {$wrap_it_up} {
+							# Clean out any double spaces
+							set wbuf [string map {"  " " "} $wbuf]
+
 							# Two partials make a whole!
 							puts "--\n$wbuf\n--"
 
 							unset -nocomplain data
 							lassign [::csv::split $wbuf] data(odometer) data(trip_odometer) data(fillup_date) data(fill_amount) data(fill_units) data(unit_price) data(total_price) data(partial_fill) data(mpg) data(note) data(octane) data(location) data(payment) data(conditions) data(reset) data(categories) data(flags)
 
-							add_fillup $vehicle_id [array get data]
+							# add_fillup $vehicle_id [array get data]
 
 							set partial 0
 							set wbuf ""

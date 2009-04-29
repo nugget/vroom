@@ -38,6 +38,11 @@ proc simplesqlquery {db sql} {
 
 
 proc is_line_incomplete {line} {
+	# If line ends with a comma, it's incomplete
+	if {[regexp {, ?$} $line]} {
+		return 1
+	}
+
 	set trimmed [regsub -all {[^\"]} $line ""]
 	set quotes [string length $trimmed]
 
@@ -93,7 +98,10 @@ proc add_fillup { vehicle_id hash_data } {
 	}
 
 	set fillup_id [simplesqlquery $dbh "SELECT fillup_id FROM fillups WHERE odometer = [sanitize_number $data(odometer)]"]
+		parray data
+
 	if {$fillup_id == ""} {
+		parray data
 		set sql "INSERT INTO fillups ("
 		foreach field $fields_varchar {
 			append sql "$field, "
@@ -103,13 +111,17 @@ proc add_fillup { vehicle_id hash_data } {
 		}
 		append sql "vehicle_id) VALUES ("
 		foreach field $fields_varchar {
+			puts "$field -> $data($field) "
 			append sql "[pg_quote $data($field)], "
 		}
 		foreach field $fields_numeric {
 			append sql "[sanitize_number $data($field)], "
 		}
 		append sql "$vehicle_id);"
+
 		puts $sql
+
+
 		if {[pg_exec_or_exception $dbh $sql]} {
 			set fillup_id [simplesqlquery $dbh "SELECT fillup_id FROM fillups WHERE odometer = [sanitize_number $data(odometer)]"]
 			puts "Added new fillup id $fillup_id ($data(fillup_date) $data(note))"
