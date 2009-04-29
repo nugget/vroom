@@ -78,10 +78,46 @@ proc add_vehicle { name units_odometer units_economy notes } {
 	return -1
 }
 
-proc add_fillup { hash_data } {
+proc add_fillup { vehicle_id hash_data } {
+	global dbh
+
 	array set data $hash_data
 
-	parray data
+	set fields_varchar [list fillup_date fill_units unit_price total_price partial_fill note octane location payment conditions reset categories]
+	set fields_numeric [list odometer trip_odometer fill_amount mpg flags]
 
-	return
+	if {$data(partial_fill) == ""} {
+		set data(partial_fill) "t"
+	} else {
+		set data(partial_fill) "f"
+	}
+
+	set fillup_id [simplesqlquery $dbh "SELECT fillup_id FROM fillups WHERE odometer = [sanitize_number $data(odometer)]"]
+	if {$fillup_id == ""} {
+		set sql "INSERT INTO fillups ("
+		foreach field $fields_varchar {
+			append sql "$field, "
+		}
+		foreach field $fields_numeric {
+			append sql "$field, "
+		}
+		append sql "vehicle_id) VALUES ("
+		foreach field $fields_varchar {
+			append sql "[pg_quote $data($field)], "
+		}
+		foreach field $fields_numeric {
+			append sql "[sanitize_number $data($field)], "
+		}
+		append sql "$vehicle_id);"
+		puts $sql
+		if {[pg_exec_or_exception $dbh $sql]} {
+			set fillup_id [simplesqlquery $dbh "SELECT fillup_id FROM fillups WHERE odometer = [sanitize_number $data(odometer)]"]
+			puts "Added new fillup id $fillup_id ($data(fillup_date) $data(note))"
+		} 
+	}
+	if {$fillup_id != ""} {
+		return $fillup_id
+	}
+
+	return -1
 }

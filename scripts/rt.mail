@@ -81,9 +81,10 @@ Fill,MPG,Note,Octane,Location,Payment,Conditions,Reset,Categories,Flags
 32432.0,32033.0,"2009-4-18",10.163,Gal, 
 2.239,22.75,,3151.924,,"Premium","Sac N Pac By H2R","American  
 Express","Track",,,0
-32556.0,124.0,"2009-4-26",13.974,Gal, 
-2.239,31.29,,8.874,,"Premium","Sac N Pac By H2R","American  
-Express","Track",,,0
+32556.0,124.0,"2009-4-26",13.974,Gal,2.239,31.29,,8.874,"These are my  
+notes
+
+Test","Premium","Sac N Pac By H2R","American Express","Track",,"Test",0
 
 
 MAINTENANCE RECORDS

@@ -101,7 +101,7 @@ proc main {} {
 							unset -nocomplain data
 							lassign [::csv::split $wbuf] data(odometer) data(trip_odometer) data(fillup_date) data(fill_amount) data(fill_units) data(unit_price) data(total_price) data(partial_fill) data(mpg) data(note) data(octane) data(location) data(payment) data(conditions) data(reset) data(categories) data(flags)
 
-							add_fillup [array get data]
+							add_fillup $vehicle_id [array get data]
 
 							set partial 0
 							set wbuf ""
