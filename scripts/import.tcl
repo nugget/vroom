@@ -72,6 +72,8 @@ proc main {} {
 
 	set dbh [pg_connect -connlist [array get ::DB]]
 
+	puts "Importing a Road Trip backup file ( http://darrensoft.ca/roadtrip/ )\n"
+
 	global vehicle_id
 	set vehicle_id NULL
 
