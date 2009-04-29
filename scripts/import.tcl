@@ -129,6 +129,7 @@ proc main {} {
 
 		if {$live} {
 			if {[regexp {[^ ]$} $line]} {
+				regsub { $} $wbuf "" wbuf
 				append wbuf $line
 				if {[::csv::iscomplete $wbuf]} {
 					# We've got a valid CSV working buffer to deal with
