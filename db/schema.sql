@@ -65,7 +65,7 @@ CREATE TABLE fillups (
   conditions varchar,
   reset boolean NOT NULL DEFAULT FALSE,
   categories varchar,
-  flags integer,
+  flags integer NOT NULL DEFAULT 0,
   PRIMARY KEY(fillup_id)
 );
 
