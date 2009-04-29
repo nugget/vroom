@@ -42,7 +42,7 @@ CREATE TABLE expenses (
   categories varchar,
   reminder_interval varchar,
   reminder_distance numeric(8,1),
-  flags integer,
+  flags integer NOT NULL DEFAULT 0,
   PRIMARY KEY(expense_id)
 );
 
