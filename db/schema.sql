@@ -93,6 +93,8 @@ CREATE OR REPLACE FUNCTION fillup_calcs() RETURNS trigger AS $$
       NEW.mpg := (NEW.trip_odometer / NEW.fill_amount);
     END IF;
 
+    RETURN NEW;
+
   END;
 $$ LANGUAGE plpgsql;
 CREATE TRIGGER fillup_extrapolate BEFORE INSERT ON fillups FOR EACH ROW EXECUTE PROCEDURE fillup_calcs();
