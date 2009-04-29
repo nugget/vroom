@@ -7,7 +7,7 @@ proc sanitize_number { value } {
         if {![info exists value]} {
                 return "NULL"
         } else {
-		set value [string map {"," ""} $value]
+		set value [string map {"," "" " " ""} $value]
                 if {[regexp {^[0-9.\+\-]+$} $value]} {
                         return $value
                 }
@@ -123,6 +123,8 @@ proc add_vehicle { hash_data } {
 		set sql "INSERT INTO vehicles ([sql_field_list $fields_varchar], [sql_field_list $fields_numeric]) "
 		append sql "VALUES ([sql_value_list varchar $fields_varchar [array get data]], [sql_value_list numeric $fields_numeric [array get data]]);"
 
+		puts $sql
+
 		if {[pg_exec_or_exception $dbh $sql]} {
 			set id [simplesqlquery $dbh "SELECT vehicle_id FROM vehicles WHERE name = [pg_quote $data(name)]"]
 			puts "Added new vehicle id $id ($data(name))"
@@ -151,9 +153,68 @@ proc add_fillup { hash_data } {
 		set sql "INSERT INTO fillups ([sql_field_list $fields_varchar], [sql_field_list $fields_numeric]) "
 		append sql "VALUES ([sql_value_list varchar $fields_varchar [array get data]], [sql_value_list numeric $fields_numeric [array get data]]);"
 
+		puts $sql
+
 		if {[pg_exec_or_exception $dbh $sql]} {
 			set id [simplesqlquery $dbh "SELECT fillup_id FROM fillups WHERE odometer = [sanitize_number $data(odometer)]"]
 			puts "Added new fillup id $id ($data(fillup_date) $data(note))"
+		} 
+	}
+	if {$id != ""} {
+		return $id
+	}
+
+	return 0
+}
+
+proc add_expense { hash_data } {
+	global dbh
+
+	array set data $hash_data
+
+	set fields_varchar [list name service_date note location type subtype payment categories reminder_interval] 
+	set fields_numeric [list odometer cost reminder_distance flags vehicle_id]
+
+	set id [simplesqlquery $dbh "SELECT expense_id FROM expenses WHERE name = [pg_quote $data(name)] AND odometer = [sanitize_number $data(odometer)]"]
+
+	if {$id == ""} {
+		set sql "INSERT INTO expenses ([sql_field_list $fields_varchar], [sql_field_list $fields_numeric]) "
+		append sql "VALUES ([sql_value_list varchar $fields_varchar [array get data]], [sql_value_list numeric $fields_numeric [array get data]]);"
+
+		parray data
+		puts $sql
+
+		if {[pg_exec_or_exception $dbh $sql]} {
+			set id [simplesqlquery $dbh "SELECT expense_id FROM expenses WHERE name = [pg_quote $data(name)] AND odometer = [sanitize_number $data(odometer)]"]
+			puts "Added new expense id $id ($data(name) on $data(service_date))"
+		} 
+	}
+	if {$id != ""} {
+		return $id
+	}
+
+	return 0
+}
+
+proc add_trip { hash_data } {
+	global dbh
+
+	array set data $hash_data
+
+	set fields_varchar [list name start_date end_date note]
+	set fields_numeric [list start_odometer end_odometer distance vehicle_id]
+
+	set id [simplesqlquery $dbh "SELECT trip_id FROM trips WHERE name = [pg_quote $data(name)] AND start_odometer = [sanitize_number $data(start_odometer)]"]
+
+	if {$id == ""} {
+		set sql "INSERT INTO trips ([sql_field_list $fields_varchar], [sql_field_list $fields_numeric]) "
+		append sql "VALUES ([sql_value_list varchar $fields_varchar [array get data]], [sql_value_list numeric $fields_numeric [array get data]]);"
+
+		puts $sql
+
+		if {[pg_exec_or_exception $dbh $sql]} {
+			set id [simplesqlquery $dbh "SELECT trip_id FROM trips WHERE name = [pg_quote $data(name)] AND start_odometer = [sanitize_number $data(start_odometer)]"]
+			puts "Added new fillup id $id ($data(name) on $data(start_date))"
 		} 
 	}
 	if {$id != ""} {
