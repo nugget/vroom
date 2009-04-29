@@ -12,6 +12,7 @@ proc process_wbuf {section wbuf} {
 	set id NULL
 
 	global vehicle_id
+	global records
 
 	if {[regexp "^\$|$section|,Note,|,Start Date,|,Odometer," $wbuf]} {
 		return
@@ -27,18 +28,21 @@ proc process_wbuf {section wbuf} {
 			set data(vehicle_id) $vehicle_id
 
 			set id [add_fillup [array get data]]
+			incr records(fillups)
 		}
 
 		"MAINTENANCE RECORDS" {
 			lassign [::csv::split $wbuf] data(name) data(service_date) data(odometer) data(cost) data(note) data(location) data(type) data(subtype) data(payment) data(categories) data(reminder_interval) data(reminder_distance) data(flags)
 			set data(vehicle_id) $vehicle_id
-			# set id [add_expense [array get data]]
+			set id [add_expense [array get data]]
+			incr records(expenses)
 		}
 
 		"ROAD TRIPS" {
 			lassign [::csv::split $wbuf] data(name) data(start_date) data(start_odometer) data(end_date) data(end_odometer) data(note) data(distance)
 			set data(vehicle_id) $vehicle_id
-			# set id [add_trip [array get data]]
+			set id [add_trip [array get data]]
+			incr records(trips)
 		}
 
 		"VEHICLE" {
@@ -57,10 +61,15 @@ proc process_wbuf {section wbuf} {
 
 proc main {} {
 	global env
+	global dbh
+	global records
+
+	set records(fillups)  0
+	set records(expenses) 0
+	set records(trips)    0
 
 	source vroom.cfg
 
-	global dbh
 	set dbh [pg_connect -connlist [array get ::DB]]
 
 	global vehicle_id
@@ -138,6 +147,8 @@ proc main {} {
 		}
 
 	}
+
+	parray records
 }
 
 if !$tcl_interactive main
