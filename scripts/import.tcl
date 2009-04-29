@@ -51,7 +51,7 @@ proc process_wbuf {section wbuf} {
 		}
 
 		default {
-			puts stderr "wbuf $wbuf in unrecognized section $section"
+			puts "wbuf $wbuf in unrecognized section $section"
 		}
 
 	}
@@ -77,7 +77,7 @@ proc main {} {
 	global vehicle_id
 	set vehicle_id NULL
 
-	set data [read_file "rt.mail"]
+	set data [read_file "/tmp/rt.mail"]
 
 	# First we need to pull out vehicle information (naturally at the bottom)
 	set live 0

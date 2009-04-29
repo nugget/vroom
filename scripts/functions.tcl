@@ -31,7 +31,7 @@ proc simplesqlquery {db sql} {
 		set success 1
 	} else {
 		set success 0
-		puts stderr [pg_result $result -error]
+		puts [pg_result $result -error]
 	}
 	
 	if {$success && [pg_result $result -numTuples] > 0} {
@@ -76,7 +76,7 @@ proc pg_exec_or_exception {db sql} {
 		set success 1
 	} else {
 		set success 0
-		puts stderr [pg_result $result -error]
+		puts [pg_result $result -error]
 	}
 
 	pg_result $result -clear
