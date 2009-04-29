@@ -15,6 +15,14 @@ proc sanitize_number { value } {
         return "NULL"
 }
 
+proc sql_boolean { value } {
+	if {$value == ""} {
+		return "f"
+	} else {
+		return "t"
+	}
+}
+
 proc simplesqlquery {db sql} {
 	set result [pg_exec $db $sql]
 	set status [pg_result $result -status]
@@ -38,6 +46,13 @@ proc simplesqlquery {db sql} {
 
 
 proc is_line_incomplete {line} {
+	# if there's a trailing space it's a partial line
+	if {[regexp { $} $line]} {
+		return 1
+	} else {
+		return 0
+	}
+
 	# If line ends with a comma, it's incomplete
 	if {[regexp {, ?$} $line]} {
 		return 1
@@ -68,70 +83,84 @@ proc pg_exec_or_exception {db sql} {
 	return $success
 }
 
-proc add_vehicle { name units_odometer units_economy notes } {
-	global dbh
+proc sql_field_list { field_list } {
+	set outbuf ""
 
-	set vehicle_id [simplesqlquery $dbh "SELECT vehicle_id FROM vehicles WHERE name = [pg_quote $name]"]
-	if {$vehicle_id == ""} {
-		pg_exec_or_exception $dbh "INSERT INTO vehicles (name,units_odometer,units_economy,notes) VALUES ([pg_quote $name],[pg_quote $units_odometer],[pg_quote $units_economy],[pg_quote $notes])"
-		set vehicle_id [simplesqlquery $dbh "SELECT vehicle_id FROM vehicles WHERE name = [pg_quote $name]"]
-		puts "Added new vehicle id $vehicle_id ($name) to database"
+	foreach field $field_list {
+		append outbuf "$field, "
 	}
-	if {$vehicle_id != ""} {
-		return $vehicle_id
-	}
-	return -1
+	regsub {, $} $outbuf "" outbuf
+
+	return $outbuf
 }
 
-proc add_fillup { vehicle_id hash_data } {
+proc sql_value_list { type field_list hash_data } {
+	array set data $hash_data
+
+	foreach field $field_list {
+		if {$type == "numeric"} {
+			append outbuf "[sanitize_number $data($field)], "
+		} else {
+			append outbuf "[pg_quote $data($field)], "
+		}
+	}
+	regsub {, $} $outbuf "" outbuf
+
+	return $outbuf
+}
+
+proc add_vehicle { hash_data } {
+	global dbh
+
+	array set data $hash_data
+
+	set fields_varchar [list name units_odometer units_economy notes]
+	set fields_numeric [list]
+
+	set id [simplesqlquery $dbh "SELECT vehicle_id FROM vehicles WHERE name = [pg_quote $data(name)]"]
+
+	if {$id == ""} {
+		set sql "INSERT INTO vehicles ([sql_field_list $fields_varchar], [sql_field_list $fields_numeric]) "
+		append sql "VALUES ([sql_value_list varchar $fields_varchar [array get data]], [sql_value_list numeric $fields_numeric [array get data]]);"
+
+		if {[pg_exec_or_exception $dbh $sql]} {
+			set id [simplesqlquery $dbh "SELECT vehicle_id FROM vehicles WHERE name = [pg_quote $data(name)]"]
+			puts "Added new vehicle id $id ($data(name))"
+		} 
+	}
+	if {$id != ""} {
+		return $id
+	}
+
+	return 0
+}
+
+proc add_fillup { hash_data } {
 	global dbh
 
 	array set data $hash_data
 
 	set fields_varchar [list fillup_date fill_units partial_fill note octane location payment conditions reset categories]
-	set fields_numeric [list odometer trip_odometer total_price unit_price fill_amount mpg flags]
+	set fields_numeric [list odometer trip_odometer total_price unit_price fill_amount mpg flags vehicle_id]
 
-	if {$data(partial_fill) == ""} {
-		set data(partial_fill) "t"
-	} else {
-		set data(partial_fill) "f"
-	}
+	set data(partial_fill) [sql_boolean $data(partial_fill)]
 
-	set fillup_id [simplesqlquery $dbh "SELECT fillup_id FROM fillups WHERE odometer = [sanitize_number $data(odometer)]"]
-		parray data
+	set id [simplesqlquery $dbh "SELECT fillup_id FROM fillups WHERE odometer = [sanitize_number $data(odometer)]"]
 
-	if {$fillup_id == ""} {
-		parray data
-		set sql "INSERT INTO fillups ("
-		foreach field $fields_varchar {
-			append sql "$field, "
-		}
-		foreach field $fields_numeric {
-			append sql "$field, "
-		}
-		append sql "vehicle_id) VALUES ("
-		foreach field $fields_varchar {
-			puts "$field -> $data($field) "
-			append sql "[pg_quote $data($field)], "
-		}
-		foreach field $fields_numeric {
-			append sql "[sanitize_number $data($field)], "
-		}
-		append sql "$vehicle_id);"
-
-		puts $sql
-
+	if {$id == ""} {
+		set sql "INSERT INTO fillups ([sql_field_list $fields_varchar], [sql_field_list $fields_numeric]) "
+		append sql "VALUES ([sql_value_list varchar $fields_varchar [array get data]], [sql_value_list numeric $fields_numeric [array get data]]);"
 
 		if {[pg_exec_or_exception $dbh $sql]} {
-			set fillup_id [simplesqlquery $dbh "SELECT fillup_id FROM fillups WHERE odometer = [sanitize_number $data(odometer)]"]
-			puts "Added new fillup id $fillup_id ($data(fillup_date) $data(note))"
+			set id [simplesqlquery $dbh "SELECT fillup_id FROM fillups WHERE odometer = [sanitize_number $data(odometer)]"]
+			puts "Added new fillup id $id ($data(fillup_date) $data(note))"
 		} 
 	}
-	if {$fillup_id != ""} {
-		return $fillup_id
+	if {$id != ""} {
+		return $id
 	}
 
-	return -1
+	return 0
 }
 
 proc csv_quote {buf} {
