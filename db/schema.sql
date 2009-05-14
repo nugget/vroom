@@ -11,6 +11,7 @@ CREATE TABLE vehicles (
   units_odometer varchar NOT NULL DEFAULT 'mi',
   units_economy varchar NOT NULL DEFAULT 'MPG',
   notes text,
+  tag varchar,
   PRIMARY KEY(vehicle_id)
 );
 
