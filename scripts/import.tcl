@@ -5,8 +5,7 @@ set ::debug 0
 package require Pgtcl 
 package require Tclx
 package require csv
-
-source functions.tcl
+package require vroom
 
 proc process_wbuf {section wbuf} {
 	set id NULL
@@ -68,11 +67,9 @@ proc main {} {
 	set records(expenses) 0
 	set records(trips)    0
 
-	source vroom.cfg
-
-	set dbh [pg_connect -connlist [array get ::DB]]
-
 	puts "Importing a Road Trip backup file ( http://darrensoft.ca/roadtrip/ )\n"
+
+	::vroom::init
 
 	global vehicle_id
 	set vehicle_id NULL

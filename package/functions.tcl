@@ -370,3 +370,6 @@ proc csv_out {vehicle_id} {
 	puts [csv_vehicle $vehicle_id]
 
 }
+
+package provide vroom 1.0
+

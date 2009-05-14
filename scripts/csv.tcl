@@ -5,13 +5,10 @@ set ::debug 0
 package require Pgtcl 
 package require Tclx
 package require csv
-
-source functions.tcl
+package require vroom
 
 proc main {} {
 	global env
-
-	source vroom.cfg
 
 	global dbh
 	set dbh [pg_connect -connlist [array get ::DB]]
