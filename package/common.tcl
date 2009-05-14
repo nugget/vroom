@@ -5,8 +5,8 @@ package require Pgtcl
 namespace eval ::vroom {
 
 	proc init {} {
-		global dbh
-		set dbh [::vroom::dbconnect ::vroom::DB]
+		global vroomdb
+		set vroomdb [::vroom::dbconnect ::vroom::DB]
 	}
 
 	proc dbconnect {DB} {

@@ -110,21 +110,21 @@ proc sql_value_list { type field_list hash_data } {
 }
 
 proc add_vehicle { hash_data } {
-	global dbh
+	global vroomdb
 
 	array set data $hash_data
 
 	set fields_varchar [list name units_odometer units_economy notes]
 	set fields_numeric [list]
 
-	set id [simplesqlquery $dbh "SELECT vehicle_id FROM vehicles WHERE name = [pg_quote $data(name)]"]
+	set id [simplesqlquery $vroomdb "SELECT vehicle_id FROM vehicles WHERE name = [pg_quote $data(name)]"]
 
 	if {$id == ""} {
 		set sql "INSERT INTO vehicles ([sql_field_list $fields_varchar], [sql_field_list $fields_numeric]) "
 		append sql "VALUES ([sql_value_list varchar $fields_varchar [array get data]], [sql_value_list numeric $fields_numeric [array get data]]);"
 
-		if {[pg_exec_or_exception $dbh $sql]} {
-			set id [simplesqlquery $dbh "SELECT vehicle_id FROM vehicles WHERE name = [pg_quote $data(name)]"]
+		if {[pg_exec_or_exception $vroomdb $sql]} {
+			set id [simplesqlquery $vroomdb "SELECT vehicle_id FROM vehicles WHERE name = [pg_quote $data(name)]"]
 			puts "Added new vehicle id $id ($data(name))"
 		} 
 	}
@@ -136,7 +136,7 @@ proc add_vehicle { hash_data } {
 }
 
 proc add_fillup { hash_data } {
-	global dbh
+	global vroomdb
 
 	array set data $hash_data
 
@@ -146,14 +146,14 @@ proc add_fillup { hash_data } {
 	set data(partial_fill) [sql_boolean $data(partial_fill)]
 	set data(reset)        [sql_boolean $data(reset)]
 
-	set id [simplesqlquery $dbh "SELECT fillup_id FROM fillups WHERE odometer = [sanitize_number $data(odometer)]"]
+	set id [simplesqlquery $vroomdb "SELECT fillup_id FROM fillups WHERE odometer = [sanitize_number $data(odometer)]"]
 
 	if {$id == ""} {
 		set sql "INSERT INTO fillups ([sql_field_list $fields_varchar], [sql_field_list $fields_numeric]) "
 		append sql "VALUES ([sql_value_list varchar $fields_varchar [array get data]], [sql_value_list numeric $fields_numeric [array get data]]);"
 
-		if {[pg_exec_or_exception $dbh $sql]} {
-			set id [simplesqlquery $dbh "SELECT fillup_id FROM fillups WHERE odometer = [sanitize_number $data(odometer)]"]
+		if {[pg_exec_or_exception $vroomdb $sql]} {
+			set id [simplesqlquery $vroomdb "SELECT fillup_id FROM fillups WHERE odometer = [sanitize_number $data(odometer)]"]
 			puts "Added new fillup id $id ($data(fillup_date) $data(note))"
 		} 
 	}
@@ -165,21 +165,21 @@ proc add_fillup { hash_data } {
 }
 
 proc add_expense { hash_data } {
-	global dbh
+	global vroomdb
 
 	array set data $hash_data
 
 	set fields_varchar [list name service_date note location type subtype payment categories reminder_interval] 
 	set fields_numeric [list odometer cost reminder_distance flags vehicle_id]
 
-	set id [simplesqlquery $dbh "SELECT expense_id FROM expenses WHERE name = [pg_quote $data(name)] AND odometer = [sanitize_number $data(odometer)]"]
+	set id [simplesqlquery $vroomdb "SELECT expense_id FROM expenses WHERE name = [pg_quote $data(name)] AND odometer = [sanitize_number $data(odometer)]"]
 
 	if {$id == ""} {
 		set sql "INSERT INTO expenses ([sql_field_list $fields_varchar], [sql_field_list $fields_numeric]) "
 		append sql "VALUES ([sql_value_list varchar $fields_varchar [array get data]], [sql_value_list numeric $fields_numeric [array get data]]);"
 
-		if {[pg_exec_or_exception $dbh $sql]} {
-			set id [simplesqlquery $dbh "SELECT expense_id FROM expenses WHERE name = [pg_quote $data(name)] AND odometer = [sanitize_number $data(odometer)]"]
+		if {[pg_exec_or_exception $vroomdb $sql]} {
+			set id [simplesqlquery $vroomdb "SELECT expense_id FROM expenses WHERE name = [pg_quote $data(name)] AND odometer = [sanitize_number $data(odometer)]"]
 			puts "Added new expense id $id ($data(name) on $data(service_date))"
 		} 
 	}
@@ -191,21 +191,21 @@ proc add_expense { hash_data } {
 }
 
 proc add_trip { hash_data } {
-	global dbh
+	global vroomdb
 
 	array set data $hash_data
 
 	set fields_varchar [list name start_date end_date note]
 	set fields_numeric [list start_odometer end_odometer distance vehicle_id]
 
-	set id [simplesqlquery $dbh "SELECT trip_id FROM trips WHERE name = [pg_quote $data(name)] AND start_odometer = [sanitize_number $data(start_odometer)]"]
+	set id [simplesqlquery $vroomdb "SELECT trip_id FROM trips WHERE name = [pg_quote $data(name)] AND start_odometer = [sanitize_number $data(start_odometer)]"]
 
 	if {$id == ""} {
 		set sql "INSERT INTO trips ([sql_field_list $fields_varchar], [sql_field_list $fields_numeric]) "
 		append sql "VALUES ([sql_value_list varchar $fields_varchar [array get data]], [sql_value_list numeric $fields_numeric [array get data]]);"
 
-		if {[pg_exec_or_exception $dbh $sql]} {
-			set id [simplesqlquery $dbh "SELECT trip_id FROM trips WHERE name = [pg_quote $data(name)] AND start_odometer = [sanitize_number $data(start_odometer)]"]
+		if {[pg_exec_or_exception $vroomdb $sql]} {
+			set id [simplesqlquery $vroomdb "SELECT trip_id FROM trips WHERE name = [pg_quote $data(name)] AND start_odometer = [sanitize_number $data(start_odometer)]"]
 			puts "Added new fillup id $id ($data(name) on $data(start_date))"
 		} 
 	}
@@ -226,14 +226,14 @@ proc csv_quote {buf} {
 }
 
 proc csv_version {} {
-	global dbh
+	global vroomdb
 
 	set outbuf ""
 
 	append outbuf "ROAD TRIP CSV\n"
 	append outbuf "Version,Language\n"
 
-	pg_select $dbh "SELECT version_id,language FROM versions ORDER BY version_id DESC LIMIT 1" buf {
+	pg_select $vroomdb "SELECT version_id,language FROM versions ORDER BY version_id DESC LIMIT 1" buf {
 		append outbuf "$buf(version_id),$buf(language)\n"
 	}
 	append outbuf "\n"
@@ -242,7 +242,7 @@ proc csv_version {} {
 }
 
 proc csv_fillups {vehicle_id} {
-	global dbh
+	global vroomdb
 
 	set outbuf ""
 
@@ -251,7 +251,7 @@ proc csv_fillups {vehicle_id} {
 	append outbuf "Unit,Total Price,Partial "
 	append outbuf "Fill,MPG,Note,Octane,Location,Payment,Conditions,Reset,Categories,Flags\n"
 
-	pg_select $dbh "SELECT * FROM fillups WHERE vehicle_id = [sanitize_number $vehicle_id] ORDER BY odometer" buf {
+	pg_select $vroomdb "SELECT * FROM fillups WHERE vehicle_id = [sanitize_number $vehicle_id] ORDER BY odometer" buf {
 		if {$buf(partial_fill) == "f"} {
 			set pf ""
 		} else {
@@ -289,7 +289,7 @@ proc csv_fillups {vehicle_id} {
 }
 
 proc csv_expenses {vehicle_id} {
-	global dbh
+	global vroomdb
 
 	set outbuf ""
 
@@ -298,7 +298,7 @@ proc csv_expenses {vehicle_id} {
 	append outbuf "(mi.),Cost,Note,Location,Type,Subtype,Payment,Categories,Reminder "
 	append outbuf "Interval,Reminder Distance,Flags\n"
 
-	pg_select $dbh "SELECT * FROM expenses WHERE vehicle_id = [sanitize_number $vehicle_id] ORDER BY service_date" buf {
+	pg_select $vroomdb "SELECT * FROM expenses WHERE vehicle_id = [sanitize_number $vehicle_id] ORDER BY service_date" buf {
 		append outbuf "[csv_quote $buf(name)],"
 		append outbuf "[csv_quote $buf(service_date)],"
 		append outbuf "$buf(odometer),"
@@ -320,14 +320,14 @@ proc csv_expenses {vehicle_id} {
 }
 
 proc csv_trips {vehicle_id} {
-	global dbh
+	global vroomdb
 
 	set outbuf ""
 
 	append outbuf "ROAD TRIPS\n"
 	append outbuf "Name,Start Date,Start Odometer (mi.),End Date,End Odometer,Note,Distance\n"
 
-	pg_select $dbh "SELECT * FROM trips WHERE vehicle_id = [sanitize_number $vehicle_id] ORDER BY start_date" buf {
+	pg_select $vroomdb "SELECT * FROM trips WHERE vehicle_id = [sanitize_number $vehicle_id] ORDER BY start_date" buf {
 		append outbuf "[csv_quote $buf(name)],"
 		append outbuf "[csv_quote $buf(start_date)],"
 		append outbuf "$buf(start_odometer),"
@@ -343,14 +343,14 @@ proc csv_trips {vehicle_id} {
 }
 
 proc csv_vehicle {vehicle_id} {
-	global dbh
+	global vroomdb
 
 	set outbuf ""
 
 	append outbuf "VEHICLE\n"
 	append outbuf "Name,Odometer,Units,Notes\n"
 
-	pg_select $dbh "SELECT * FROM vehicles WHERE vehicle_id = [sanitize_number $vehicle_id]" buf {
+	pg_select $vroomdb "SELECT * FROM vehicles WHERE vehicle_id = [sanitize_number $vehicle_id]" buf {
 		append outbuf "[csv_quote $buf(name)],"
 		append outbuf "[csv_quote $buf(units_odometer)],"
 		append outbuf "[csv_quote $buf(units_economy)],"

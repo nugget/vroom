@@ -60,7 +60,7 @@ proc process_wbuf {section wbuf} {
 
 proc main {} {
 	global env
-	global dbh
+	global vroomdb
 	global records
 
 	set records(fillups)  0
