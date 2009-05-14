@@ -10,8 +10,7 @@ package require vroom
 proc main {} {
 	global env
 
-	global dbh
-	set dbh [pg_connect -connlist [array get ::DB]]
+	::vroom::init
 
 	set vehicle_id 1
 	
