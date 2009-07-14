@@ -1,7 +1,7 @@
 TARGET = /usr/local/lib/vroom
 
 all:
-	echo "pkg_mkIndex -verbose -- ." | tclsh8.4
+	echo "pkg_mkIndex -verbose -- ." | tclsh8.5
 
 install:
 	mkdir -p $(TARGET)
