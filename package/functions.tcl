@@ -76,6 +76,7 @@ proc pg_exec_or_exception {db sql} {
 		set success 1
 	} else {
 		set success 0
+		puts $sql
 		puts [pg_result $result -error]
 	}
 
@@ -86,6 +87,9 @@ proc pg_exec_or_exception {db sql} {
 proc sql_field_list { field_list } {
 	set outbuf ""
 
+	if {$field_list == ""} {
+		return 
+	}
 	foreach field $field_list {
 		append outbuf "$field, "
 	}
@@ -95,13 +99,22 @@ proc sql_field_list { field_list } {
 }
 
 proc sql_value_list { type field_list hash_data } {
+
+	if {$field_list == ""} {
+		return 
+	}
+
 	array set data $hash_data
 
 	foreach field $field_list {
 		if {$type == "numeric"} {
 			append outbuf "[sanitize_number $data($field)], "
 		} else {
-			append outbuf "[pg_quote $data($field)], "
+			if {$data($field) == ""} {
+				append outbuf "NULL, "
+			} else {
+				append outbuf "[pg_quote $data($field)], "
+			}
 		}
 	}
 	regsub {, $} $outbuf "" outbuf
@@ -120,8 +133,8 @@ proc add_vehicle { hash_data } {
 	set id [simplesqlquery $vroomdb "SELECT vehicle_id FROM vehicles WHERE name = [pg_quote $data(name)]"]
 
 	if {$id == ""} {
-		set sql "INSERT INTO vehicles ([sql_field_list $fields_varchar], [sql_field_list $fields_numeric]) "
-		append sql "VALUES ([sql_value_list varchar $fields_varchar [array get data]], [sql_value_list numeric $fields_numeric [array get data]]);"
+		set sql "INSERT INTO vehicles ([sql_field_list $fields_varchar]) "
+		append sql "VALUES ([sql_value_list varchar $fields_varchar [array get data]]);"
 
 		if {[pg_exec_or_exception $vroomdb $sql]} {
 			set id [simplesqlquery $vroomdb "SELECT vehicle_id FROM vehicles WHERE name = [pg_quote $data(name)]"]
@@ -206,7 +219,7 @@ proc add_trip { hash_data } {
 
 		if {[pg_exec_or_exception $vroomdb $sql]} {
 			set id [simplesqlquery $vroomdb "SELECT trip_id FROM trips WHERE name = [pg_quote $data(name)] AND start_odometer = [sanitize_number $data(start_odometer)]"]
-			puts "Added new fillup id $id ($data(name) on $data(start_date))"
+			puts "Added new trip id $id ($data(name) on $data(start_date))"
 		} 
 	}
 	if {$id != ""} {
