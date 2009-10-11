@@ -101,7 +101,7 @@ proc main {} {
 		}
 		if {$live == 1} {
 			if {[string range $line 0 0] == "\""} {
-				if {$line == "\""} {
+				if {[regexp {^",} $line]} {
 					set vehicle 0
 					append vbuf $line
 
