@@ -12,6 +12,9 @@ CREATE TABLE vehicles (
   units_economy varchar NOT NULL DEFAULT 'MPG',
   notes text,
   tag varchar,
+  tank_capacity numeric(5,2),
+  tank_units varchar NOT NULL DEFAULT 'gal',
+  home_currency varchar NOT NULL DEFAULT 'USD',
   PRIMARY KEY(vehicle_id)
 );
 
@@ -44,6 +47,8 @@ CREATE TABLE expenses (
   reminder_interval varchar,
   reminder_distance numeric(8,1),
   flags integer NOT NULL DEFAULT 0,
+  currency_code varchar,
+  currency_rate numeric(10,6) NOT NULL DEFAULT 1,
   PRIMARY KEY(expense_id)
 );
 
@@ -67,6 +72,8 @@ CREATE TABLE fillups (
   reset boolean NOT NULL DEFAULT FALSE,
   categories varchar,
   flags integer NOT NULL DEFAULT 0,
+  currency_code varchar,
+  currency_rate numeric(10,6) NOT NULL DEFAULT 1,
   PRIMARY KEY(fillup_id)
 );
 
