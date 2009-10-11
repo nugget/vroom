@@ -7,6 +7,14 @@ package require Tclx
 package require csv
 package require vroom
 
+proc date_expand {date} {
+	if {[regexp {(\d\d\d\d)/(\d+)/(\d+)} $date _ yyyy mm dd]} {
+		return $date
+	} else {
+		return $date
+	}
+}
+
 proc process_wbuf {section wbuf} {
 	set id NULL
 
@@ -23,7 +31,7 @@ proc process_wbuf {section wbuf} {
 		}
 
 		"FUEL RECORDS" {
-			lassign [::csv::split $wbuf] data(odometer) data(trip_odometer) data(fillup_date) data(fill_amount) data(fill_units) data(unit_price) data(total_price) data(partial_fill) data(mpg) data(note) data(octane) data(location) data(payment) data(conditions) data(reset) data(categories) data(flags)
+			lassign [::csv::split $wbuf] data(odometer) data(trip_odometer) data(fillup_date) data(fill_amount) data(fill_units) data(unit_price) data(total_price) data(partial_fill) data(mpg) data(note) data(octane) data(location) data(payment) data(conditions) data(reset) data(categories) data(flags) data(currency_code) data(currency_rate)
 			set data(vehicle_id) $vehicle_id
 
 			set id [add_fillup [array get data]]
@@ -31,7 +39,7 @@ proc process_wbuf {section wbuf} {
 		}
 
 		"MAINTENANCE RECORDS" {
-			lassign [::csv::split $wbuf] data(name) data(service_date) data(odometer) data(cost) data(note) data(location) data(type) data(subtype) data(payment) data(categories) data(reminder_interval) data(reminder_distance) data(flags)
+			lassign [::csv::split $wbuf] data(name) data(service_date) data(odometer) data(cost) data(note) data(location) data(type) data(subtype) data(payment) data(categories) data(reminder_interval) data(reminder_distance) data(flags) data(currency_code) data(currency_rate)
 			set data(vehicle_id) $vehicle_id
 			set id [add_expense [array get data]]
 			incr records(expenses)
@@ -45,8 +53,12 @@ proc process_wbuf {section wbuf} {
 		}
 
 		"VEHICLE" {
-			lassign [::csv::split $wbuf] data(name) data(odometer) data(units_odometer) data(units_economy) data(notes)
+			lassign [::csv::split $wbuf] data(name) data(odometer) data(units_odometer) data(units_economy) data(notes) data(tank_capacity) data(tank_units) data(home_currency)
 			set id [add_vehicle [array get data]]
+		}
+
+		"TIRE LOG" {
+			puts "Ignoring tire log"
 		}
 
 		default {
@@ -115,7 +127,7 @@ proc main {} {
 	set wbuf ""
 
 	foreach line [split $data "\n"] {
-		if {[regexp {^(ROAD TRIP CSV|FUEL RECORDS|MAINTENANCE RECORDS|ROAD TRIPS|VEHICLE)$} $line]} {
+		if {[regexp {^(ROAD TRIP CSV|FUEL RECORDS|MAINTENANCE RECORDS|ROAD TRIPS|VEHICLE|TIRE LOG)$} $line]} {
 			set live 1
 			set wbuf ""
 			set section $line

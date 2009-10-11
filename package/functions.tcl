@@ -127,8 +127,8 @@ proc add_vehicle { hash_data } {
 
 	array set data $hash_data
 
-	set fields_varchar [list name units_odometer units_economy notes]
-	set fields_numeric [list]
+	set fields_varchar [list name units_odometer units_economy notes tank_units home_currency]
+	set fields_numeric [list tank_capacity]
 
 	set id [simplesqlquery $vroomdb "SELECT vehicle_id FROM vehicles WHERE name = [pg_quote $data(name)]"]
 
@@ -153,8 +153,8 @@ proc add_fillup { hash_data } {
 
 	array set data $hash_data
 
-	set fields_varchar [list fillup_date fill_units partial_fill note octane location payment conditions reset categories]
-	set fields_numeric [list odometer trip_odometer total_price unit_price fill_amount mpg flags vehicle_id]
+	set fields_varchar [list fillup_date fill_units partial_fill note octane location payment conditions reset categories currency_code]
+	set fields_numeric [list odometer trip_odometer total_price unit_price fill_amount mpg flags vehicle_id currency_rate]
 
 	set data(partial_fill) [sql_boolean $data(partial_fill)]
 	set data(reset)        [sql_boolean $data(reset)]
@@ -182,8 +182,8 @@ proc add_expense { hash_data } {
 
 	array set data $hash_data
 
-	set fields_varchar [list name service_date note location type subtype payment categories reminder_interval] 
-	set fields_numeric [list odometer cost reminder_distance flags vehicle_id]
+	set fields_varchar [list name service_date note location type subtype payment categories reminder_interval currency_code] 
+	set fields_numeric [list odometer cost reminder_distance flags vehicle_id currency_rate]
 
 	set id [simplesqlquery $vroomdb "SELECT expense_id FROM expenses WHERE name = [pg_quote $data(name)] AND odometer = [sanitize_number $data(odometer)]"]
 
