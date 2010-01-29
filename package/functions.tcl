@@ -56,9 +56,6 @@ proc update_if_changed {db table key id data_hash} {
 			}
 			if {$new_data($field) != $old_data($field)} {
 				set changed 1
-				puts "--\n old-$old_data($field)-"
-				puts " new-$new_data($field)-"
-				puts " new[pg_quote $new_data($field)]"
 				append sql "$field = [pg_quote $new_data($field)], "
 			}
 		}
@@ -67,7 +64,6 @@ proc update_if_changed {db table key id data_hash} {
 		set sql [regsub {, $} $sql ""]
 		append sql " WHERE $key = $id;"
 
-		puts "  $sql"
 		pg_exec_or_exception $db $sql
 	}
 
