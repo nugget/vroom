@@ -33,7 +33,7 @@ proc simplesqlquery {db sql} {
 		set success 0
 		puts [pg_result $result -error]
 	}
-	
+
 	if {$success && [pg_result $result -numTuples] > 0} {
 		set return [pg_result $result -getTuple 0]
 	} else {
@@ -88,7 +88,7 @@ proc sql_field_list { field_list } {
 	set outbuf ""
 
 	if {$field_list == ""} {
-		return 
+		return
 	}
 	foreach field $field_list {
 		append outbuf "$field, "
@@ -101,7 +101,7 @@ proc sql_field_list { field_list } {
 proc sql_value_list { type field_list hash_data } {
 
 	if {$field_list == ""} {
-		return 
+		return
 	}
 
 	array set data $hash_data
@@ -139,7 +139,7 @@ proc add_vehicle { hash_data } {
 		if {[pg_exec_or_exception $vroomdb $sql]} {
 			set id [simplesqlquery $vroomdb "SELECT vehicle_id FROM vehicles WHERE name = [pg_quote $data(name)]"]
 			puts "Added new vehicle id $id ($data(name))"
-		} 
+		}
 	}
 	if {$id != ""} {
 		return $id
@@ -168,7 +168,7 @@ proc add_fillup { hash_data } {
 		if {[pg_exec_or_exception $vroomdb $sql]} {
 			set id [simplesqlquery $vroomdb "SELECT fillup_id FROM fillups WHERE odometer = [sanitize_number $data(odometer)]"]
 			puts "Added new fillup id $id ($data(fillup_date) $data(note))"
-		} 
+		}
 	}
 	if {$id != ""} {
 		return $id
@@ -182,7 +182,7 @@ proc add_expense { hash_data } {
 
 	array set data $hash_data
 
-	set fields_varchar [list name service_date note location type subtype payment categories reminder_interval currency_code] 
+	set fields_varchar [list name service_date note location type subtype payment categories reminder_interval currency_code]
 	set fields_numeric [list odometer cost reminder_distance flags vehicle_id currency_rate]
 
 	set id [simplesqlquery $vroomdb "SELECT expense_id FROM expenses WHERE name = [pg_quote $data(name)] AND odometer = [sanitize_number $data(odometer)]"]
@@ -194,7 +194,7 @@ proc add_expense { hash_data } {
 		if {[pg_exec_or_exception $vroomdb $sql]} {
 			set id [simplesqlquery $vroomdb "SELECT expense_id FROM expenses WHERE name = [pg_quote $data(name)] AND odometer = [sanitize_number $data(odometer)]"]
 			puts "Added new expense id $id ($data(name) on $data(service_date))"
-		} 
+		}
 	}
 	if {$id != ""} {
 		return $id
@@ -220,7 +220,14 @@ proc add_trip { hash_data } {
 		if {[pg_exec_or_exception $vroomdb $sql]} {
 			set id [simplesqlquery $vroomdb "SELECT trip_id FROM trips WHERE name = [pg_quote $data(name)] AND start_odometer = [sanitize_number $data(start_odometer)]"]
 			puts "Added new trip id $id ($data(name) on $data(start_date))"
-		} 
+		}
+	} else {
+		set sql "UPDATE trips SET end_date = [pg_quote $data(end_date)], end_odometer = [sanitize_number $data(end_odometer)], note = [pg_quote $data(note)], distance = [sanitize_number $data(distance)]
+				 WHERE trip_id = $id AND (end_date != [pg_quote $data(end_date)] OR end_odometer != [sanitize_number $data(end_odometer)] OR note != [pg_quote $data(note)] OR distance != [sanitize_number $data(distance)])"
+		if {[pg_exec_or_exception $vroomdb $sql]} {
+			puts "Updated existing trip id $id ($data(name) on $data(start_date))"
+		}
+
 	}
 	if {$id != ""} {
 		return $id
