@@ -224,10 +224,7 @@ proc add_trip { hash_data } {
 	} else {
 		set sql "UPDATE trips SET end_date = [pg_quote $data(end_date)], end_odometer = [sanitize_number $data(end_odometer)], note = [pg_quote $data(note)], distance = [sanitize_number $data(distance)]
 				 WHERE trip_id = $id AND (end_date != [pg_quote $data(end_date)] OR end_odometer != [sanitize_number $data(end_odometer)] OR note != [pg_quote $data(note)] OR distance != [sanitize_number $data(distance)])"
-		if {[pg_exec_or_exception $vroomdb $sql]} {
-			puts "Updated existing trip id $id ($data(name) on $data(start_date))"
-		}
-
+		pg_exec_or_exception $vroomdb $sql
 	}
 	if {$id != ""} {
 		return $id
