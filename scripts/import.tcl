@@ -127,8 +127,10 @@ proc main {} {
 	set wbuf ""
 
 	foreach line [split $data "\n"] {
-		if {[regexp {^(ROAD TRIP CSV|FUEL RECORDS|MAINTENANCE RECORDS|ROAD TRIPS|VEHICLE|TIRE LOG)$} $line]} {
+		if {[string match "---- Begin Copy and Paste here" $line]} {
 			set live 1
+		}
+		if {[regexp {^(ROAD TRIP CSV|FUEL RECORDS|MAINTENANCE RECORDS|ROAD TRIPS|VEHICLE|TIRE LOG)$} $line]} {
 			set wbuf ""
 			set section $line
 		}
