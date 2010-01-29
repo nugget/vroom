@@ -2,7 +2,7 @@
 
 set ::debug 0
 
-package require Pgtcl 
+package require Pgtcl
 package require Tclx
 package require csv
 package require vroom
@@ -58,7 +58,7 @@ proc process_wbuf {section wbuf} {
 		}
 
 		"TIRE LOG" {
-			puts "Ignoring tire log"
+			# puts "Ignoring tire log"
 		}
 
 		default {
