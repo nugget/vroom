@@ -44,6 +44,36 @@ proc simplesqlquery {db sql} {
 	return $return
 }
 
+proc update_if_changed {db table key id data_hash} {
+	set changed 0
+	array set new_data $data_hash
+
+	set sql "UPDATE $table SET "
+	pg_select $db "SELECT * FROM $table WHERE $key = $id" old_data {
+		foreach field [array names new_data] {
+			if {[regexp {_date$} $field]} {
+				set new_data($field) [simplesqlquery $db "SELECT [pg_quote $new_data($field)]::date"]
+			}
+			if {$new_data($field) != $old_data($field)} {
+				set changed 1
+				puts "--\n old-$old_data($field)-"
+				puts " new-$new_data($field)-"
+				puts " new[pg_quote $new_data($field)]"
+				append sql "$field = [pg_quote $new_data($field)], "
+			}
+		}
+	}
+	if {$changed} {
+		set sql [regsub {, $} $sql ""]
+		append sql " WHERE $key = $id;"
+
+		puts "  $sql"
+		pg_exec_or_exception $db $sql
+	}
+
+	return $changed
+}
+
 
 proc is_line_incomplete {line} {
 	# if there's a trailing space it's a partial line
@@ -222,9 +252,13 @@ proc add_trip { hash_data } {
 			puts "Added new trip id $id ($data(name) on $data(start_date))"
 		}
 	} else {
-		set sql "UPDATE trips SET end_date = [pg_quote $data(end_date)], end_odometer = [sanitize_number $data(end_odometer)], note = [pg_quote $data(note)], distance = [sanitize_number $data(distance)]
-				 WHERE trip_id = $id AND (end_date != [pg_quote $data(end_date)] OR end_odometer != [sanitize_number $data(end_odometer)] OR note != [pg_quote $data(note)] OR distance != [sanitize_number $data(distance)])"
-		pg_exec_or_exception $vroomdb $sql
+		if {[update_if_changed $vroomdb trips trip_id $id [array get data]]} {
+			puts "Updated trip id $id"
+		}
+
+		#set sql "UPDATE trips SET end_date = [pg_quote $data(end_date)], end_odometer = [sanitize_number $data(end_odometer)], note = [pg_quote $data(note)], distance = [sanitize_number $data(distance)]
+		#		 WHERE trip_id = $id AND (end_date != [pg_quote $data(end_date)] OR end_odometer != [sanitize_number $data(end_odometer)] OR note != [pg_quote $data(note)] OR distance != [sanitize_number $data(distance)])"
+		#pg_exec_or_exception $vroomdb $sql
 	}
 	if {$id != ""} {
 		return $id
