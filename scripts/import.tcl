@@ -127,18 +127,19 @@ proc main {} {
 	set wbuf ""
 
 	foreach line [split $data "\n"] {
-		if {[string match "---- Begin Copy and Paste here" $line]} {
+		# puts "$live/$partial/$wrap_it_up:$line"
+		if {[string match "---- Begin Copy and Paste here*" $line]} {
 			set live 1
 		}
 		if {[regexp {^(ROAD TRIP CSV|FUEL RECORDS|MAINTENANCE RECORDS|ROAD TRIPS|VEHICLE|TIRE LOG)$} $line]} {
 			set wbuf ""
 			set section $line
 		}
-		if {[string match "---- End Copy and Paste ----" $line]} {
+		if {[string match "---- End Copy and Paste*" $line]} {
 			set live 0
 		}
 
-		if {$live} {
+		if {$live && [info exists section]} {
 			if {[regexp {[^ ]$} $line]} {
 				regsub { $} $wbuf "" wbuf
 				append wbuf $line
