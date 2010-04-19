@@ -1,43 +1,45 @@
+From nugget@macnugget.org  Mon Apr 19 17:44:58 2010
 Return-Path: <nugget@macnugget.org>
 X-Spam-Checker-Version: SpamAssassin 3.2.5 (2008-06-10) on
 	carrera.macnugget.org
 X-Spam-Level: 
-X-Spam-Status: No, score=-4.4 required=5.0 tests=ALL_TRUSTED,BAYES_00,
-	DKIM_SIGNED,DKIM_VERIFIED,HTML_MESSAGE,URI_TRUNCATED autolearn=ham
+X-Spam-Status: No, score=-0.3 required=5.0 tests=ALL_TRUSTED,AWL,BAYES_50,
+	DKIM_SIGNED,DKIM_VERIFIED,FH_DATE_PAST_20XX,HTML_MESSAGE autolearn=no
 	version=3.2.5
 X-Original-To: nugget@macnugget.org
 Delivered-To: nugget@macnugget.org
 Received: from carrera.macnugget.org (localhost [127.0.0.1])
-	by carrera.macnugget.org (Postfix) with ESMTP id 1196E4AC7E
-	for <nugget@macnugget.org>; Wed, 29 Apr 2009 11:23:55 -0500 (CDT)
+	by carrera.macnugget.org (Postfix) with ESMTP id 9B0EF4ACD8
+	for <nugget@macnugget.org>; Mon, 19 Apr 2010 17:44:58 -0500 (CDT)
 DKIM-Signature: v=1; a=rsa-sha1; c=relaxed; d=macnugget.org; h=
-	message-id:from:to:content-type:mime-version:subject:date; s=
-	selector1; bh=CQDodsD2+RQ8r20pjQHDScoLNjg=; b=qx3+F3VUeKIK4AZdBC
-	82hnOhWexxzLXb9Py65PNiZt5BfdSKQQbNQWxEGd7vu4W/S1gIMJG6WL9Ggdj1G6
-	wsfn9xzLalWVol9SfMwZge3hHiyDAReaWxmXXwwj1wfVGAyZyxLlFFMz/8ptU01E
-	G8lJvAHrgBrqesy9VaofvWzQo=
-DomainKey-Signature: a=rsa-sha1; c=nofws; d=macnugget.org; h=message-id:from
-	:to:content-type:mime-version:subject:date; q=dns; s=selector1;
-	 b=MZaLCw8kGFlRckKekNo/Z7r85e1WTXEyKJ/0itMXUhDuw4JHY3B04BHNgT/58
-	OWqbGLiFpeZ3pdVVxZwd9l9XM6uILa3c6jfpgOPwKIISi8x+zRsyA3v7f0GhlgiC
-	n032xCQVvUWgAuYJTCEcYnTuSrcbr6j+yAsMfJQHU3u1O8=
-Received: from [10.144.71.14] (unknown [32.168.21.5])
+	message-id:from:to:content-type:content-transfer-encoding
+	:mime-version:subject:date; s=selector1; bh=jWvsoB4Er421il2rfFAA
+	tcOkZi0=; b=KO1Hwq4ZGGotQi5o7gd0Jg5NBdfJ0+lkzRRbCcYwKM4j9jmsMPka
+	2u5U/nfPN2/1ig+eWuvZf5AKyPuqbhjQ3hK3E1N6tc6BANubvf4Q79+sJ8MGt4nG
+	EuOkuBMe2nzlY42VgJcqmArI4wd0nVqS10MdhSFloYUJBxn3W7+f0RY=
+DomainKey-Signature: a=rsa-sha1; c=nofws; d=macnugget.org; h=message-id
+	:from:to:content-type:content-transfer-encoding:mime-version
+	:subject:date; q=dns; s=selector1; b=ilE7ECDQJjcRwgqRRuwrZFEwnLe
+	43u4Y0abiX8btHNHMznFyEZDwSmdYbVNz4sFajRWXwfVNZqpV7nWh6Iss4HfOONP
+	dsQ39x6RAy8WiS1Ld2l2n/IvHRP7eHJGG+xFUNI/2DLxVkv40BAgKXMTssAWRm4F
+	IC1Ew0/O0QZRq13I=
+Received: from [10.0.42.2] (99-53-250-214.lightspeed.hstntx.sbcglobal.net [99.53.250.214])
 	(using TLSv1 with cipher AES128-SHA (128/128 bits))
 	(Client did not present a certificate)
-	by carrera.macnugget.org (Postfix) with ESMTPSA id 9A34F4AC79
-	for <nugget@macnugget.org>; Wed, 29 Apr 2009 11:23:37 -0500 (CDT)
-Message-Id: <36E0F028-50A4-448F-B575-EC9F7B4F0803@macnugget.org>
+	by carrera.macnugget.org (Postfix) with ESMTPSA id E75444ACBA
+	for <nugget@macnugget.org>; Mon, 19 Apr 2010 17:44:57 -0500 (CDT)
+Message-Id: <C30B9C6C-246C-4955-BE9A-E487869E549A@macnugget.org>
 From: David McNett <nugget@macnugget.org>
-To: David McNett <nugget@macnugget.org>
-Content-Type: multipart/alternative;
-	boundary=Apple-Mail-1-722008715
-X-Mailer: iPhone Mail (5H11)
-Mime-Version: 1.0 (iPhone Mail 5H11)
-Subject: Road Trip Export Data for '2007 Porsche 911 C2S' on Apr 29, 2009
-Date: Wed, 29 Apr 2009 11:22:59 -0500
+To: "nugget@macnugget.org" <nugget@macnugget.org>
+Content-Type: multipart/alternative; boundary=Apple-Mail-1--795369970
+Content-Transfer-Encoding: 7bit
+Mime-Version: 1.0 (iPhone Mail 7E18)
+Subject: Road Trip Export Data for '2007 GT3 RS' on Apr 19, 2010
+Date: Mon, 19 Apr 2010 17:44:48 -0500
+X-Mailer: iPhone Mail (7E18)
 
 
---Apple-Mail-1-722008715
+--Apple-Mail-1--795369970
 Content-Type: text/plain;
 	charset=us-ascii;
 	format=flowed;
@@ -56,403 +58,247 @@ Restore
 To restore this data into Road Trip, forward this email to your iPhone  
 or iPod, then click this link from your device.
 
-You can also use the CSV Importing Tool to import the CSV data below.  
-Visit http://darrensoft.ca/roadtrip for more details.
+If the link does not work, you can use the CSV Import Website to  
+import the attached CSV file.
 
 Transfer to Excel
 
-To transfer this data to Excel, select and copy the data below, paste  
-into a new document in Notepad or TextEdit, and save the file with  
-a .CSV file extension. Visit http://darrensoft.ca/roadtrip/ for  
-detailed instructions.
+To transfer this data to Excel, simply open the attached CSV file with  
+Excel or OpenOffice.
+
+Visit http://darrensoft.ca/roadtrip/ for detailed backup and restore  
+instructions.
 
 ---- Begin Copy and Paste here. File: RoadTrip.csv ----
 
-ROAD TRIP CSV
+ROAD TRIP CSV ",."
 Version,Language
-130,en
+150,en
 
 
 FUEL RECORDS
-Odometer (mi.),Trip Distance,Date,Fill Amount,Fill Units,Price per  
+Odometer (mi),Trip Distance,Date,Fill Amount,Fill Units,Price per  
 Unit,Total Price,Partial  
-Fill,MPG,Note,Octane,Location,Payment,Conditions,Reset,Categories,Flags
-199.0,199.0,"2007-2-15",10.983,Gal, 
-2.299,25.25,,0.000,,,"Chevron","Optima",,Reset,,9
-399.0,200.0,"2007-2-17",13.137,Gal, 
-2.299,30.20,,15.224,,,"Tetco","Optima",,,,0
-600.0,201.0,"2007-2-24",13.449,Gal, 
-2.379,32.00,,14.945,,,"Exxon","Optima",,,,0
-796.0,196.0,"2007-2-28",13.747,Gal, 
-2.459,33.80,,14.258,,,"Exxon","Optima",,,,0
-955.0,159.0,"2007-3-10",11.177,Gal, 
-2.589,28.94,,14.226,,,"Tetco","Platinum",,,,0
-1158.0,203.0,"2007-3-18",14.007,Gal, 
-2.579,36.12,,14.493,,,"Exxon","Optima",,,,0
-1341.0,183.0,"2007-4-12",13.268,Gal, 
-2.899,38.46,,13.793,,,"Exxon","Optima",,,,0
-1531.0,190.0,"2007-4-19",13.554,Gal, 
-2.939,39.84,,14.018,,,"Tetco","Optima",,,,0
-1797.0,266.0,"2007-4-22",14.339,Gal, 
-2.839,40.71,,18.551,,,"Shell","Optima",,,,0
-2127.0,330.0,"2007-4-22",15.149,Gal, 
-2.939,44.52,,21.784,,,"Chevron","Optima",,,,0
-2377.0,250.0,"2007-4-26",13.523,Gal, 
-3.099,41.91,,18.487,,,"Texaco","Optima",,,,0
-2641.0,264.0,"2007-4-29",14.010,Gal, 
-3.049,42.72,,18.844,,,"Exxon","Optima",,,,0
-2796.0,155.0,"2007-5-09",11.216,Gal, 
-3.069,34.42,,13.820,,,"Chevron","Optima",,,,0
-3040.0,244.0,"2007-5-09",12.068,Gal, 
-3.099,37.40,,20.219,,,"Exxon","Optima",,,,0
-3271.0,231.0,"2007-5-13",14.179,Gal, 
-3.069,43.52,,16.292,,,"Chevron","Optima",,,,0
-3500.0,229.0,"2007-5-21",13.040,Gal, 
-3.179,41.45,,17.561,,,"Chevron","Optima",,,,0
-3896.0,396.0,"2007-6-04",11.215,Gal, 
-3.229,36.21,,35.310,,,"Chevron","Optima",,,,0
-4220.0,324.0,"2007-6-05",14.284,Gal, 
-3.239,46.27,,22.683,,,"Exxon","Optima",,,,0
-4437.0,217.0,"2007-6-10",14.236,Gal, 
-3.229,45.97,,15.243,,,"Chevron","Optima",,,,0
-4545.0,108.0,"2007-6-15",7.291,Gal, 
-3.199,23.32,,14.813,,,"Exxon","Optima",,,,0
-4815.0,270.0,"2007-6-16",13.890,Gal,3.069,42.63,,19.438,,,"Winners  
-Corner","Optima",,,,0
-5001.0,186.0,"2007-6-23",11.054,Gal, 
-3.259,36.02,,16.826,,,"Exxon","Optima",,,,0
-5100.0,99.0,"2007-6-26",6.341,Gal, 
-3.149,19.97,,15.613,,,"Chevron","Optima",,,,0
-5334.0,234.0,"2007-6-27",12.637,Gal, 
-2.999,37.90,,18.517,,,"Exxon","Optima",,,,0
-5582.0,248.0,"2007-7-03",14.917,Gal, 
-3.099,46.23,,16.625,,,"Chevron","Optima",,,,0
-5906.0,324.0,"2007-7-05",15.397,Gal, 
-3.139,48.33,,21.043,,,"Shell","Optima",,,,0
-6245.0,339.0,"2007-7-08",16.060,Gal, 
-3.099,49.77,,21.108,,,"Chevron","Optima",,,,0
-6374.0,129.0,"2007-7-15",8.483,Gal, 
-3.149,26.71,,15.207,,,"Chevron","Optima",,,,0
-6604.0,230.0,"2007-7-23",13.977,Gal, 
-3.129,43.73,,16.456,,,"Chevron","Optima",,,,0
-6724.0,120.0,"2007-7-30",8.018,Gal, 
-2.969,23.81,,14.966,,,"Chevron","Optima",,,,0
-6977.0,253.0,"2007-8-02",12.955,Gal, 
-2.999,38.85,,19.529,,,"Exxon","Optima",,,,0
-7216.0,239.0,"2007-8-08",13.956,Gal, 
-2.969,41.44,,17.125,,,"Chevron","Optima",,,,0
-7452.0,236.0,"2007-8-14",12.938,Gal, 
-2.959,38.28,,18.241,,,"Chevron","Optima",,,,0
-7718.0,266.0,"2007-8-15",12.995,Gal, 
-2.969,38.58,,20.469,,,"Chevron","Optima",,,,0
-7994.0,276.0,"2007-8-18",14.259,Gal, 
-2.979,42.48,,19.356,,,"Shell","Optima",,,,0
-8235.0,241.0,"2007-8-28",14.123,Gal, 
-2.949,41.65,,17.064,,,"Tetco","Optima",,,,0
-8451.0,216.0,"2007-9-13",13.587,Gal, 
-2.999,40.75,,15.898,,,"Shell","Optima",,,,0
-8669.0,218.0,"2007-9-24",14.252,Gal, 
-2.969,42.31,,15.296,,,"Chevron","Optima",,,,0
-8884.0,215.0,"2007-10-15",13.425,Gal, 
-2.919,39.19,,16.015,,,"Chevron","Optima",,,,0
-9129.0,245.0,"2007-10-18",14.337,Gal, 
-2.909,41.71,,17.089,,,"Chevron","Optima",,,,0
-9354.0,225.0,"2007-10-21",14.469,Gal, 
-2.989,43.25,,15.550,,,"Chevron","Optima",,,,0
-9597.0,243.0,"2007-10-27",15.364,Gal, 
-2.989,45.92,,15.816,,,"Chevron","Optima",,,,0
-9851.0,254.0,"2007-11-04",12.970,Gal, 
-2.999,38.90,,19.584,,,"Exxon","Optima",,,,0
-10031.0,180.0,"2007-11-10",11.486,Gal, 
-3.259,37.43,,15.671,,,"Exxon","Optima",,,,0
-10145.0,114.0,"2007-11-11",5.393,Gal, 
-3.329,17.95,,21.139,,,"Exxon","Optima",,,,0
-10261.0,116.0,"2007-11-11",12.062,Gal, 
-3.329,40.15,,9.617,,,"Exxon","Optima","Track",,,0
-10377.0,116.0,"2007-11-12",12.145,Gal, 
-3.299,40.07,,9.551,,,"Exxon","Optima",,,,0
-10654.0,277.0,"2007-11-21",14.849,Gal, 
-3.239,48.10,,18.654,,,"Exxon","Optima",,,,0
-10947.0,293.0,"2007-11-22",13.538,Gal, 
-3.189,43.17,,21.643,,,"QuickTrip","Optima",,,,0
-11092.0,145.0,"2007-11-23",6.670,Gal, 
-3.119,20.80,,21.739,,,"Mobil","Optima",,,,0
-11313.0,221.0,"2007-12-04",12.603,Gal, 
-3.199,40.32,,17.536,,,"Chevron","Optima",,,,0
-11563.0,250.0,"2007-12-09",15.137,Gal, 
-3.169,47.97,,16.516,,,"Shell","Optima",,,,0
-11829.0,266.0,"2007-12-17",14.525,Gal, 
-3.199,46.47,,18.313,,,"Shell","Optima",,,,0
-11915.0,86.0,"2007-12-27",6.443,Gal, 
-3.159,20.35,,13.348,,,"Exxon","Optima","Track",,,0
-12150.0,235.0,"2007-12-28",10.629,Gal, 
-3.169,33.68,,22.109,,,"Chevron","Optima",,,,0
-12390.0,240.0,"2007-12-29",10.587,Gal, 
-3.179,33.66,,22.669,,,"Exxon","Optima",,,,0
-12558.0,168.0,"2008-1-07",11.300,Gal, 
-3.239,36.60,,14.867,,,"Chevron","Optima",,,,0
-12828.0,270.0,"2008-7-12",15.629,Gal, 
-4.169,65.16,,17.276,,,"Exxon","Optima",,,,0
-12886.0,58.0,"2008-1-10",15.249,Gal, 
-3.179,48.48,,3.804,,,"Exxon","Optima",,,,0
-13011.0,125.0,"2008-1-17",7.191,Gal, 
-3.239,23.29,,17.383,,,"Chevron","Optima",,,,0
-13245.0,234.0,"2008-1-19",11.648,Gal, 
-3.259,37.96,,20.089,,,"Exxon","Optima",,,,0
-13461.0,216.0,"2008-1-22",10.138,Gal, 
-3.189,32.33,,21.306,,,"Chevron","Optima",,,,0
-13697.0,236.0,"2008-1-27",13.057,Gal, 
-3.219,42.03,,18.075,,,"Shell","Optima",,,,0
-13964.0,267.0,"2008-1-31",14.684,Gal, 
-3.169,46.53,,18.183,,,"Chevron","Optima",,,,0
-14166.0,202.0,"2008-2-14",14.358,Gal, 
-3.169,45.50,,14.069,,,"Chevron","Optima",,,,0
-14445.0,279.0,"2008-2-14",14.158,Gal, 
-3.159,44.73,,19.706,,,"Exxon","Optima",,,,0
-14625.0,180.0,"2008-2-24",11.258,Gal, 
-3.239,36.46,,15.989,,,"Chevron","Optima",,,,0
-14848.0,223.0,"2008-2-27",13.932,Gal, 
-3.299,45.96,,16.006,,,"Tetco","Optima",,,,0
-15097.0,249.0,"2008-3-01",12.572,Gal,3.199,40.22,,19.806,,,"Randall's  
-Fuel","Optima",,,,0
-15232.0,135.0,"2008-3-01",6.849,Gal, 
-3.359,23.01,,19.711,,,"Exxon","Optima",,,,0
-15360.0,128.0,"2008-3-02",5.498,Gal, 
-3.459,19.02,,23.281,,,"Shell","Optima",,,,0
-15486.0,126.0,"2008-3-02",14.189,Gal, 
-3.459,49.08,,8.880,,,"Shell","Optima","Track",,,0
-15596.0,110.0,"2008-3-03",10.682,Gal, 
-3.319,35.45,,10.298,,,"Chevron","Optima",,,,0
-15822.0,226.0,"2008-3-11",13.903,Gal, 
-3.479,48.37,,16.255,,,"Texaco","Optima",,,,0
-16045.0,223.0,"2008-3-17",14.178,Gal, 
-3.479,49.33,,15.729,,,"Texaco","Optima",,,,0
-16324.0,279.0,"2008-3-22",14.263,Gal, 
-3.459,49.34,,19.561,,,"Shell","Optima",,,,0
-16557.0,233.0,"2008-3-30",14.661,Gal, 
-3.419,50.13,,15.893,,,"Chevron","Optima",,,,0
-16743.0,186.0,"2008-4-13",14.234,Gal, 
-3.529,50.23,,13.067,,,"Chevron","Optima",,,,0
-16789.0,46.0,"2008-4-14",2.967,Gal, 
-3.519,10.44,,15.504,,,"Exxon","Optima",,,,0
-17009.0,220.0,"2008-4-16",14.605,Gal, 
-3.679,53.73,,15.063,,,"Texaco","Optima",,,,0
-17211.0,202.0,"2008-4-22",14.208,Gal, 
-3.569,50.71,,14.217,,,"Shell","Optima",,,,0
-17317.0,106.0,"2008-4-24",7.566,Gal, 
-3.719,28.14,,14.010,,,"Chevron","Optima",,,,0
-17538.0,221.0,"2008-4-26",9.782,Gal, 
-3.699,36.18,,22.593,,,"Exxon","Optima",,,,0
-17687.0,149.0,"2008-4-27",7.780,Gal, 
-3.799,29.56,,19.152,,,"Shell","Optima",,,,0
-17921.0,234.0,"2008-5-01",15.166,Gal, 
-3.789,57.46,,15.429,,,"Chevron","Optima",,,,0
-18030.0,109.0,"2008-5-03",6.058,Gal, 
-3.729,22.59,,17.993,,,"HEB","Optima",,,,0
-18179.0,149.0,"2008-5-03",7.350,Gal, 
-3.829,28.14,,20.272,,,"Texaco","Optima",,,,0
-18285.0,106.0,"2008-5-04",10.844,Gal, 
-3.829,41.52,,9.775,,,"Texaco","Optima","Track",,,0
-18377.0,92.0,"2008-5-05",10.331,Gal, 
-3.829,39.56,,8.905,,,"Texaco","Optima","Track",,,0
-18584.0,207.0,"2008-5-07",11.560,Gal, 
-3.859,44.61,,17.907,,,"Chevron","Optima",,,,0
-18872.0,288.0,"2008-5-10",15.170,Gal, 
-3.979,60.36,,18.985,,,"Chevron","Optima",,,,0
-19097.0,225.0,"2008-5-19",14.459,Gal, 
-3.919,56.66,,15.561,,,"Exxon","Optima",,,,0
-19347.0,250.0,"2008-5-30",15.203,Gal, 
-4.089,62.17,,16.444,,,"Chevron","Optima",,,,0
-19478.0,131.0,"2008-6-02",7.697,Gal, 
-3.999,30.78,,17.020,,,"Exxon","Optima",,,,0
-19668.0,190.0,"2008-6-06",14.757,Gal, 
-4.079,60.19,,12.875,,,"Exxon","Optima",,,,0
-19795.0,127.0,"2008-6-07",5.771,Gal, 
-4.179,24.12,,22.007,,,"Shell","Optima",,,,0
-19908.0,113.0,"2008-6-08",11.500,Gal, 
-4.204,48.35,,9.826,,,"Exxon","Optima",,,,0
-20049.0,141.0,"2008-6-09",13.459,Gal, 
-4.239,57.05,,10.476,,,"Chevron","Optima","Track",,,0
-20216.0,167.0,"2008-6-11",9.816,Gal, 
-4.189,41.12,,17.013,,,"Chevron","Optima",,,,0
-20436.0,220.0,"2008-6-14",11.434,Gal, 
-4.169,47.67,,19.241,,,"Exxon","Optima",,,,0
-20647.0,211.0,"2008-6-15",12.052,Gal, 
-4.209,50.73,,17.507,,,"Chevron","Optima",,,,0
-20845.0,198.0,"2008-6-22",14.088,Gal, 
-4.199,59.16,,14.055,,,"Exxon","Optima",,,,0
-21100.0,255.0,"2008-6-26",14.475,Gal, 
-4.279,61.94,,17.617,,,"Exxon","Optima",,,,0
-21235.0,135.0,"2008-6-29",8.772,Gal, 
-4.169,36.57,,15.390,,,"Tetco","Optima",,,,0
-21367.0,132.0,"2008-7-01",14.508,Gal, 
-4.249,61.64,,9.098,,,"Raceway","Chase","Track",,,0
-21549.0,182.0,"2008-7-06",12.239,Gal, 
-4.239,51.88,,14.870,,,"Chevron","Optima",,,,0
-22040.0,491.0,"2008-7-13",11.865,Gal, 
-4.229,50.18,,41.382,,,"Chevron","Optima",,,,0
-22307.0,267.0,"2008-7-19",15.130,Gal, 
-4.189,63.38,,17.647,,,"HEB","Optima",,,,0
-22573.0,266.0,"2008-7-22",15.405,Gal, 
-4.159,64.07,,17.267,,,"Valero","Optima",,,,0
-22727.0,154.0,"2008-8-04",8.994,Gal, 
-4.039,36.33,,17.123,,,"Exxon","Optima",,,,0
-22884.0,157.0,"2008-8-08",13.299,Gal, 
-3.949,52.52,,11.805,,,"Chevron","Optima",,,,0
-23072.0,188.0,"2008-8-09",15.744,Gal, 
-4.039,63.59,,11.941,,,"Exxon","Optima",,,,0
-23270.0,198.0,"2008-8-10",11.478,Gal, 
-3.989,45.79,,17.250,,,"Chevron","Optima",,,,0
-23527.0,257.0,"2008-8-12",14.529,Gal, 
-3.999,58.10,,17.689,,,"Exxon","Optima",,,,0
-23665.0,138.0,"2008-8-20",8.706,Gal, 
-3.959,34.47,,15.851,,,"Chevron","Optima",,,,0
-23880.0,215.0,"2008-8-23",11.252,Gal, 
-3.879,43.65,,19.108,,,"Shell","Optima",,,,0
-24093.0,213.0,"2008-8-26",11.124,Gal, 
-3.739,41.59,,19.148,,,"Exxon","Optima",,,,0
-24322.0,229.0,"2008-8-29",12.113,Gal, 
-3.859,46.74,,18.905,,,"Chevron","Optima",,,,0
-24471.0,149.0,"2008-8-30",7.336,Gal, 
-3.849,28.24,,20.311,,,"Chevron","Optima",,,,0
-24666.0,195.0,"2008-9-12",13.678,Gal, 
-3.889,53.19,,14.256,,,"Shell","Optima",,,,0
-24886.0,220.0,"2008-9-27",14.820,Gal, 
-3.829,56.75,,14.845,,,"Exxon","Optima",,,,0
-24994.0,108.0,"2008-9-28",7.180,Gal, 
-3.809,27.35,,15.042,,,"Chevron","Optima",,,,0
-25189.0,195.0,"2008-10-21",13.500,Gal, 
-3.479,46.97,,14.444,,,"Chevron","Optima",,,,0
-25309.0,120.0,"2008-10-29",8.798,Gal, 
-2.629,23.13,,13.639,,,"Chevron","Optima",,,,0
-25546.0,237.0,"2008-11-01",12.221,Gal, 
-2.379,29.07,,19.393,,,"Exxon","Optima",,,,0
-25792.0,246.0,"2008-11-10",14.568,Gal, 
-2.379,34.66,,16.886,,,"Texaco","Optima",,,,0
-25997.0,205.0,"2008-11-15",11.146,Gal, 
-2.399,26.74,,18.392,,,"Shell","Optima",,,,0
-26395.0,398.0,"2008-11-22",13.000,Gal, 
-2.313,30.07,,30.615,,,"Chevron","Optima",,,,0
-26541.0,146.0,"2008-12-06",7.000,Gal, 
-2.197,15.38,,20.857,,,"HEB","Optima",,,,0
-26725.0,184.0,"2008-12-07",11.029,Gal, 
-2.159,23.81,,16.683,,,"Texaco","Optima",,,,0
-26841.0,116.0,"2008-12-08",12.778,Gal, 
-2.159,27.59,,9.078,,,"Texaco","Optima",,,,0
-27000.0,159.0,"2008-12-08",10.387,Gal, 
-2.259,23.46,,15.308,,,"Texaco","Optima",,,,0
-27202.0,202.0,"2008-12-19",11.750,Gal, 
-1.889,22.20,,17.191,,,"Chevron","Optima",,,,0
-27435.0,233.0,"2008-12-20",10.114,Gal, 
-1.979,20.02,,23.037,,,"Exxon","Optima",,,,0
-27596.0,161.0,"2008-12-21",6.957,Gal,1.769,12.31,,23.142,,,"Sac n Pac  
-by H2R","Optima",,,,0
-27817.0,221.0,"2008-12-26",11.534,Gal,1.649,19.02,,19.161,,,"7  
-Eleven","Optima",,,,0
-27895.0,78.0,"2008-12-26",3.498,Gal, 
-1.759,6.15,,22.298,,,"Exxon","Optima",,,,0
-28202.0,307.0,"2008-12-31",14.828,Gal, 
-1.719,25.49,,20.704,,,"HEB","Optima",,,,0
-28440.0,238.0,"2009-1-10",14.485,Gal, 
-1.889,27.36,,16.431,,,"Chevron","Optima",,,,0
-28527.0,87.0,"2009-1-12",5.520,Gal, 
-1.859,10.26,,15.761,,,"Chevron","Optima",,,,0
-28782.0,255.0,"2009-1-16",13.808,Gal, 
-2.019,27.88,,18.468,,,"Exxon","Optima",,,,0
-29036.0,254.0,"2009-1-24",14.207,Gal, 
-2.019,28.68,,17.879,,,"Exxon","Optima",,,,0
-29274.0,238.0,"2009-1-30",13.748,Gal, 
-2.059,28.31,,17.312,,,"Chevron","Optima",,,,0
-29454.0,180.0,"2009-2-03",10.278,Gal, 
-1.999,20.55,,17.513,,,"HEB","Platinum",,,,0
-29661.0,207.0,"2009-2-05",10.213,Gal, 
-2.159,22.05,,20.268,,,"Shell","Platinum",,,,0
-29900.0,239.0,"2009-2-21",12.671,Gal, 
-2.099,26.60,,18.862,,,"Shell","Platinum",,,,0
-30183.0,283.0,"2009-2-21",13.375,Gal, 
-2.099,28.07,,21.159,,,"Shell","Platinum",,,,0
-30445.0,262.0,"2009-2-25",14.002,Gal, 
-2.009,28.13,,18.712,,,"Chevron","Platinum",,,,0
-30693.0,248.0,"2009-3-05",13.856,Gal, 
-1.939,26.87,,17.898,,,"Citgo","Platinum",,,,0
-30881.0,188.0,"2009-3-15",12.951,Gal,1.999,25.89,,14.516,,,"Sunmart  
-Sealy","Platinum",,,,0
-31130.0,249.0,"2009-3-16",13.408,Gal, 
-2.219,29.75,,18.571,,,"Chevron","Platinum",,,,0
-31407.0,277.0,"2009-3-21",13.708,Gal, 
-2.199,30.14,,20.207,,,"Exxon","Platinum",,,,0
-31684.0,277.0,"2009-3-24",14.018,Gal, 
-2.259,31.67,,19.760,,,"Shell","Platinum",,,,0
-31904.0,220.0,"2009-3-28",12.432,Gal, 
-2.209,27.46,,17.696,,,"Tetco","Platinum",,,,0
-32146.0,242.0,"2009-4-10",14.993,Gal, 
-2.359,35.37,,16.141,,,"Exxon","Platinum",,,,0
-32432.0,286.0,"2009-4-18",10.163,Gal,2.239,22.75,,28.141,,,"Sac n Pac  
-by H2R","Platinum","Track",,,0
-32556.0,124.0,"2009-4-26",13.974,Gal,2.239,31.29,,8.874,,,"Sac n Pac  
-by H2R","Platinum","Track",,,0
+Fill, 
+MPG, 
+Note, 
+Octane,Location,Payment,Conditions,Reset,Categories,Flags,Currency  
+Code,Currency Rate,Latitude,Longitude
+4567,4567,"2009-9-05",9.357,Gal,2.809,26.28,,,"First tank  
+ever","Premium","BP Franklin TN","Platinum",,Reset,,9,,1,,
+4699,132,"2009-9-05",7.782,Gal,2.859,22.25,,16.962,,"Premium","Chevron  
+Cherokee, AL","Platinum","Highway",,"Vacation",0,,1,,
+4934,235,"2009-9-06",11.112,Gal,2.569,28.55,,21.148,,"Premium","Fleet  
+Way Jackson, MS","Platinum","Highway",,,0,,1,,
+5168,234,"2009-9-06",11.713,Gal,2.799,32.78,,19.978,,"Premium","Citgo  
+Pitkin, LA","Platinum","Highway",,,0,,1,,
+5459,291,"2009-9-11",15.64,Gal, 
+2.539,39.71,,18.606,,"Premium","Citgo","Platinum",,,,0,,1,,
+5682,223,"2009-9-12",11.575,Gal, 
+2.699,31.24,,19.266,,"Premium","Texaco","Platinum",,,,0,,1,,
+5922,240,"2009-9-15",15.541,Gal, 
+2.459,38.22,,15.443,,"Premium","Citgo","Platinum",,,,0,,1,,
+5976,54,"2009-9-20",4.82,Gal, 
+2.76,13.3,,11.203,,"Premium","Exxon","Platinum",,,,0,,1,,
+6193,217,"2009-9-20",12.94,Gal,2.699,34.93,,16.77,,"Premium","Sac n  
+Pac by H2R","Platinum",,,,0,,1,,
+6295,102,"2009-9-20",11.666,Gal,2.699,31.49,,8.743,,"Premium","Sac n  
+Pac by H2R","Platinum","Track",,,0,,1,,
+6527,232,"2009-9-28",12.825,Gal, 
+2.439,31.28,,18.09,,"Premium","Citgo","Platinum",,,,0,,1,,
+6669,142,"2009-10-03",10.254,Gal, 
+2.599,26.65,,13.848,,"Premium","Citgo","Platinum",,,,0,,1,,
+6799,130,"2009-10-04",11.43,Gal, 
+2.631,30.07,,11.374,,"Premium","Citgo","Platinum","Track",,"Track", 
+0,,1,,
+6962,163,"2009-10-29",14.526,Gal, 
+2.699,39.21,,11.221,,"Premium","Citgo","Platinum","City",,,0,,1,,
+7113,151,"2009-11-07",10.41,Gal, 
+2.859,29.76,,14.505,,"Premium","Shell","Platinum",,,,0,,1,,
+7171,58,"2009-11-07",6.8,Gal,3.325,22.61,,8.529,,"Premium","Texas  
+World Speedway","Platinum","Track",,,0,,1,,
+7247,76,"2009-11-08",7.571,Gal, 
+2.86,21.65,,10.038,,"Premium","Shell","Platinum",,,,0,,1,,
+7325,78,"2009-11-08",8.4,Gal,3.3,27.72,,9.286,,"Premium","Texas World  
+Speedway","Platinum","Track",,,0,,1,,
+7491,166,"2009-11-23",13.789,Gal, 
+2.879,39.7,,12.039,,"Premium","Exxon","Platinum","City",,,0,,1,,
+7665,174,"2009-12-08",14.363,Gal, 
+2.879,41.35,,12.114,,"Premium","Shell","Platinum","City",,,0,,1,,
+7806,141,"2009-12-24",12.025,Gal, 
+2.899,34.86,,11.726,,"Premium","Shell","Platinum","City",,,0,,1,,
+8084,278,"2009-12-25",13.501,Gal, 
+2.959,39.95,,20.591,,"Premium","Shell","Platinum","Highway",,,0,,1,,
+8285,201,"2009-12-27",10.789,Gal, 
+2.879,31.06,,18.63,,"Premium","Exxon","Platinum","Highway",,,0,,1,,
+8490,205,"2010-1-11",14.291,Gal, 
+2.799,40,,14.345,,"Premium","Citgo","Platinum",,,,0,,1,,
+8656,166,"2010-1-19",14.124,Gal, 
+2.779,39.25,,11.753,,"Premium","Exxon","Platinum","City",,,0,,1,,
+8849,193,"2010-1-22",9.693,Gal,3.122,30.26,,19.911,,"Premium","Sac n  
+Pac by H2R","Platinum",,,,0,,1,,
+8944,95,"2010-1-22",11.735,Gal, 
+2.779,32.61,,8.095,,"Premium","Raceway","MasterCard",,,,0,,1,,
+9049,105,"2010-1-23",11.631,Gal, 
+2.579,30,,9.028,,"Premium","Shell","Platinum","Track",,,0,,1,,
+9121,72,"2010-1-24",9.144,Gal, 
+2.841,25.98,,7.874,,"Premium","Shell","Platinum","Track",,,0,,1,,
+9182,61,"2010-1-24",7.329,Gal, 
+2.839,20.81,,8.323,,"Premium","Shell","Platinum","Track",,,0,,1,,
+9389,207,"2010-1-30",12.292,Gal, 
+2.939,36.13,,16.84,,"Premium","Exxon","Platinum",,,,0,,1,,
+9543,154,"2010-1-30",7.982,Gal, 
+2.799,22.34,,19.293,,"Premium","Citgo","Platinum",,,,0,,1,,
+9644,101,"2010-1-30",10.75,Gal,2.986,32.1,,9.395,"With paulf and  
+kevin","Premium","Shell","Platinum","Track",,,0,,1,,
+9727,83,"2010-1-30",8.038,Gal, 
+2.799,22.5,,10.326,,"Premium","Texaco",,"Track",,,0,,1,,
+9939,212,"2010-2-12",14.295,Gal, 
+2.959,42.3,,14.83,,"Premium","Shell","Platinum","City",,,0,,1,,
+10146,207,"2010-2-24",14.855,Gal, 
+2.799,41.58,,13.935,,"Premium","Exxon","Platinum","City",,,0,,1,,
+10319,173,"2010-2-27",7.842,Gal, 
+2.799,21.95,,22.061,,"Premium","Texaco","Platinum","Hauling Ass",,, 
+0,,1,,
+10454,135,"2010-2-27",13.936,Gal, 
+2.799,39.01,,9.687,,"Premium","Valero","Platinum","Track",,,0,,1,,
+10658,204,"2010-3-12",14.01,Gal, 
+2.829,39.63,,14.561,,"Premium","Citgo","Platinum",,,,0,,1,,
+10757,99,"2010-3-13",5.045,Gal, 
+2.9,14.63,,19.623,,"Premium","Exxon","Platinum","Highway",,,0,,1,,
+10856,99,"2010-3-14",12.8,Gal,3.316,42.44,,7.734,,"Premium","Texas  
+World Speedway","Platinum","Track",,"Track",0,,1,,
+10916,60,"2010-3-14",8.4,Gal,3.3,27.72,,7.143,,"Premium","Texas World  
+Speedway","Platinum","Track",,"Track",0,,1,,
+10999,83,"2010-3-14",6.798,Gal, 
+3.099,21.07,,12.209,,"Premium","Exxon","Platinum",,,,0,,1,,
+11234,235,"2010-3-15",12.341,Gal, 
+2.889,35.65,,19.042,,"Premium","Exxon","Platinum","Highway",,,0,,1,,
+11469,235,"2010-3-26",14.829,Gal, 
+2.999,44.47,,15.847,,"Premium","Exxon","Platinum","City",,,0,,1,,
+11635,166,"2010-3-27",7.948,Gal, 
+2.899,23.04,,20.886,,"Premium","Texaco","Platinum",,,,0,,1,,
+11719,84,"2010-3-27",10.912,Gal, 
+2.919,31.85,,7.698,,"Premium","Shell","Platinum","Track",,"Track",0,,1,,
+11857,138,"2010-3-27",12.571,Gal, 
+2.899,36.44,,10.978,,"Premium","Valero","Platinum",,,,0,,1,,
+12079,222,"2010-4-13",14.918,Gal, 
+2.959,44.14,,14.881,,"Premium","Citgo","Platinum",,,,0,,1,,
+12150,71,"2010-4-17",6.503,Gal, 
+3.609,23.47,,10.918,,"Premium","Motorsport Ranch  
+Houston","Platinum",,,,0,,1,,
+12233,83,"2010-4-17",10.791,Gal, 
+3.609,38.94,,7.692,,"Premium","Motorsport Ranch  
+Houston","Platinum","Track",,"Track",0,,1,,
+12291,58,"2010-4-18",11.688,Gal, 
+3.609,42.18,,4.962,,"Premium","Motorsport Ranch  
+Houston","Platinum","Track",,"Track",0,,1,29.277542,-95.422501
 
 
 MAINTENANCE RECORDS
 Description,Date,Odometer  
 (mi.),Cost,Note,Location,Type,Subtype,Payment,Categories,Reminder  
-Interval,Reminder Distance,Flags
-"Installed V1 Radar Detector","2007-2-24", 
-600.0,10.00,,"NuggetHaus",Service,"Accessory","Cash",,,0.0,0
-"Denison Gateway 500","2007-4-15", 
-1531.0,516.00,,"NuggetHaus",Service,"Accessory","Platinum",,,0.0,0
-"SmartTop","2007-6-09", 
-4500.0,479.00,,,Service,"Accessory","Platinum",,,0.0,0
-"Topped Off Oil","2007-6-25", 
-5153.0,6.00,,,Service,"Maintenance","Platinum",,,0.0,0
-"Repaint Trunk Lid","2007-6-27",5334.0,676.00,,"Jeff's Auto  
-Body",Service,"Repair","Optima",,,0.0,0
-"Oil Change","2007-7-09",6275.0,264.00,,"Roger Beasley  
-Porsche",Service,"Maintenance","Optima",,,0.0,0
-"Windshield Chip Repair","2007-7-09", 
-6275.0,60.00,,"NuggetHaus",Service,"Repair","Cash",,,0.0,0
-"Rear Tires","2007-10-18",9100.0,1165.00,,"Discount  
-Tire",Service,"Maintenance","Optima",,,0.0,0
-"Topped Off Oil","2007-11-12", 
-10377.0,0.00,,"NuggetHaus",Service,"Maintenance",,,,0.0,0
-"Repair Rattle In Top","2007-11-14",10504.0,0.00,,"Roger Beasley  
-Porsche",Service,"Repair",,,,0.0,0
-"Front Tires","2008-2-06",13999.0,958.00,,"Discount  
-Tire",Service,"Maintenance","Optima",,,0.0,0
-"Alignment","2008-2-06",13999.0,20.00,,"JC Auto  
-Spec",Service,"Maintenance","Cash",,,0.0,0
-"Rear Tires","2008-4-11",16789.0,1067.00,,"Discount  
-Tire",Service,"Maintenance","Optima",,,0.0,0
-"Brake Fluid _ Tech Inspection","2008-4-14",16962.0,466.00,,"Colvin  
-Automotive",Service,"Maintenance","Optima","Track",,0.0,0
-"Oil Change _ 20K Service","2008-5-16",19035.0,598.00,,"Roger Beasley  
-Porsche",Service,"Maintenance","Optima",,,0.0,0
-"New Tires _ Nav Update","2008-8-11",23450.0,2754.32,,"Roger Beasley  
-Porsche",Service,"Maintenance","Optima",,,0.0,0
-"Rear Wheel Damage","2008-9-26",25199.0,2237.00,,"Roger Beasley  
-Porsche",Service,"Repair","Optima","Track",,0.0,0
+Interval,Reminder Distance,Flags,Currency Code,Currency  
+Rate,Latitude,Longitude
+"Bought Vehicle","2009-8-31",4382,,"Bought sight unseen.","Porsche Of  
+Nashville",Other,,,,,,0,,1,,
+"Added Cargraphic Front Screen Kit","2009-9-01", 
+4382,380,,"SharkWerks",Service,"Accessory","Platinum",,,,0,,1,,
+"Switch To Original Style GT3 RS Steering Wheel","2009-9-01", 
+4382,879.83,,"Suncoast Porsche Parts",Expense,,"Platinum",,,,0,,1,,
+"State Inspection","2009-9-09",5226,41.75,,"Momentum  
+Porsche",Service,"Inspection","Platinum",,,,0,,1,,
+"GT3 Mk2 Rear Brake Cooling Ducts","2009-9-11",5459,217.61,,"Suncoast  
+Porsche Parts",Expense,"Track - Equipment","Platinum","Track",,,0,,1,,
+"Remove Window Tint","2009-9-25",6509,116.18,,"Momentum  
+Porsche",Service,,"Platinum",,,,0,,1,,
+"Replace Side Window After Theft","2009-11-05",6990,1101.31,"Thief  
+smashed out driver side window and stole radar detector.","Momentum  
+Porsche",Service,"Repair","Platinum",,,,0,,1,,
+"Add 1 qt Oil","2009-11-08",7325,,"Oil reading low mid-day at track so  
+I added a full quart, bringing indicator to top-of-full mark.","Texas  
+World Speedway",Service,,,"Track",,,0,,1,,
+"New Tires All Around","2009-12-17",7760,1565.33,"Unhappy with OEM PS2  
+Cup tires, I replaced with four Bridgestone RE-11 in stock sizes. Very  
+pleased, I like them a lot more for street driving. Will be running  
+dedicated track wheels an tires (Hoosier R6) from here on  
+out.","Discount Tire",Service,"Maintenance","American Express",,,,0,,1,,
+"Track Wheels And Slicks","2009-12-21",7781,3584.2,"Dedicated track  
+wheels. O.Z. Alleggerita 18x8.5 and 18x12.  Hoosier R6 and TPMS  
+sensors","Tire Rack",Expense,"Track - Equipment","American  
+Express","Track",,,0,,1,,
+"General Maintenance","2010-1-12",8505,555.57,"Oil change, brake fluid  
+flush, alignment.","Momentum  
+Porsche",Service,"Maintenance","Platinum",,,,0,,1,,
+"Hoosier R6 Set","2010-3-05",10454,1609.26,"Set number two","Discount  
+Tire",Expense,"Track - Equipment","American Express","Track",,,0,,1,,
+"Rear Brake Pads","2010-3-05",10454,299.95,,"Suncoast Porsche  
+Parts",Service,"Maintenance","Platinum",,,,0,,1,,
 
 
 ROAD TRIPS
 Name,Start Date,Start Odometer (mi.),End Date,End Odometer,Note,Distance
+"Spring 2009","2009-1-01",4567,"2009-4-30",4567,,
+"Summer 2009","2009-5-01",4567,"2009-8-31",4567,,
+"Bringing the car home to Texas","2009-9-04",4382,"2009-9-06", 
+5386,"Straight down the Natchez Trace Parkway and then back roads the  
+rest of the way.",1004
+"HPDE: H2R","2009-9-12",5465,"2009-9-12",5493,"H2R sponsored HPDE.  I  
+didn't formally participate, I just snuck out on track a few times  
+during the instructor sessions.",28
+"Open day: H2R","2009-9-20",6145,"2009-9-20",6293,,148
+"HPDE: TWS CCW","2009-10-03",6676,"2009-10-04",6780,"Horrible rain",104
+"HPDE: TWS CW","2009-11-07",7116,"2009-11-08",7451,,335
+"Open Day: H2R","2010-1-22",8851,"2010-1-22",8942,"Hoosier R6",91
+"HPDE: H2R","2010-1-23",8946,"2010-1-24",9174,"Hoosier R6. Kicked ass  
+in red group.",228
+"Open Day: H2R","2010-1-30",9551,"2010-1-30",9718,"New personal best  
+time! 1:27.2 lap clockwise. Instructed paulf and Kevin in car for  
+three sessions.",167
+"HPDE: H2R (Boxers and Boxsters)","2010-2-27",10324,"2010-2-27", 
+10372,"...and that's the end of the first set of Hoosiers. They're  
+cooked.",48
+"HPDE: TWS CCW","2010-3-13",10766,"2010-3-14",10959,,193
+"HPDE: H2R","2010-3-27",11640,"2010-3-27",11783,"1:26.6! I'm getting  
+faster",143
+"HPDE: MSR Houston","2010-4-17",12150,"2010-4-18",12329,"First time at  
+this track and I loved it. Torrential rain on Sunday but we still  
+ran.",179
 
 
 VEHICLE
-Name,Odometer,Units,Notes
-"2007 Porsche 911 C2S","mi","MPG","License Plate: TX-BOFH
-VIN:WP0CB29937S776108
+Name,Odometer,Units,Notes,Tank Capacity,Tank Units,Home Currency,Flags
+"2007 GT3 RS","mi","MPG","License Plate:
+VIN:
 
 Insurance Name:
 Policy No.:
 Phone:
 Notes:
-"
+",17.700001,gal,USD,0
+
+
+TIRE LOG
+Name,Start Date,Start Odometer (mi.),Size,Size  
+Adjustment,Distance,Age,Note,Flags
+"Pilot Sport Cups","2009-8-31",4382,,,3378,"3 Months",,0
+"Potenza RE-11","2009-12-17",7760,,,4531,"4 Months",,0
+
 ---- End Copy and Paste ----
 
 
 
+
+
+
 Sent from my iPhone
---Apple-Mail-1-722008715
+--Apple-Mail-1--795369970
+Content-Type: multipart/mixed;
+	boundary=Apple-Mail-2--795369947
+Content-Transfer-Encoding: 7bit
+
+
+--Apple-Mail-2--795369947
 Content-Type: text/html;
 	charset=utf-8
 Content-Transfer-Encoding: quoted-printable
@@ -462,468 +308,456 @@ format.</p><h3>Backup</h3><p>To backup your Road Trip data, simply send =
 this email to yourself and archive it in your =
 mailbox.</p><h3>Restore</h3><p>To restore this data into Road Trip, =
 forward this email to your iPhone or iPod, then <b><a =
-href=3D"desroadtrip://roadtrip.darrenstone.ca/import?version=3D130%26forma=
-t=3D1#Um9hZFRyaXAsMTMwCkNhck1vZGVsLDIwMDclMjBQb3JzY2hlJTIwOTExJTIwQzJTLDAs=
-MCwwLExpY2Vuc2UlMjBQbGF0ZTolMjBUWC1CT0ZIJTBBVklOOldQMENCMjk5MzdTNzc2MTA4JT=
-BBJTBBSW5zdXJhbmNlJTIwTmFtZTolMEFQb2xpY3klMjBOby46JTBBUGhvbmU6JTBBTm90ZXM6=
-JTBBCkZ1ZWxSZWNvcmRzLDEzMCwxNTcKZiwzMjU1NiwyMDA5LTQtMjYsMTMuOTc0LDAsMi4yMz=
-ksMSwsLFNhYyUyMG4lMjBQYWMlMjBieSUyMEgyUixQbGF0aW51bSxUcmFjaywwLCwxMjQuMDAw=
-MDAwCmYsMzI0MzIsMjAwOS00LTE4LDEwLjE2MywwLDIuMjM5LDEsLCxTYWMlMjBuJTIwUGFjJT=
-IwYnklMjBIMlIsUGxhdGludW0sVHJhY2ssMCwsMjg2LjAwMDAwMApmLDMyMTQ2LDIwMDktNC0x=
-MCwxNC45OTMsMCwyLjM1OSwxLCwsRXh4b24sUGxhdGludW0sLDAsLDI0MS4xMDAwMDYKZiwzMT=
-kwNCwyMDA5LTMtMjgsMTIuNDMyLDAsMi4yMDksMSwsLFRldGNvLFBsYXRpbnVtLCwwLCwyMjAu=
-ODk5OTk0CmYsMzE2ODQsMjAwOS0zLTI0LDE0LjAxOCwwLDIuMjU5LDEsLCxTaGVsbCxQbGF0aW=
-51bSwsMCwsMjc2LjUwMDAwMApmLDMxNDA3LDIwMDktMy0yMSwxMy43MDgsMCwyLjE5OSwxLCws=
-RXh4b24sUGxhdGludW0sLDAsLDI3Ni43OTk5ODgKZiwzMTEzMCwyMDA5LTMtMTYsMTMuNDA4LD=
-AsMi4yMTksMSwsLENoZXZyb24sUGxhdGludW0sLDAsLDI0MS44MDAwMDMKZiwzMDg4MSwyMDA5=
-LTMtMTUsMTIuOTUxLDAsMS45OTksMSwsLFN1bm1hcnQlMjBTZWFseSxQbGF0aW51bSwsMCwsMT=
-g3LjgwMDAwMwpmLDMwNjkzLDIwMDktMy01LDEzLjg1NiwwLDEuOTM5LDEsLCxDaXRnbyxQbGF0=
-aW51bSwsMCwsMjQ3Ljg5OTk5NApmLDMwNDQ1LDIwMDktMi0yNSwxNC4wMDIsMCwyLjAwOSwxLC=
-wsQ2hldnJvbixQbGF0aW51bSwsMCwsMjU5LjcwMDAxMgpmLDMwMTgzLDIwMDktMi0yMSwxMy4z=
-NzUsMCwyLjA5OSwxLCwsU2hlbGwsUGxhdGludW0sLDAsLDI4My4yOTk5ODgKZiwyOTkwMCwyMD=
-A5LTItMjEsMTIuNjcxLDAsMi4wOTksMSwsLFNoZWxsLFBsYXRpbnVtLCwwLCwyMzguODk5OTk0=
-CmYsMjk2NjEsMjAwOS0yLTUsMTAuMjEzLDAsMi4xNTksMSwsLFNoZWxsLFBsYXRpbnVtLCwwLC=
-wyMDYuMzk5OTk0CmYsMjk0NTQsMjAwOS0yLTMsMTAuMjc4LDAsMS45OTksMSwsLEhFQixQbGF0=
-aW51bSwsMCwsMTgwLjE5OTk5NwpmLDI5Mjc0LDIwMDktMS0zMCwxMy43NDgsMCwyLjA1OSwxLC=
-wsQ2hldnJvbixPcHRpbWEsLDAsLDIzNy41MDAwMDAKZiwyOTAzNiwyMDA5LTEtMjQsMTQuMjA3=
-LDAsMi4wMTksMSwsLEV4eG9uLE9wdGltYSwsMCwsMjUzLjEwMDAwNgpmLDI4NzgyLDIwMDktMS=
-0xNiwxMy44MDgsMCwyLjAxOSwxLCwsRXh4b24sT3B0aW1hLCwwLCwyNTQuMDAwMDAwCmYsMjg1=
-MjcsMjAwOS0xLTEyLDUuNTIwLDAsMS44NTksMSwsLENoZXZyb24sT3B0aW1hLCwwLCw4Ny41MD=
-AwMDAKZiwyODQ0MCwyMDA5LTEtMTAsMTQuNDg1LDAsMS44ODksMSwsLENoZXZyb24sT3B0aW1h=
-LCwwLCwyMzcuMzAwMDAzCmYsMjgyMDIsMjAwOC0xMi0zMSwxNC44MjgsMCwxLjcxOSwxLCwsSE=
-VCLE9wdGltYSwsMCwsMzA3LjEwMDAwNgpmLDI3ODk1LDIwMDgtMTItMjYsMy40OTgsMCwxLjc1=
-OSwxLCwsRXh4b24sT3B0aW1hLCwwLCw3OC41MDAwMDAKZiwyNzgxNywyMDA4LTEyLTI2LDExLj=
-UzNCwwLDEuNjQ5LDEsLCw3JTIwRWxldmVuLE9wdGltYSwsMCwsMjIwLjMwMDAwMwpmLDI3NTk2=
-LDIwMDgtMTItMjEsNi45NTcsMCwxLjc2OSwxLCwsU2FjJTIwbiUyMFBhYyUyMGJ5JTIwSDJSLE=
-9wdGltYSwsMCwsMTYxLjEwMDAwNgpmLDI3NDM1LDIwMDgtMTItMjAsMTAuMTE0LDAsMS45Nzks=
-MSwsLEV4eG9uLE9wdGltYSwsMCwsMjMzLjMwMDAwMwpmLDI3MjAyLDIwMDgtMTItMTksMTEuNz=
-UwLDAsMS44ODksMSwsLENoZXZyb24sT3B0aW1hLCwwLCwyMzMuMDAwMDAwCmYsMjcwMDAsMjAw=
-OC0xMi04LDEwLjM4NywwLDIuMjU5LDEsLCxUZXhhY28sT3B0aW1hLCwwLCwyNzQuMjk5OTg4Cm=
-YsMjY4NDEsMjAwOC0xMi04LDEyLjc3OCwwLDIuMTU5LDEsLCxUZXhhY28sT3B0aW1hLCwwLCwx=
-MTYuNjk5OTk3CmYsMjY3MjUsMjAwOC0xMi03LDExLjAyOSwwLDIuMTU5LDEsLCxUZXhhY28sT3=
-B0aW1hLCwwLCwxODMuNTAwMDAwCmYsMjY1NDEsMjAwOC0xMi02LDcuMDAwLDAsMi4xOTcsMSws=
-LEhFQixPcHRpbWEsLDAsLDE0NS44OTk5OTQKZiwyNjM5NSwyMDA4LTExLTIyLDEzLjAwMCwwLD=
-IuMzEzLDEsLCxDaGV2cm9uLE9wdGltYSwsMCwsMTQ2LjAwMDAwMApmLDI1OTk3LDIwMDgtMTEt=
-MTUsMTEuMTQ2LDAsMi4zOTksMSwsLFNoZWxsLE9wdGltYSwsMCwsMjA0LjgwMDAwMwpmLDI1Nz=
-kyLDIwMDgtMTEtMTAsMTQuNTY4LDAsMi4zNzksMSwsLFRleGFjbyxPcHRpbWEsLDAsLDI0Ni4w=
-MDAwMDAKZiwyNTU0NiwyMDA4LTExLTEsMTIuMjIxLDAsMi4zNzksMSwsLEV4eG9uLE9wdGltYS=
-wsMCwsMjM3LjY5OTk5NwpmLDI1MzA5LDIwMDgtMTAtMjksOC43OTgsMCwyLjYyOSwxLCwsQ2hl=
-dnJvbixPcHRpbWEsLDAsLDEyMC4wOTk5OTgKZiwyNTE4OSwyMDA4LTEwLTIxLDEzLjUwMCwwLD=
-MuNDc5LDEsLCxDaGV2cm9uLE9wdGltYSwsMCwsMTk1LjAwMDAwMApmLDI0OTk0LDIwMDgtOS0y=
-OCw3LjE4MCwwLDMuODA5LDEsLCxDaGV2cm9uLE9wdGltYSwsMCwsMTA4LjAwMDAwMApmLDI0OD=
-g2LDIwMDgtOS0yNywxNC44MjAsMCwzLjgyOSwxLCwsRXh4b24sT3B0aW1hLCwwLCwyMTkuODAw=
-MDAzCmYsMjQ2NjYsMjAwOC05LTEyLDEzLjY3OCwwLDMuODg5LDEsLCxTaGVsbCxPcHRpbWEsLD=
-AsLDE5NS4zOTk5OTQKZiwyNDQ3MSwyMDA4LTgtMzAsNy4zMzYsMCwzLjg0OSwxLCwsQ2hldnJv=
-bixPcHRpbWEsLDAsLDE0OC44MDAwMDMKZiwyNDMyMiwyMDA4LTgtMjksMTIuMTEzLDAsMy44NT=
-ksMSwsLENoZXZyb24sT3B0aW1hLCwwLCwyMjguODk5OTk0CmYsMjQwOTMsMjAwOC04LTI2LDEx=
-LjEyNCwwLDMuNzM5LDEsLCxFeHhvbixPcHRpbWEsLDAsLDIxMi44OTk5OTQKZiwyMzg4MCwyMD=
-A4LTgtMjMsMTEuMjUyLDAsMy44NzksMSwsLFNoZWxsLE9wdGltYSwsMCwsMjE1LjM5OTk5NApm=
-LDIzNjY1LDIwMDgtOC0yMCw4LjcwNiwwLDMuOTU5LDEsLCxDaGV2cm9uLE9wdGltYSwsMCwsMT=
-M3LjY5OTk5NwpmLDIzNTI3LDIwMDgtOC0xMiwxNC41MjksMCwzLjk5OSwxLCwsRXh4b24sT3B0=
-aW1hLCwwLCwyNTcuMjk5OTg4CmYsMjMyNzAsMjAwOC04LTEwLDExLjQ3OCwwLDMuOTg5LDEsLC=
-xDaGV2cm9uLE9wdGltYSwsMCwsMTk3LjYwMDAwNgpmLDIzMDcyLDIwMDgtOC05LDE1Ljc0NCww=
-LDQuMDM5LDEsLCxFeHhvbixPcHRpbWEsLDAsLDE4Ny42MDAwMDYKZiwyMjg4NCwyMDA4LTgtOC=
-wxMy4yOTksMCwzLjk0OSwxLCwsQ2hldnJvbixPcHRpbWEsLDAsLDE1Ni42MDAwMDYKZiwyMjcy=
-NywyMDA4LTgtNCw4Ljk5NCwwLDQuMDM5LDEsLCxFeHhvbixPcHRpbWEsLDAsLDE1NC4xOTk5OT=
-cKZiwyMjU3MywyMDA4LTctMjIsMTUuNDA1LDAsNC4xNTksMSwsLFZhbGVybyxPcHRpbWEsLDAs=
-LDI2NS42MDAwMDYKZiwyMjMwNywyMDA4LTctMTksMTUuMTMwLDAsNC4xODksMSwsLEhFQixPcH=
-RpbWEsLDAsLDI2Ny4yMDAwMTIKZiwyMjA0MCwyMDA4LTctMTMsMTEuODY1LDAsNC4yMjksMSws=
-LENoZXZyb24sT3B0aW1hLCwwLCwyMTEuODk5OTk0CmYsMjE1NDksMjAwOC03LTYsMTIuMjM5LD=
-AsNC4yMzksMSwsLENoZXZyb24sT3B0aW1hLCwwLCwxODIuMTk5OTk3CmYsMjEzNjcsMjAwOC03=
-LTEsMTQuNTA4LDAsNC4yNDksMSwsLFJhY2V3YXksQ2hhc2UsVHJhY2ssMCwsMTMxLjUwMDAwMA=
-pmLDIxMjM1LDIwMDgtNi0yOSw4Ljc3MiwwLDQuMTY5LDEsLCxUZXRjbyxPcHRpbWEsLDAsLDEz=
-NC44OTk5OTQKZiwyMTEwMCwyMDA4LTYtMjYsMTQuNDc1LDAsNC4yNzksMSwsLEV4eG9uLE9wdG=
-ltYSwsMCwsMjU1LjE5OTk5NwpmLDIwODQ1LDIwMDgtNi0yMiwxNC4wODgsMCw0LjE5OSwxLCws=
-RXh4b24sT3B0aW1hLCwwLCwxOTguMTk5OTk3CmYsMjA2NDcsMjAwOC02LTE1LDEyLjA1MiwwLD=
-QuMjA5LDEsLCxDaGV2cm9uLE9wdGltYSwsMCwsMjExLjE5OTk5NwpmLDIwNDM2LDIwMDgtNi0x=
-NCwxMS40MzQsMCw0LjE2OSwxLCwsRXh4b24sT3B0aW1hLCwwLCwyMTkuNjk5OTk3CmYsMjAyMT=
-YsMjAwOC02LTExLDkuODE2LDAsNC4xODksMSwsLENoZXZyb24sT3B0aW1hLCwwLCwxNjcuMDAw=
-MDAwCmYsMjAwNDksMjAwOC02LTksMTMuNDU5LDAsNC4yMzksMSwsLENoZXZyb24sT3B0aW1hLF=
-RyYWNrLDAsLDE0MC41MDAwMDAKZiwxOTkwOCwyMDA4LTYtOCwxMS41MDAsMCw0LjIwNCwxLCws=
-RXh4b24sT3B0aW1hLCwwLCwxMTMuMDAwMDAwCmYsMTk3OTUsMjAwOC02LTcsNS43NzEsMCw0Lj=
-E3OSwxLCwsU2hlbGwsT3B0aW1hLCwwLCwxMjYuNDAwMDAyCmYsMTk2NjgsMjAwOC02LTYsMTQu=
-NzU3LDAsNC4wNzksMSwsLEV4eG9uLE9wdGltYSwsMCwsMTkwLjYwMDAwNgpmLDE5NDc4LDIwMD=
-gtNi0yLDcuNjk3LDAsMy45OTksMSwsLEV4eG9uLE9wdGltYSwsMCwsMTMwLjM5OTk5NApmLDE5=
-MzQ3LDIwMDgtNS0zMCwxNS4yMDMsMCw0LjA4OSwxLCwsQ2hldnJvbixPcHRpbWEsLDAsLDI0OS=
-44OTk5OTQKZiwxOTA5NywyMDA4LTUtMTksMTQuNDU5LDAsMy45MTksMSwsLEV4eG9uLE9wdGlt=
-YSwsMCwsMjI2LjMwMDAwMwpmLDE4ODcyLDIwMDgtNS0xMCwxNS4xNzAsMCwzLjk3OSwxLCwsQ2=
-hldnJvbixPcHRpbWEsLDAsLDI4Ny41MDAwMDAKZiwxODU4NCwyMDA4LTUtNywxMS41NjAsMCwz=
-Ljg1OSwxLCwsQ2hldnJvbixPcHRpbWEsLDAsLDIwNy4xMDAwMDYKZiwxODM3NywyMDA4LTUtNS=
-wxMC4zMzEsMCwzLjgyOSwxLCwsVGV4YWNvLE9wdGltYSxUcmFjaywwLCw5MS42OTk5OTcKZiwx=
-ODI4NSwyMDA4LTUtNCwxMC44NDQsMCwzLjgyOSwxLCwsVGV4YWNvLE9wdGltYSxUcmFjaywwLC=
-wxMDUuODAwMDAzCmYsMTgxNzksMjAwOC01LTMsNy4zNTAsMCwzLjgyOSwxLCwsVGV4YWNvLE9w=
-dGltYSwsMCwsMTQ5LjM5OTk5NApmLDE4MDMwLDIwMDgtNS0zLDYuMDU4LDAsMy43MjksMSwsLE=
-hFQixPcHRpbWEsLDAsLDEwOC44MDAwMDMKZiwxNzkyMSwyMDA4LTUtMSwxNS4xNjYsMCwzLjc4=
-OSwxLCwsQ2hldnJvbixPcHRpbWEsLDAsLDIzNC4xMDAwMDYKZiwxNzY4NywyMDA4LTQtMjcsNy=
-43ODAsMCwzLjc5OSwxLCwsU2hlbGwsT3B0aW1hLCwwLCwxNDguODAwMDAzCmYsMTc1MzgsMjAw=
-OC00LTI2LDkuNzgyLDAsMy42OTksMSwsLEV4eG9uLE9wdGltYSwsMCwsMjIwLjg5OTk5NApmLD=
-E3MzE3LDIwMDgtNC0yNCw3LjU2NiwwLDMuNzE5LDEsLCxDaGV2cm9uLE9wdGltYSwsMCwsMTAz=
-LjkwMDAwMgpmLDE3MjExLDIwMDgtNC0yMiwxNC4yMDgsMCwzLjU2OSwxLCwsU2hlbGwsT3B0aW=
-1hLCwwLCwyMDIuNTAwMDAwCmYsMTcwMDksMjAwOC00LTE2LDE0LjYwNSwwLDMuNjc5LDEsLCxU=
-ZXhhY28sT3B0aW1hLCwwLCwyMjAuMzk5OTk0CmYsMTY3ODksMjAwOC00LTE0LDIuOTY3LDAsMy=
-41MTksMSwsLEV4eG9uLE9wdGltYSwsMCwsNDYuMDAwMDAwCmYsMTY3NDMsMjAwOC00LTEzLDE0=
-LjIzNCwwLDMuNTI5LDEsLCxDaGV2cm9uLE9wdGltYSwsMCwsMTg1Ljg5OTk5NApmLDE2NTU3LD=
-IwMDgtMy0zMCwxNC42NjEsMCwzLjQxOSwxLCwsQ2hldnJvbixPcHRpbWEsLDAsLDIzMy4wMDAw=
-MDAKZiwxNjMyNCwyMDA4LTMtMjIsMTQuMjYzLDAsMy40NTksMSwsLFNoZWxsLE9wdGltYSwsMC=
-wsMjc4LjI5OTk4OApmLDE2MDQ1LDIwMDgtMy0xNywxNC4xNzgsMCwzLjQ3OSwxLCwsVGV4YWNv=
-LE9wdGltYSwsMCwsMjIzLjY5OTk5NwpmLDE1ODIyLDIwMDgtMy0xMSwxMy45MDMsMCwzLjQ3OS=
-wxLCwsVGV4YWNvLE9wdGltYSwsMCwsMjI1LjMwMDAwMwpmLDE1NTk2LDIwMDgtMy0zLDEwLjY4=
-MiwwLDMuMzE5LDEsLCxDaGV2cm9uLE9wdGltYSwsMCwsMTA5LjY5OTk5NwpmLDE1NDg2LDIwMD=
-gtMy0yLDE0LjE4OSwwLDMuNDU5LDEsLCxTaGVsbCxPcHRpbWEsVHJhY2ssMCwsMTI2LjE5OTk5=
-NwpmLDE1MzYwLDIwMDgtMy0yLDUuNDk4LDAsMy40NTksMSwsLFNoZWxsLE9wdGltYSwsMCwsMT=
-E3LjgwMDAwMwpmLDE1MjMyLDIwMDgtMy0xLDYuODQ5LDAsMy4zNTksMSwsLEV4eG9uLE9wdGlt=
-YSwsMCwsMTQ1LjE5OTk5NwpmLDE1MDk3LDIwMDgtMy0xLDEyLjU3MiwwLDMuMTk5LDEsLCxSYW=
-5kYWxsJ3MlMjBGdWVsLE9wdGltYSwsMCwsMjQ4Ljg5OTk5NApmLDE0ODQ4LDIwMDgtMi0yNywx=
-My45MzIsMCwzLjI5OSwxLCwsVGV0Y28sT3B0aW1hLCwwLCwyMjMuMDAwMDAwCmYsMTQ2MjUsMj=
-AwOC0yLTI0LDExLjI1OCwwLDMuMjM5LDEsLCxDaGV2cm9uLE9wdGltYSwsMCwsMTc5LjY5OTk5=
-NwpmLDE0NDQ1LDIwMDgtMi0xNCwxNC4xNTgsMCwzLjE1OSwxLCwsRXh4b24sT3B0aW1hLCwwLC=
-wyNzkuMTAwMDA2CmYsMTQxNjYsMjAwOC0yLTE0LDE0LjM1OCwwLDMuMTY5LDEsLCxDaGV2cm9u=
-LE9wdGltYSwsMCwsMjAxLjY5OTk5NwpmLDEzOTY0LDIwMDgtMS0zMSwxNC42ODQsMCwzLjE2OS=
-wxLCwsQ2hldnJvbixPcHRpbWEsLDAsLDI2Ny4yOTk5ODgKZiwxMzY5NywyMDA4LTEtMjcsMTMu=
-MDU3LDAsMy4yMTksMSwsLFNoZWxsLE9wdGltYSwsMCwsMjY3LjAwMDAwMApmLDEzNDYxLDIwMD=
-gtMS0yMiwxMC4xMzgsMCwzLjE4OSwxLCwsQ2hldnJvbixPcHRpbWEsLDAsLDIxNi4zMDAwMDMK=
-ZiwxMzI0NSwyMDA4LTEtMTksMTEuNjQ4LDAsMy4yNTksMSwsLEV4eG9uLE9wdGltYSwsMCwsMj=
-MzLjgwMDAwMwpmLDEzMDExLDIwMDgtMS0xNyw3LjE5MSwwLDMuMjM5LDEsLCxDaGV2cm9uLE9w=
-dGltYSwsMCwsMTI1LjU5OTk5OApmLDEyODg2LDIwMDgtMS0xMCwxNS4yNDksMCwzLjE3OSwxLC=
-wsRXh4b24sT3B0aW1hLCwwLCwzMjcuODk5OTk0CmYsMTI4MjgsMjAwOC03LTEyLDE1LjYyOSww=
-LDQuMTY5LDEsLCxFeHhvbixPcHRpbWEsLDAsLDI3OS4xMDAwMDYKZiwxMjU1OCwyMDA4LTEtNy=
-wxMS4zMDAsMCwzLjIzOSwxLCwsQ2hldnJvbixPcHRpbWEsLDAsLDE2Ny44OTk5OTQKZiwxMjM5=
-MCwyMDA3LTEyLTI5LDEwLjU4NywwLDMuMTc5LDEsLCxFeHhvbixPcHRpbWEsLDAsLDIzOS44OT=
-k5OTQKZiwxMjE1MCwyMDA3LTEyLTI4LDEwLjYyOSwwLDMuMTY5LDEsLCxDaGV2cm9uLE9wdGlt=
-YSwsMCwsMjM0LjM5OTk5NApmLDExOTE1LDIwMDctMTItMjcsNi40NDMsMCwzLjE1OSwxLCwsRX=
-h4b24sT3B0aW1hLFRyYWNrLDAsLDU4LjcwMDAwMQpmLDExODI5LDIwMDctMTItMTcsMTQuNTI1=
-LDAsMy4xOTksMSwsLFNoZWxsLE9wdGltYSwsMCwsMjY1LjYwMDAwNgpmLDExNTYzLDIwMDctMT=
-ItOSwxNS4xMzcsMCwzLjE2OSwxLCwsU2hlbGwsT3B0aW1hLCwwLCwyNTAuMDAwMDAwCmYsMTEz=
-MTMsMjAwNy0xMi00LDEyLjYwMywwLDMuMTk5LDEsLCxDaGV2cm9uLE9wdGltYSwsMCwsMjE0Lj=
-UwMDAwMApmLDExMDkyLDIwMDctMTEtMjMsNi42NzAsMCwzLjExOSwxLCwsTW9iaWwsT3B0aW1h=
-LCwwLCwxNDUuMTAwMDA2CmYsMTA5NDcsMjAwNy0xMS0yMiwxMy41MzgsMCwzLjE4OSwxLCwsUX=
-VpY2tUcmlwLE9wdGltYSwsMCwsMjkyLjc5OTk4OApmLDEwNjU0LDIwMDctMTEtMjEsMTQuODQ5=
-LDAsMy4yMzksMSwsLEV4eG9uLE9wdGltYSwsMCwsMjc3LjAwMDAwMApmLDEwMzc3LDIwMDctMT=
-EtMTIsMTIuMTQ1LDAsMy4yOTksMSwsLEV4eG9uLE9wdGltYSwsMCwsMjMzLjEwMDAwNgpmLDEw=
-MjYxLDIwMDctMTEtMTEsMTIuMDYyLDAsMy4zMjksMSwsLEV4eG9uLE9wdGltYSxUcmFjaywwLC=
-wxMTYuNDAwMDAyCmYsMTAxNDUsMjAwNy0xMS0xMSw1LjM5MywwLDMuMzI5LDEsLCxFeHhvbixP=
-cHRpbWEsLDAsLDExNi4wMDAwMDAKZiwxMDAzMSwyMDA3LTExLTEwLDExLjQ4NiwwLDMuMjU5LD=
-EsLCxFeHhvbixPcHRpbWEsLDAsLDE3OS4zMDAwMDMKZiw5ODUxLDIwMDctMTEtNCwxMi45NzAs=
-MCwyLjk5OSwxLCwsRXh4b24sT3B0aW1hLCwwLCwyNTMuMzk5OTk0CmYsOTU5NywyMDA3LTEwLT=
-I3LDE1LjM2NCwwLDIuOTg5LDEsLCxDaGV2cm9uLE9wdGltYSwsMCwsMjQzLjUwMDAwMApmLDkz=
-NTQsMjAwNy0xMC0yMSwxNC40NjksMCwyLjk4OSwxLCwsQ2hldnJvbixPcHRpbWEsLDAsLDIyNC=
-4xOTk5OTcKZiw5MTI5LDIwMDctMTAtMTgsMTQuMzM3LDAsMi45MDksMSwsLENoZXZyb24sT3B0=
-aW1hLCwwLCwyNDUuMzk5OTk0CmYsODg4NCwyMDA3LTEwLTE1LDEzLjQyNSwwLDIuOTE5LDEsLC=
-xDaGV2cm9uLE9wdGltYSwsMCwsMjE1LjEwMDAwNgpmLDg2NjksMjAwNy05LTI0LDE0LjI1Miww=
-LDIuOTY5LDEsLCxDaGV2cm9uLE9wdGltYSwsMCwsMjE3LjY5OTk5NwpmLDg0NTEsMjAwNy05LT=
-EzLDEzLjU4NywwLDIuOTk5LDEsLCxTaGVsbCxPcHRpbWEsLDAsLDIxNS42OTk5OTcKZiw4MjM1=
-LDIwMDctOC0yOCwxNC4xMjMsMCwyLjk0OSwxLCwsVGV0Y28sT3B0aW1hLCwwLCwyNDAuODAwMD=
-AzCmYsNzk5NCwyMDA3LTgtMTgsMTQuMjU5LDAsMi45NzksMSwsLFNoZWxsLE9wdGltYSwsMCws=
-Mjc0Ljg5OTk5NApmLDc3MTgsMjAwNy04LTE1LDEyLjk5NSwwLDIuOTY5LDEsLCxDaGV2cm9uLE=
-9wdGltYSwsMCwsMjY1LjYwMDAwNgpmLDc0NTIsMjAwNy04LTE0LDEyLjkzOCwwLDIuOTU5LDEs=
-LCxDaGV2cm9uLE9wdGltYSwsMCwsMjM2LjAwMDAwMApmLDcyMTYsMjAwNy04LTgsMTMuOTU2LD=
-AsMi45NjksMSwsLENoZXZyb24sT3B0aW1hLCwwLCwyMzkuMzk5OTk0CmYsNjk3NywyMDA3LTgt=
-MiwxMi45NTUsMCwyLjk5OSwxLCwsRXh4b24sT3B0aW1hLCwwLCwyNTAuNTAwMDAwCmYsNjcyNC=
-wyMDA3LTctMzAsOC4wMTgsMCwyLjk2OSwxLCwsQ2hldnJvbixPcHRpbWEsLDAsLDI1My4wMDAw=
-MDAKZiw2NjA0LDIwMDctNy0yMywxMy45NzcsMCwzLjEyOSwxLCwsQ2hldnJvbixPcHRpbWEsLD=
-AsLDIzMC4zOTk5OTQKZiw2Mzc0LDIwMDctNy0xNSw4LjQ4MywwLDMuMTQ5LDEsLCxDaGV2cm9u=
-LE9wdGltYSwsMCwsMTI5LjM5OTk5NApmLDYyNDUsMjAwNy03LTgsMTYuMDYwLDAsMy4wOTksMS=
-wsLENoZXZyb24sT3B0aW1hLCwwLCwzMzguNzk5OTg4CmYsNTkwNiwyMDA3LTctNSwxNS4zOTcs=
-MCwzLjEzOSwxLCwsU2hlbGwsT3B0aW1hLCwwLCwzMjQuMDAwMDAwCmYsNTU4MiwyMDA3LTctMy=
-wxNC45MTcsMCwzLjA5OSwxLCwsQ2hldnJvbixPcHRpbWEsLDAsLDI0Ny4zOTk5OTQKZiw1MzM0=
-LDIwMDctNi0yNywxMi42MzcsMCwyLjk5OSwxLCwsRXh4b24sT3B0aW1hLCwwLCwyMzMuNjk5OT=
-k3CmYsNTEwMCwyMDA3LTYtMjYsNi4zNDEsMCwzLjE0OSwxLCwsQ2hldnJvbixPcHRpbWEsLDAs=
-LDk4LjA5OTk5OApmLDUwMDEsMjAwNy02LTIzLDExLjA1NCwwLDMuMjU5LDEsLCxFeHhvbixPcH=
-RpbWEsLDAsLDE4NS4zMDAwMDMKZiw0ODE1LDIwMDctNi0xNiwxMy44OTAsMCwzLjA2OSwxLCws=
-V2lubmVycyUyMENvcm5lcixPcHRpbWEsLDAsLDI2OS4zOTk5OTQKZiw0NTQ1LDIwMDctNi0xNS=
-w3LjI5MSwwLDMuMTk5LDEsLCxFeHhvbixPcHRpbWEsLDAsLDEwOC40MDAwMDIKZiw0NDM3LDIw=
-MDctNi0xMCwxNC4yMzYsMCwzLjIyOSwxLCwsQ2hldnJvbixPcHRpbWEsLDAsLDIxNi44OTk5OT=
-QKZiw0MjIwLDIwMDctNi01LDE0LjI4NCwwLDMuMjM5LDEsLCxFeHhvbixPcHRpbWEsLDAsLDIx=
-Ny4wMDAwMDAKZiwzODk2LDIwMDctNi00LDExLjIxNSwwLDMuMjI5LDEsLCxDaGV2cm9uLE9wdG=
-ltYSwsMCwsMzI0LjAwMDAwMApmLDM1MDAsMjAwNy01LTIxLDEzLjA0MCwwLDMuMTc5LDEsLCxD=
-aGV2cm9uLE9wdGltYSwsMCwsMzk2LjAwMDAwMApmLDMyNzEsMjAwNy01LTEzLDE0LjE3OSwwLD=
-MuMDY5LDEsLCxDaGV2cm9uLE9wdGltYSwsMCwsMjI5LjAwMDAwMApmLDMwNDAsMjAwNy01LTks=
-MTIuMDY4LDAsMy4wOTksMSwsLEV4eG9uLE9wdGltYSwsMCwsMjMxLjAwMDAwMApmLDI3OTYsMj=
-AwNy01LTksMTEuMjE2LDAsMy4wNjksMSwsLENoZXZyb24sT3B0aW1hLCwwLCwyNDQuMDAwMDAw=
-CmYsMjY0MSwyMDA3LTQtMjksMTQuMDEwLDAsMy4wNDksMSwsLEV4eG9uLE9wdGltYSwsMCwsMT=
-U1LjAwMDAwMApmLDIzNzcsMjAwNy00LTI2LDEzLjUyMywwLDMuMDk5LDEsLCxUZXhhY28sT3B0=
-aW1hLCwwLCwyNjQuMDAwMDAwCmYsMjEyNywyMDA3LTQtMjIsMTUuMTQ5LDAsMi45MzksMSwsLE=
-NoZXZyb24sT3B0aW1hLCwwLCwyNTAuMDAwMDAwCmYsMTc5NywyMDA3LTQtMjIsMTQuMzM5LDAs=
-Mi44MzksMSwsLFNoZWxsLE9wdGltYSwsMCwsMzMwLjAwMDAwMApmLDE1MzEsMjAwNy00LTE5LD=
-EzLjU1NCwwLDIuOTM5LDEsLCxUZXRjbyxPcHRpbWEsLDAsLDMzMC4wMDAwMDAKZiwxMzQxLDIw=
-MDctNC0xMiwxMy4yNjgsMCwyLjg5OSwxLCwsRXh4b24sT3B0aW1hLCwwLCwyNjYuMDAwMDAwCm=
-YsMTE1OCwyMDA3LTMtMTgsMTQuMDA3LDAsMi41NzksMSwsLEV4eG9uLE9wdGltYSwsMCwsMTgz=
-LjAwMDAwMApmLDk1NSwyMDA3LTMtMTAsMTEuMTc3LDAsMi41ODksMSwsLFRldGNvLFBsYXRpbn=
-VtLCwwLCwyMDMuMDAwMDAwCmYsNzk2LDIwMDctMi0yOCwxMy43NDcsMCwyLjQ1OSwxLCwsRXh4=
-b24sT3B0aW1hLCwwLCwxNTkuMDAwMDAwCmYsNjAwLDIwMDctMi0yNCwxMy40NDksMCwyLjM3OS=
-wxLCwsRXh4b24sT3B0aW1hLCwwLCwxOTYuMDAwMDAwCmYsMzk5LDIwMDctMi0xNywxMy4xMzcs=
-MCwyLjI5OSwxLCwsVGV0Y28sT3B0aW1hLCwwLCwyMDEuMDAwMDAwCmYsMTk5LDIwMDctMi0xNS=
-wxMC45ODMsMCwyLjI5OSwxLCwsQ2hldnJvbixPcHRpbWEsLDksLDE5OS4wMDAwMDAKTWFpbnRl=
-bmFuY2VSZWNvcmRzLDEzMCwxNwptLDI1MTk5LDIwMDgtOS0yNixSZWFyJTIwV2hlZWwlMjBEYW=
-1hZ2UsMjIzNy4wMCwsUm9nZXIlMjBCZWFzbGV5JTIwUG9yc2NoZSwwLFJlcGFpcixPcHRpbWEs=
-VHJhY2ssLDAuMCwwCm0sMjM0NTAsMjAwOC04LTExLE5ldyUyMFRpcmVzJTIwJTI2JTIwTmF2JT=
-IwVXBkYXRlLDI3NTQuMzIsLFJvZ2VyJTIwQmVhc2xleSUyMFBvcnNjaGUsMCxNYWludGVuYW5j=
-ZSxPcHRpbWEsLCwwLjAsMAptLDE5MDM1LDIwMDgtNS0xNixPaWwlMjBDaGFuZ2UlMjAlMjYlMj=
-AyMEslMjBTZXJ2aWNlLDU5OC4wMCwsUm9nZXIlMjBCZWFzbGV5JTIwUG9yc2NoZSwwLE1haW50=
-ZW5hbmNlLE9wdGltYSwsLDAuMCwwCm0sMTY5NjIsMjAwOC00LTE0LEJyYWtlJTIwRmx1aWQlMj=
-AlMjYlMjBUZWNoJTIwSW5zcGVjdGlvbiw0NjYuMDAsLENvbHZpbiUyMEF1dG9tb3RpdmUsMCxN=
-YWludGVuYW5jZSxPcHRpbWEsVHJhY2ssLDAuMCwwCm0sMTY3ODksMjAwOC00LTExLFJlYXIlMj=
-BUaXJlcywxMDY3LjAwLCxEaXNjb3VudCUyMFRpcmUsMCxNYWludGVuYW5jZSxPcHRpbWEsLCww=
-LjAsMAptLDEzOTk5LDIwMDgtMi02LEFsaWdubWVudCwyMC4wMCwsSkMlMjBBdXRvJTIwU3BlYy=
-wwLE1haW50ZW5hbmNlLENhc2gsLCwwLjAsMAptLDEzOTk5LDIwMDgtMi02LEZyb250JTIwVGly=
-ZXMsOTU4LjAwLCxEaXNjb3VudCUyMFRpcmUsMCxNYWludGVuYW5jZSxPcHRpbWEsLCwwLjAsMA=
-ptLDEwNTA0LDIwMDctMTEtMTQsUmVwYWlyJTIwUmF0dGxlJTIwSW4lMjBUb3AsMC4wMCwsUm9n=
-ZXIlMjBCZWFzbGV5JTIwUG9yc2NoZSwwLFJlcGFpciwsLCwwLjAsMAptLDEwMzc3LDIwMDctMT=
-EtMTIsVG9wcGVkJTIwT2ZmJTIwT2lsLDAuMDAsLE51Z2dldEhhdXMsMCxNYWludGVuYW5jZSws=
-LCwwLjAsMAptLDkxMDAsMjAwNy0xMC0xOCxSZWFyJTIwVGlyZXMsMTE2NS4wMCwsRGlzY291bn=
-QlMjBUaXJlLDAsTWFpbnRlbmFuY2UsT3B0aW1hLCwsMC4wLDAKbSw2Mjc1LDIwMDctNy05LFdp=
-bmRzaGllbGQlMjBDaGlwJTIwUmVwYWlyLDYwLjAwLCxOdWdnZXRIYXVzLDAsUmVwYWlyLENhc2=
-gsLCwwLjAsMAptLDYyNzUsMjAwNy03LTksT2lsJTIwQ2hhbmdlLDI2NC4wMCwsUm9nZXIlMjBC=
-ZWFzbGV5JTIwUG9yc2NoZSwwLE1haW50ZW5hbmNlLE9wdGltYSwsLDAuMCwwCm0sNTMzNCwyMD=
-A3LTYtMjcsUmVwYWludCUyMFRydW5rJTIwTGlkLDY3Ni4wMCwsSmVmZidzJTIwQXV0byUyMEJv=
-ZHksMCxSZXBhaXIsT3B0aW1hLCwsMC4wLDAKbSw1MTUzLDIwMDctNi0yNSxUb3BwZWQlMjBPZm=
-YlMjBPaWwsNi4wMCwsLDAsTWFpbnRlbmFuY2UsUGxhdGludW0sLCwwLjAsMAptLDQ1MDAsMjAw=
-Ny02LTksU21hcnRUb3AsNDc5LjAwLCwsMCxBY2Nlc3NvcnksUGxhdGludW0sLCwwLjAsMAptLD=
-E1MzEsMjAwNy00LTE1LERlbmlzb24lMjBHYXRld2F5JTIwNTAwLDUxNi4wMCwsTnVnZ2V0SGF1=
-cywwLEFjY2Vzc29yeSxQbGF0aW51bSwsLDAuMCwwCm0sNjAwLDIwMDctMi0yNCxJbnN0YWxsZW=
-QlMjBWMSUyMFJhZGFyJTIwRGV0ZWN0b3IsMTAuMDAsLE51Z2dldEhhdXMsMCxBY2Nlc3Nvcnks=
-Q2FzaCwsLDAuMCwwClJvYWRUcmlwUmVjb3JkcywxMzAsMAo=3D">click this link from =
-your device.</a></b></p><p>You can also use the <b>CSV Importing =
-Tool</b> to import the CSV data below.  Visit <a =
-href=3D"http://darrensoft.ca/roadtrip">http://darrensoft.ca/roadtrip</a> =
-for more details.</p><h3>Transfer to Excel</h3><p>To transfer this data =
-to Excel, select and copy the data below, paste into a new document in =
-Notepad or TextEdit, and save the file with a <b>.CSV</b> file =
-extension.  Visit <a href=3D"http://darrensoft.ca/roadtrip/"><a =
+href=3D"desroadtrip://roadtrip.darrenstone.ca/import?version=3D150%26forma=
+t=3D1#Um9hZFRyaXAsMTUwCkNhck1vZGVsLDIwMDclMjBHVDMlMjBSUywwLDAsMCxMaWNlbnNl=
+JTIwUGxhdGU6JTBBVklOOiUwQSUwQUluc3VyYW5jZSUyME5hbWU6JTBBUG9saWN5JTIwTm8uOi=
+UwQVBob25lOiUwQU5vdGVzOiUwQSwxNy43MCwwLFVTRCwwCkZ1ZWxSZWNvcmRzLDE1MCw1Mgpm=
+LDQ1NjcuMCwyMDA5LTktNSw5LjM1NywwLDIuODA5LDEsRmlyc3QlMjB0YW5rJTIwZXZlcixQcm=
+VtaXVtLEJQJTIwRnJhbmtsaW4lMjBUTixQbGF0aW51bSwsOSwsMC4wLCwsLApmLDQ2OTkuMCwy=
+MDA5LTktNSw3Ljc4MiwwLDIuODU5LDEsLFByZW1pdW0sQ2hldnJvbiUyMENoZXJva2VlJTJDJT=
+IwQUwsUGxhdGludW0sSGlnaHdheSwwLFZhY2F0aW9uLDAuMCwsLCwKZiw0OTM0LjAsMjAwOS05=
+LTYsMTEuMTEyLDAsMi41NjksMSwsUHJlbWl1bSxGbGVldCUyMFdheSUyMEphY2tzb24lMkMlMj=
+BNUyxQbGF0aW51bSxIaWdod2F5LDAsLDAuMCwsLCwKZiw1MTY4LjAsMjAwOS05LTYsMTEuNzEz=
+LDAsMi43OTksMSwsUHJlbWl1bSxDaXRnbyUyMFBpdGtpbiUyQyUyMExBLFBsYXRpbnVtLEhpZ2=
+h3YXksMCwsMC4wLCwsLApmLDU0NTkuMCwyMDA5LTktMTEsMTUuNjQwLDAsMi41MzksMSwsUHJl=
+bWl1bSxDaXRnbyxQbGF0aW51bSwsMCwsMC4wLCwsLApmLDU2ODIuMCwyMDA5LTktMTIsMTEuNT=
+c1LDAsMi42OTksMSwsUHJlbWl1bSxUZXhhY28sUGxhdGludW0sLDAsLDAuMCwsLCwKZiw1OTIy=
+LjAsMjAwOS05LTE1LDE1LjU0MSwwLDIuNDU5LDEsLFByZW1pdW0sQ2l0Z28sUGxhdGludW0sLD=
+AsLDAuMCwsLCwKZiw1OTc2LjAsMjAwOS05LTIwLDQuODIwLDAsMi43NjAsMSwsUHJlbWl1bSxF=
+eHhvbixQbGF0aW51bSwsMCwsMC4wLCwsLApmLDYxOTMuMCwyMDA5LTktMjAsMTIuOTQwLDAsMi=
+42OTksMSwsUHJlbWl1bSxTYWMlMjBuJTIwUGFjJTIwYnklMjBIMlIsUGxhdGludW0sLDAsLDAu=
+MCwsLCwKZiw2Mjk1LjAsMjAwOS05LTIwLDExLjY2NiwwLDIuNjk5LDEsLFByZW1pdW0sU2FjJT=
+IwbiUyMFBhYyUyMGJ5JTIwSDJSLFBsYXRpbnVtLFRyYWNrLDAsLDAuMCwsLCwKZiw2NTI3LjAs=
+MjAwOS05LTI4LDEyLjgyNSwwLDIuNDM5LDEsLFByZW1pdW0sQ2l0Z28sUGxhdGludW0sLDAsLD=
+AuMCwsLCwKZiw2NjY5LjAsMjAwOS0xMC0zLDEwLjI1NCwwLDIuNTk5LDEsLFByZW1pdW0sQ2l0=
+Z28sUGxhdGludW0sLDAsLDAuMCwsLCwKZiw2Nzk5LjAsMjAwOS0xMC00LDExLjQzMCwwLDIuNj=
+MxLDEsLFByZW1pdW0sQ2l0Z28sUGxhdGludW0sVHJhY2ssMCxUcmFjaywwLjAsLCwsCmYsNjk2=
+Mi4wLDIwMDktMTAtMjksMTQuNTI2LDAsMi42OTksMSwsUHJlbWl1bSxDaXRnbyxQbGF0aW51bS=
+xDaXR5LDAsLDAuMCwsLCwKZiw3MTEzLjAsMjAwOS0xMS03LDEwLjQxMCwwLDIuODU5LDEsLFBy=
+ZW1pdW0sU2hlbGwsUGxhdGludW0sLDAsLDAuMCwsLCwKZiw3MTcxLjAsMjAwOS0xMS03LDYuOD=
+AwLDAsMy4zMjUsMSwsUHJlbWl1bSxUZXhhcyUyMFdvcmxkJTIwU3BlZWR3YXksUGxhdGludW0s=
+VHJhY2ssMCwsMC4wLCwsLApmLDcyNDcuMCwyMDA5LTExLTgsNy41NzEsMCwyLjg2MCwxLCxQcm=
+VtaXVtLFNoZWxsLFBsYXRpbnVtLCwwLCwwLjAsLCwsCmYsNzMyNS4wLDIwMDktMTEtOCw4LjQw=
+MCwwLDMuMzAwLDEsLFByZW1pdW0sVGV4YXMlMjBXb3JsZCUyMFNwZWVkd2F5LFBsYXRpbnVtLF=
+RyYWNrLDAsLDAuMCwsLCwKZiw3NDkxLjAsMjAwOS0xMS0yMywxMy43ODksMCwyLjg3OSwxLCxQ=
+cmVtaXVtLEV4eG9uLFBsYXRpbnVtLENpdHksMCwsMC4wLCwsLApmLDc2NjUuMCwyMDA5LTEyLT=
+gsMTQuMzYzLDAsMi44NzksMSwsUHJlbWl1bSxTaGVsbCxQbGF0aW51bSxDaXR5LDAsLDAuMCws=
+LCwKZiw3ODA2LjAsMjAwOS0xMi0yNCwxMi4wMjUsMCwyLjg5OSwxLCxQcmVtaXVtLFNoZWxsLF=
+BsYXRpbnVtLENpdHksMCwsMC4wLCwsLApmLDgwODQuMCwyMDA5LTEyLTI1LDEzLjUwMSwwLDIu=
+OTU5LDEsLFByZW1pdW0sU2hlbGwsUGxhdGludW0sSGlnaHdheSwwLCwwLjAsLCwsCmYsODI4NS=
+4wLDIwMDktMTItMjcsMTAuNzg5LDAsMi44NzksMSwsUHJlbWl1bSxFeHhvbixQbGF0aW51bSxI=
+aWdod2F5LDAsLDAuMCwsLCwKZiw4NDkwLjAsMjAxMC0xLTExLDE0LjI5MSwwLDIuNzk5LDEsLF=
+ByZW1pdW0sQ2l0Z28sUGxhdGludW0sLDAsLDAuMCwsLCwKZiw4NjU2LjAsMjAxMC0xLTE5LDE0=
+LjEyNCwwLDIuNzc5LDEsLFByZW1pdW0sRXh4b24sUGxhdGludW0sQ2l0eSwwLCwwLjAsLCwsCm=
+YsODg0OS4wLDIwMTAtMS0yMiw5LjY5MywwLDMuMTIyLDEsLFByZW1pdW0sU2FjJTIwbiUyMFBh=
+YyUyMGJ5JTIwSDJSLFBsYXRpbnVtLCwwLCwwLjAsLCwsCmYsODk0NC4wLDIwMTAtMS0yMiwxMS=
+43MzUsMCwyLjc3OSwxLCxQcmVtaXVtLFJhY2V3YXksTWFzdGVyQ2FyZCwsMCwsMC4wLCwsLApm=
+LDkwNDkuMCwyMDEwLTEtMjMsMTEuNjMxLDAsMi41NzksMSwsUHJlbWl1bSxTaGVsbCxQbGF0aW=
+51bSxUcmFjaywwLCwwLjAsLCwsCmYsOTEyMS4wLDIwMTAtMS0yNCw5LjE0NCwwLDIuODQxLDEs=
+LFByZW1pdW0sU2hlbGwsUGxhdGludW0sVHJhY2ssMCwsMC4wLCwsLApmLDkxODIuMCwyMDEwLT=
+EtMjQsNy4zMjksMCwyLjgzOSwxLCxQcmVtaXVtLFNoZWxsLFBsYXRpbnVtLFRyYWNrLDAsLDAu=
+MCwsLCwKZiw5Mzg5LjAsMjAxMC0xLTMwLDEyLjI5MiwwLDIuOTM5LDEsLFByZW1pdW0sRXh4b2=
+4sUGxhdGludW0sLDAsLDAuMCwsLCwKZiw5NTQzLjAsMjAxMC0xLTMwLDcuOTgyLDAsMi43OTks=
+MSwsUHJlbWl1bSxDaXRnbyxQbGF0aW51bSwsMCwsMC4wLCwsLApmLDk2NDQuMCwyMDEwLTEtMz=
+AsMTAuNzUwLDAsMi45ODYsMSxXaXRoJTIwcGF1bGYlMjBhbmQlMjBrZXZpbixQcmVtaXVtLFNo=
+ZWxsLFBsYXRpbnVtLFRyYWNrLDAsLDAuMCwsLCwKZiw5NzI3LjAsMjAxMC0xLTMwLDguMDM4LD=
+AsMi43OTksMSwsUHJlbWl1bSxUZXhhY28sLFRyYWNrLDAsLDAuMCwsLCwKZiw5OTM5LjAsMjAx=
+MC0yLTEyLDE0LjI5NSwwLDIuOTU5LDEsLFByZW1pdW0sU2hlbGwsUGxhdGludW0sQ2l0eSwwLC=
+wwLjAsLCwsCmYsMTAxNDYuMCwyMDEwLTItMjQsMTQuODU1LDAsMi43OTksMSwsUHJlbWl1bSxF=
+eHhvbixQbGF0aW51bSxDaXR5LDAsLDAuMCwsLCwKZiwxMDMxOS4wLDIwMTAtMi0yNyw3Ljg0Mi=
+wwLDIuNzk5LDEsLFByZW1pdW0sVGV4YWNvLFBsYXRpbnVtLEhhdWxpbmclMjBBc3MsMCwsMC4w=
+LCwsLApmLDEwNDU0LjAsMjAxMC0yLTI3LDEzLjkzNiwwLDIuNzk5LDEsLFByZW1pdW0sVmFsZX=
+JvLFBsYXRpbnVtLFRyYWNrLDAsLDAuMCwsLCwKZiwxMDY1OC4wLDIwMTAtMy0xMiwxNC4wMTAs=
+MCwyLjgyOSwxLCxQcmVtaXVtLENpdGdvLFBsYXRpbnVtLCwwLCwwLjAsLCwsCmYsMTA3NTcuMC=
+wyMDEwLTMtMTMsNS4wNDUsMCwyLjkwMCwxLCxQcmVtaXVtLEV4eG9uLFBsYXRpbnVtLEhpZ2h3=
+YXksMCwsMC4wLCwsLApmLDEwODU2LjAsMjAxMC0zLTE0LDEyLjgwMCwwLDMuMzE2LDEsLFByZW=
+1pdW0sVGV4YXMlMjBXb3JsZCUyMFNwZWVkd2F5LFBsYXRpbnVtLFRyYWNrLDAsVHJhY2ssMC4w=
+LCwsLApmLDEwOTE2LjAsMjAxMC0zLTE0LDguNDAwLDAsMy4zMDAsMSwsUHJlbWl1bSxUZXhhcy=
+UyMFdvcmxkJTIwU3BlZWR3YXksUGxhdGludW0sVHJhY2ssMCxUcmFjaywwLjAsLCwsCmYsMTA5=
+OTkuMCwyMDEwLTMtMTQsNi43OTgsMCwzLjA5OSwxLCxQcmVtaXVtLEV4eG9uLFBsYXRpbnVtLC=
+wwLCwwLjAsLCwsCmYsMTEyMzQuMCwyMDEwLTMtMTUsMTIuMzQxLDAsMi44ODksMSwsUHJlbWl1=
+bSxFeHhvbixQbGF0aW51bSxIaWdod2F5LDAsLDAuMCwsLCwKZiwxMTQ2OS4wLDIwMTAtMy0yNi=
+wxNC44MjksMCwyLjk5OSwxLCxQcmVtaXVtLEV4eG9uLFBsYXRpbnVtLENpdHksMCwsMC4wLCws=
+LApmLDExNjM1LjAsMjAxMC0zLTI3LDcuOTQ4LDAsMi44OTksMSwsUHJlbWl1bSxUZXhhY28sUG=
+xhdGludW0sLDAsLDAuMCwsLCwKZiwxMTcxOS4wLDIwMTAtMy0yNywxMC45MTIsMCwyLjkxOSwx=
+LCxQcmVtaXVtLFNoZWxsLFBsYXRpbnVtLFRyYWNrLDAsVHJhY2ssMC4wLCwsLApmLDExODU3Lj=
+AsMjAxMC0zLTI3LDEyLjU3MSwwLDIuODk5LDEsLFByZW1pdW0sVmFsZXJvLFBsYXRpbnVtLCww=
+LCwwLjAsLCwsCmYsMTIwNzkuMCwyMDEwLTQtMTMsMTQuOTE4LDAsMi45NTksMSwsUHJlbWl1bS=
+xDaXRnbyxQbGF0aW51bSwsMCwsMC4wLCwsLApmLDEyMTUwLjAsMjAxMC00LTE3LDYuNTAzLDAs=
+My42MDksMSwsUHJlbWl1bSxNb3RvcnNwb3J0JTIwUmFuY2glMjBIb3VzdG9uLFBsYXRpbnVtLC=
+wwLCwwLjAsLCwsCmYsMTIyMzMuMCwyMDEwLTQtMTcsMTAuNzkxLDAsMy42MDksMSwsUHJlbWl1=
+bSxNb3RvcnNwb3J0JTIwUmFuY2glMjBIb3VzdG9uLFBsYXRpbnVtLFRyYWNrLDAsVHJhY2ssMC=
+4wLCwsLApmLDEyMjkxLjAsMjAxMC00LTE4LDExLjY4OCwwLDMuNjA5LDEsLFByZW1pdW0sTW90=
+b3JzcG9ydCUyMFJhbmNoJTIwSG91c3RvbixQbGF0aW51bSxUcmFjaywwLFRyYWNrLDAuMCwsLD=
+I5LjI3NzU0MSwtOTUuNDIyNDk4Ck1haW50ZW5hbmNlUmVjb3JkcywxNTAsMTMKbSw0MzgyLjAs=
+MjAwOS04LTMxLEJvdWdodCUyMFZlaGljbGUsMC4wMCxCb3VnaHQlMjBzaWdodCUyMHVuc2Vlbi=
+4sUG9yc2NoZSUyME9mJTIwTmFzaHZpbGxlLDIsLCwsLDAuMCwwLCwsLAptLDQzODIuMCwyMDA5=
+LTktMSxBZGRlZCUyMENhcmdyYXBoaWMlMjBGcm9udCUyMFNjcmVlbiUyMEtpdCwzODAuMDAsLF=
+NoYXJrV2Vya3MsMCxBY2Nlc3NvcnksUGxhdGludW0sLCwwLjAsMCwsLCwKbSw0MzgyLjAsMjAw=
+OS05LTEsU3dpdGNoJTIwVG8lMjBPcmlnaW5hbCUyMFN0eWxlJTIwR1QzJTIwUlMlMjBTdGVlcm=
+luZyUyMFdoZWVsLDg3OS44MywsU3VuY29hc3QlMjBQb3JzY2hlJTIwUGFydHMsMSwsUGxhdGlu=
+dW0sLCwwLjAsMCwsLCwKbSw1MjI2LjAsMjAwOS05LTksU3RhdGUlMjBJbnNwZWN0aW9uLDQxLj=
+c1LCxNb21lbnR1bSUyMFBvcnNjaGUsMCxJbnNwZWN0aW9uLFBsYXRpbnVtLCwsMC4wLDAsLCws=
+Cm0sNTQ1OS4wLDIwMDktOS0xMSxHVDMlMjBNazIlMjBSZWFyJTIwQnJha2UlMjBDb29saW5nJT=
+IwRHVjdHMsMjE3LjYxLCxTdW5jb2FzdCUyMFBvcnNjaGUlMjBQYXJ0cywxLFRyYWNrJTIwLSUy=
+MEVxdWlwbWVudCxQbGF0aW51bSxUcmFjaywsMC4wLDAsLCwsCm0sNjUwOS4wLDIwMDktOS0yNS=
+xSZW1vdmUlMjBXaW5kb3clMjBUaW50LDExNi4xOCwsTW9tZW50dW0lMjBQb3JzY2hlLDAsLFBs=
+YXRpbnVtLCwsMC4wLDAsLCwsCm0sNjk5MC4wLDIwMDktMTEtNSxSZXBsYWNlJTIwU2lkZSUyMF=
+dpbmRvdyUyMEFmdGVyJTIwVGhlZnQsMTEwMS4zMSxUaGllZiUyMHNtYXNoZWQlMjBvdXQlMjBk=
+cml2ZXIlMjBzaWRlJTIwd2luZG93JTIwYW5kJTIwc3RvbGUlMjByYWRhciUyMGRldGVjdG9yLi=
+xNb21lbnR1bSUyMFBvcnNjaGUsMCxSZXBhaXIsUGxhdGludW0sLCwwLjAsMCwsLCwKbSw3MzI1=
+LjAsMjAwOS0xMS04LEFkZCUyMDElMjBxdCUyME9pbCwwLjAwLE9pbCUyMHJlYWRpbmclMjBsb3=
+clMjBtaWQtZGF5JTIwYXQlMjB0cmFjayUyMHNvJTIwSSUyMGFkZGVkJTIwYSUyMGZ1bGwlMjBx=
+dWFydCUyQyUyMGJyaW5naW5nJTIwaW5kaWNhdG9yJTIwdG8lMjB0b3Atb2YtZnVsbCUyMG1hcm=
+suLFRleGFzJTIwV29ybGQlMjBTcGVlZHdheSwwLCwsVHJhY2ssLDAuMCwwLCwsLAptLDc3NjAu=
+MCwyMDA5LTEyLTE3LE5ldyUyMFRpcmVzJTIwQWxsJTIwQXJvdW5kLDE1NjUuMzMsVW5oYXBweS=
+UyMHdpdGglMjBPRU0lMjBQUzIlMjBDdXAlMjB0aXJlcyUyQyUyMEklMjByZXBsYWNlZCUyMHdp=
+dGglMjBmb3VyJTIwQnJpZGdlc3RvbmUlMjBSRS0xMSUyMGluJTIwc3RvY2slMjBzaXplcy4lMj=
+AlMjBWZXJ5JTIwcGxlYXNlZCUyQyUyMEklMjBsaWtlJTIwdGhlbSUyMGElMjBsb3QlMjBtb3Jl=
+JTIwZm9yJTIwc3RyZWV0JTIwZHJpdmluZy4lMjAlMjBXaWxsJTIwYmUlMjBydW5uaW5nJTIwZG=
+VkaWNhdGVkJTIwdHJhY2slMjB3aGVlbHMlMjBhbiUyMHRpcmVzJTIwKEhvb3NpZXIlMjBSNikl=
+MjBmcm9tJTIwaGVyZSUyMG9uJTIwb3V0LixEaXNjb3VudCUyMFRpcmUsMCxNYWludGVuYW5jZS=
+xBbWVyaWNhbiUyMEV4cHJlc3MsLCwwLjAsMCwsLCwKbSw3NzgxLjAsMjAwOS0xMi0yMSxUcmFj=
+ayUyMFdoZWVscyUyMEFuZCUyMFNsaWNrcywzNTg0LjIwLERlZGljYXRlZCUyMHRyYWNrJTIwd2=
+hlZWxzLiUyMCUyME8uWi4lMjBBbGxlZ2dlcml0YSUyMDE4eDguNSUyMGFuZCUyMDE4eDEyLiUy=
+MCUyMEhvb3NpZXIlMjBSNiUyMGFuZCUyMFRQTVMlMjBzZW5zb3JzLFRpcmUlMjBSYWNrLDEsVH=
+JhY2slMjAtJTIwRXF1aXBtZW50LEFtZXJpY2FuJTIwRXhwcmVzcyxUcmFjaywsMC4wLDAsLCws=
+Cm0sODUwNS4wLDIwMTAtMS0xMixHZW5lcmFsJTIwTWFpbnRlbmFuY2UsNTU1LjU3LE9pbCUyMG=
+NoYW5nZSUyQyUyMGJyYWtlJTIwZmx1aWQlMjBmbHVzaCUyQyUyMGFsaWdubWVudC4sTW9tZW50=
+dW0lMjBQb3JzY2hlLDAsTWFpbnRlbmFuY2UsUGxhdGludW0sLCwwLjAsMCwsLCwKbSwxMDQ1NC=
+4wLDIwMTAtMy01LEhvb3NpZXIlMjBSNiUyMFNldCwxNjA5LjI2LFNldCUyMG51bWJlciUyMHR3=
+byxEaXNjb3VudCUyMFRpcmUsMSxUcmFjayUyMC0lMjBFcXVpcG1lbnQsQW1lcmljYW4lMjBFeH=
+ByZXNzLFRyYWNrLCwwLjAsMCwsLCwKbSwxMDQ1NC4wLDIwMTAtMy01LFJlYXIlMjBCcmFrZSUy=
+MFBhZHMsMjk5Ljk1LCxTdW5jb2FzdCUyMFBvcnNjaGUlMjBQYXJ0cywwLE1haW50ZW5hbmNlLF=
+BsYXRpbnVtLCwsMC4wLDAsLCwsClJvYWRUcmlwUmVjb3JkcywxNTAsMTQKcixTcHJpbmclMjAy=
+MDA5LDIwMDktMS0xLDAuMCwyMDA5LTQtMzAsMC4wLApyLFN1bW1lciUyMDIwMDksMjAwOS01LT=
+EsMC4wLDIwMDktOC0zMSwwLjAsCnIsQnJpbmdpbmclMjB0aGUlMjBjYXIlMjBob21lJTIwdG8l=
+MjBUZXhhcywyMDA5LTktNCw0MzgyLjAsMjAwOS05LTYsNTM4Ni4wLFN0cmFpZ2h0JTIwZG93bi=
+UyMHRoZSUyME5hdGNoZXolMjBUcmFjZSUyMFBhcmt3YXklMjBhbmQlMjB0aGVuJTIwYmFjayUy=
+MHJvYWRzJTIwdGhlJTIwcmVzdCUyMG9mJTIwdGhlJTIwd2F5LgpyLEhQREU6JTIwSDJSLDIwMD=
+ktOS0xMiw1NDY1LjAsMjAwOS05LTEyLDU0OTMuMCxIMlIlMjBzcG9uc29yZWQlMjBIUERFLiUy=
+MCUyMEklMjBkaWRuJ3QlMjBmb3JtYWxseSUyMHBhcnRpY2lwYXRlJTJDJTIwSSUyMGp1c3QlMj=
+BzbnVjayUyMG91dCUyMG9uJTIwdHJhY2slMjBhJTIwZmV3JTIwdGltZXMlMjBkdXJpbmclMjB0=
+aGUlMjBpbnN0cnVjdG9yJTIwc2Vzc2lvbnMuCnIsT3BlbiUyMGRheTolMjBIMlIsMjAwOS05LT=
+IwLDYxNDUuMCwyMDA5LTktMjAsNjI5My4wLApyLEhQREU6JTIwVFdTJTIwQ0NXLDIwMDktMTAt=
+Myw2Njc2LjAsMjAwOS0xMC00LDY3ODAuMCxIb3JyaWJsZSUyMHJhaW4KcixIUERFOiUyMFRXUy=
+UyMENXLDIwMDktMTEtNyw3MTE2LjAsMjAwOS0xMS04LDc0NTEuMCwKcixPcGVuJTIwRGF5OiUy=
+MEgyUiwyMDEwLTEtMjIsODg1MS4wLDIwMTAtMS0yMiw4OTQyLjAsSG9vc2llciUyMFI2CnIsSF=
+BERTolMjBIMlIsMjAxMC0xLTIzLDg5NDYuMCwyMDEwLTEtMjQsOTE3NC4wLEhvb3NpZXIlMjBS=
+Ni4lMjAlMjBLaWNrZWQlMjBhc3MlMjBpbiUyMHJlZCUyMGdyb3VwLgpyLE9wZW4lMjBEYXk6JT=
+IwSDJSLDIwMTAtMS0zMCw5NTUxLjAsMjAxMC0xLTMwLDk3MTguMCxOZXclMjBwZXJzb25hbCUy=
+MGJlc3QlMjB0aW1lISUyMDE6MjcuMiUyMGxhcCUyMGNsb2Nrd2lzZS4lMjAlMjBJbnN0cnVjdG=
+VkJTIwcGF1bGYlMjBhbmQlMjBLZXZpbiUyMGluJTIwY2FyJTIwZm9yJTIwdGhyZWUlMjBzZXNz=
+aW9ucy4KcixIUERFOiUyMEgyUiUyMChCb3hlcnMlMjBhbmQlMjBCb3hzdGVycyksMjAxMC0yLT=
+I3LDEwMzI0LjAsMjAxMC0yLTI3LDEwMzcyLjAsLi4uYW5kJTIwdGhhdCdzJTIwdGhlJTIwZW5k=
+JTIwb2YlMjB0aGUlMjBmaXJzdCUyMHNldCUyMG9mJTIwSG9vc2llcnMuJTIwJTIwVGhleSdyZS=
+UyMGNvb2tlZC4KcixIUERFOiUyMFRXUyUyMENDVywyMDEwLTMtMTMsMTA3NjYuMCwyMDEwLTMt=
+MTQsMTA5NTkuMCwKcixIUERFOiUyMEgyUiwyMDEwLTMtMjcsMTE2NDAuMCwyMDEwLTMtMjcsMT=
+E3ODMuMCwxOjI2LjYhJTIwSSdtJTIwZ2V0dGluZyUyMGZhc3RlcgpyLEhQREU6JTIwTVNSJTIw=
+SG91c3RvbiwyMDEwLTQtMTcsMTIxNTAuMCwyMDEwLTQtMTgsMTIzMjkuMCxGaXJzdCUyMHRpbW=
+UlMjBhdCUyMHRoaXMlMjB0cmFjayUyMGFuZCUyMEklMjBsb3ZlZCUyMGl0LiUyMCUyMFRvcnJl=
+bnRpYWwlMjByYWluJTIwb24lMjBTdW5kYXklMjBidXQlMjB3ZSUyMHN0aWxsJTIwcmFuLgpUaX=
+JlUmVjb3JkcywxNTAsMgp0LFBpbG90JTIwU3BvcnQlMjBDdXBzLDIwMDktOC0zMSw0MzgyLjAs=
+LDAuMDAwMCwsMAp0LFBvdGVuemElMjBSRS0xMSwyMDA5LTEyLTE3LDc3NjAuMCwsMC4wMDAwLC=
+wwCg=3D=3D">click this link from your device.</a></b></p><p>If the link =
+does not work, you can use the <b><a =
+href=3D"http://darrensoft.ca/roadtrip/csvimport/">CSV Import =
+Website</a></b> to import the attached CSV file.</p><h3>Transfer to =
+Excel</h3><p>To transfer this data to Excel, simply open the attached =
+CSV file with Excel or OpenOffice.  </p><p>Visit <a =
+href=3D"http://darrensoft.ca/roadtrip/"><a =
 href=3D"http://darrensoft.ca/roadtrip/">http://darrensoft.ca/roadtrip/</a>=
-</a> for detailed instructions.</p><p><i>---- Begin Copy and Paste here. =
- File: RoadTrip.csv ----</i></p><p></p><pre>ROAD TRIP =
-CSV<br>Version,Language<br>130,en<br><br><br>FUEL RECORDS<br>Odometer =
-(mi.),Trip Distance,Date,Fill Amount,Fill Units,Price per Unit,Total =
-Price,Partial =
-Fill,MPG,Note,Octane,Location,Payment,Conditions,Reset,Categories,Flags<br=
->199.0,199.0,"2007-2-15",10.983,Gal,2.299,25.25,,0.000,,,"Chevron","Optima=
-",,Reset,,9<br>399.0,200.0,"2007-2-17",13.137,Gal,2.299,30.20,,15.224,,,"T=
-etco","Optima",,,,0<br>600.0,201.0,"2007-2-24",13.449,Gal,2.379,32.00,,14.=
-945,,,"Exxon","Optima",,,,0<br>796.0,196.0,"2007-2-28",13.747,Gal,2.459,33=
-.80,,14.258,,,"Exxon","Optima",,,,0<br>955.0,159.0,"2007-3-10",11.177,Gal,=
-2.589,28.94,,14.226,,,"Tetco","Platinum",,,,0<br>1158.0,203.0,"2007-3-18",=
-14.007,Gal,2.579,36.12,,14.493,,,"Exxon","Optima",,,,0<br>1341.0,183.0,"20=
-07-4-12",13.268,Gal,2.899,38.46,,13.793,,,"Exxon","Optima",,,,0<br>1531.0,=
-190.0,"2007-4-19",13.554,Gal,2.939,39.84,,14.018,,,"Tetco","Optima",,,,0<b=
-r>1797.0,266.0,"2007-4-22",14.339,Gal,2.839,40.71,,18.551,,,"Shell","Optim=
-a",,,,0<br>2127.0,330.0,"2007-4-22",15.149,Gal,2.939,44.52,,21.784,,,"Chev=
-ron","Optima",,,,0<br>2377.0,250.0,"2007-4-26",13.523,Gal,3.099,41.91,,18.=
-487,,,"Texaco","Optima",,,,0<br>2641.0,264.0,"2007-4-29",14.010,Gal,3.049,=
-42.72,,18.844,,,"Exxon","Optima",,,,0<br>2796.0,155.0,"2007-5-09",11.216,G=
-al,3.069,34.42,,13.820,,,"Chevron","Optima",,,,0<br>3040.0,244.0,"2007-5-0=
-9",12.068,Gal,3.099,37.40,,20.219,,,"Exxon","Optima",,,,0<br>3271.0,231.0,=
-"2007-5-13",14.179,Gal,3.069,43.52,,16.292,,,"Chevron","Optima",,,,0<br>35=
-00.0,229.0,"2007-5-21",13.040,Gal,3.179,41.45,,17.561,,,"Chevron","Optima"=
-,,,,0<br>3896.0,396.0,"2007-6-04",11.215,Gal,3.229,36.21,,35.310,,,"Chevro=
-n","Optima",,,,0<br>4220.0,324.0,"2007-6-05",14.284,Gal,3.239,46.27,,22.68=
-3,,,"Exxon","Optima",,,,0<br>4437.0,217.0,"2007-6-10",14.236,Gal,3.229,45.=
-97,,15.243,,,"Chevron","Optima",,,,0<br>4545.0,108.0,"2007-6-15",7.291,Gal=
-,3.199,23.32,,14.813,,,"Exxon","Optima",,,,0<br>4815.0,270.0,"2007-6-16",1=
-3.890,Gal,3.069,42.63,,19.438,,,"Winners =
-Corner","Optima",,,,0<br>5001.0,186.0,"2007-6-23",11.054,Gal,3.259,36.02,,=
-16.826,,,"Exxon","Optima",,,,0<br>5100.0,99.0,"2007-6-26",6.341,Gal,3.149,=
-19.97,,15.613,,,"Chevron","Optima",,,,0<br>5334.0,234.0,"2007-6-27",12.637=
-,Gal,2.999,37.90,,18.517,,,"Exxon","Optima",,,,0<br>5582.0,248.0,"2007-7-0=
-3",14.917,Gal,3.099,46.23,,16.625,,,"Chevron","Optima",,,,0<br>5906.0,324.=
-0,"2007-7-05",15.397,Gal,3.139,48.33,,21.043,,,"Shell","Optima",,,,0<br>62=
-45.0,339.0,"2007-7-08",16.060,Gal,3.099,49.77,,21.108,,,"Chevron","Optima"=
-,,,,0<br>6374.0,129.0,"2007-7-15",8.483,Gal,3.149,26.71,,15.207,,,"Chevron=
-","Optima",,,,0<br>6604.0,230.0,"2007-7-23",13.977,Gal,3.129,43.73,,16.456=
-,,,"Chevron","Optima",,,,0<br>6724.0,120.0,"2007-7-30",8.018,Gal,2.969,23.=
-81,,14.966,,,"Chevron","Optima",,,,0<br>6977.0,253.0,"2007-8-02",12.955,Ga=
-l,2.999,38.85,,19.529,,,"Exxon","Optima",,,,0<br>7216.0,239.0,"2007-8-08",=
-13.956,Gal,2.969,41.44,,17.125,,,"Chevron","Optima",,,,0<br>7452.0,236.0,"=
-2007-8-14",12.938,Gal,2.959,38.28,,18.241,,,"Chevron","Optima",,,,0<br>771=
-8.0,266.0,"2007-8-15",12.995,Gal,2.969,38.58,,20.469,,,"Chevron","Optima",=
-,,,0<br>7994.0,276.0,"2007-8-18",14.259,Gal,2.979,42.48,,19.356,,,"Shell",=
-"Optima",,,,0<br>8235.0,241.0,"2007-8-28",14.123,Gal,2.949,41.65,,17.064,,=
-,"Tetco","Optima",,,,0<br>8451.0,216.0,"2007-9-13",13.587,Gal,2.999,40.75,=
-,15.898,,,"Shell","Optima",,,,0<br>8669.0,218.0,"2007-9-24",14.252,Gal,2.9=
-69,42.31,,15.296,,,"Chevron","Optima",,,,0<br>8884.0,215.0,"2007-10-15",13=
-.425,Gal,2.919,39.19,,16.015,,,"Chevron","Optima",,,,0<br>9129.0,245.0,"20=
-07-10-18",14.337,Gal,2.909,41.71,,17.089,,,"Chevron","Optima",,,,0<br>9354=
-.0,225.0,"2007-10-21",14.469,Gal,2.989,43.25,,15.550,,,"Chevron","Optima",=
-,,,0<br>9597.0,243.0,"2007-10-27",15.364,Gal,2.989,45.92,,15.816,,,"Chevro=
-n","Optima",,,,0<br>9851.0,254.0,"2007-11-04",12.970,Gal,2.999,38.90,,19.5=
-84,,,"Exxon","Optima",,,,0<br>10031.0,180.0,"2007-11-10",11.486,Gal,3.259,=
-37.43,,15.671,,,"Exxon","Optima",,,,0<br>10145.0,114.0,"2007-11-11",5.393,=
-Gal,3.329,17.95,,21.139,,,"Exxon","Optima",,,,0<br>10261.0,116.0,"2007-11-=
-11",12.062,Gal,3.329,40.15,,9.617,,,"Exxon","Optima","Track",,,0<br>10377.=
-0,116.0,"2007-11-12",12.145,Gal,3.299,40.07,,9.551,,,"Exxon","Optima",,,,0=
-<br>10654.0,277.0,"2007-11-21",14.849,Gal,3.239,48.10,,18.654,,,"Exxon","O=
-ptima",,,,0<br>10947.0,293.0,"2007-11-22",13.538,Gal,3.189,43.17,,21.643,,=
-,"QuickTrip","Optima",,,,0<br>11092.0,145.0,"2007-11-23",6.670,Gal,3.119,2=
-0.80,,21.739,,,"Mobil","Optima",,,,0<br>11313.0,221.0,"2007-12-04",12.603,=
-Gal,3.199,40.32,,17.536,,,"Chevron","Optima",,,,0<br>11563.0,250.0,"2007-1=
-2-09",15.137,Gal,3.169,47.97,,16.516,,,"Shell","Optima",,,,0<br>11829.0,26=
-6.0,"2007-12-17",14.525,Gal,3.199,46.47,,18.313,,,"Shell","Optima",,,,0<br=
->11915.0,86.0,"2007-12-27",6.443,Gal,3.159,20.35,,13.348,,,"Exxon","Optima=
-","Track",,,0<br>12150.0,235.0,"2007-12-28",10.629,Gal,3.169,33.68,,22.109=
-,,,"Chevron","Optima",,,,0<br>12390.0,240.0,"2007-12-29",10.587,Gal,3.179,=
-33.66,,22.669,,,"Exxon","Optima",,,,0<br>12558.0,168.0,"2008-1-07",11.300,=
-Gal,3.239,36.60,,14.867,,,"Chevron","Optima",,,,0<br>12828.0,270.0,"2008-7=
--12",15.629,Gal,4.169,65.16,,17.276,,,"Exxon","Optima",,,,0<br>12886.0,58.=
-0,"2008-1-10",15.249,Gal,3.179,48.48,,3.804,,,"Exxon","Optima",,,,0<br>130=
-11.0,125.0,"2008-1-17",7.191,Gal,3.239,23.29,,17.383,,,"Chevron","Optima",=
-,,,0<br>13245.0,234.0,"2008-1-19",11.648,Gal,3.259,37.96,,20.089,,,"Exxon"=
-,"Optima",,,,0<br>13461.0,216.0,"2008-1-22",10.138,Gal,3.189,32.33,,21.306=
-,,,"Chevron","Optima",,,,0<br>13697.0,236.0,"2008-1-27",13.057,Gal,3.219,4=
-2.03,,18.075,,,"Shell","Optima",,,,0<br>13964.0,267.0,"2008-1-31",14.684,G=
-al,3.169,46.53,,18.183,,,"Chevron","Optima",,,,0<br>14166.0,202.0,"2008-2-=
-14",14.358,Gal,3.169,45.50,,14.069,,,"Chevron","Optima",,,,0<br>14445.0,27=
-9.0,"2008-2-14",14.158,Gal,3.159,44.73,,19.706,,,"Exxon","Optima",,,,0<br>=
-14625.0,180.0,"2008-2-24",11.258,Gal,3.239,36.46,,15.989,,,"Chevron","Opti=
-ma",,,,0<br>14848.0,223.0,"2008-2-27",13.932,Gal,3.299,45.96,,16.006,,,"Te=
-tco","Optima",,,,0<br>15097.0,249.0,"2008-3-01",12.572,Gal,3.199,40.22,,19=
-.806,,,"Randall's =
-Fuel","Optima",,,,0<br>15232.0,135.0,"2008-3-01",6.849,Gal,3.359,23.01,,19=
-.711,,,"Exxon","Optima",,,,0<br>15360.0,128.0,"2008-3-02",5.498,Gal,3.459,=
-19.02,,23.281,,,"Shell","Optima",,,,0<br>15486.0,126.0,"2008-3-02",14.189,=
-Gal,3.459,49.08,,8.880,,,"Shell","Optima","Track",,,0<br>15596.0,110.0,"20=
-08-3-03",10.682,Gal,3.319,35.45,,10.298,,,"Chevron","Optima",,,,0<br>15822=
-.0,226.0,"2008-3-11",13.903,Gal,3.479,48.37,,16.255,,,"Texaco","Optima",,,=
-,0<br>16045.0,223.0,"2008-3-17",14.178,Gal,3.479,49.33,,15.729,,,"Texaco",=
-"Optima",,,,0<br>16324.0,279.0,"2008-3-22",14.263,Gal,3.459,49.34,,19.561,=
-,,"Shell","Optima",,,,0<br>16557.0,233.0,"2008-3-30",14.661,Gal,3.419,50.1=
-3,,15.893,,,"Chevron","Optima",,,,0<br>16743.0,186.0,"2008-4-13",14.234,Ga=
-l,3.529,50.23,,13.067,,,"Chevron","Optima",,,,0<br>16789.0,46.0,"2008-4-14=
-",2.967,Gal,3.519,10.44,,15.504,,,"Exxon","Optima",,,,0<br>17009.0,220.0,"=
-2008-4-16",14.605,Gal,3.679,53.73,,15.063,,,"Texaco","Optima",,,,0<br>1721=
-1.0,202.0,"2008-4-22",14.208,Gal,3.569,50.71,,14.217,,,"Shell","Optima",,,=
-,0<br>17317.0,106.0,"2008-4-24",7.566,Gal,3.719,28.14,,14.010,,,"Chevron",=
-"Optima",,,,0<br>17538.0,221.0,"2008-4-26",9.782,Gal,3.699,36.18,,22.593,,=
-,"Exxon","Optima",,,,0<br>17687.0,149.0,"2008-4-27",7.780,Gal,3.799,29.56,=
-,19.152,,,"Shell","Optima",,,,0<br>17921.0,234.0,"2008-5-01",15.166,Gal,3.=
-789,57.46,,15.429,,,"Chevron","Optima",,,,0<br>18030.0,109.0,"2008-5-03",6=
-.058,Gal,3.729,22.59,,17.993,,,"HEB","Optima",,,,0<br>18179.0,149.0,"2008-=
-5-03",7.350,Gal,3.829,28.14,,20.272,,,"Texaco","Optima",,,,0<br>18285.0,10=
-6.0,"2008-5-04",10.844,Gal,3.829,41.52,,9.775,,,"Texaco","Optima","Track",=
-,,0<br>18377.0,92.0,"2008-5-05",10.331,Gal,3.829,39.56,,8.905,,,"Texaco","=
-Optima","Track",,,0<br>18584.0,207.0,"2008-5-07",11.560,Gal,3.859,44.61,,1=
-7.907,,,"Chevron","Optima",,,,0<br>18872.0,288.0,"2008-5-10",15.170,Gal,3.=
-979,60.36,,18.985,,,"Chevron","Optima",,,,0<br>19097.0,225.0,"2008-5-19",1=
-4.459,Gal,3.919,56.66,,15.561,,,"Exxon","Optima",,,,0<br>19347.0,250.0,"20=
-08-5-30",15.203,Gal,4.089,62.17,,16.444,,,"Chevron","Optima",,,,0<br>19478=
-.0,131.0,"2008-6-02",7.697,Gal,3.999,30.78,,17.020,,,"Exxon","Optima",,,,0=
-<br>19668.0,190.0,"2008-6-06",14.757,Gal,4.079,60.19,,12.875,,,"Exxon","Op=
-tima",,,,0<br>19795.0,127.0,"2008-6-07",5.771,Gal,4.179,24.12,,22.007,,,"S=
-hell","Optima",,,,0<br>19908.0,113.0,"2008-6-08",11.500,Gal,4.204,48.35,,9=
-.826,,,"Exxon","Optima",,,,0<br>20049.0,141.0,"2008-6-09",13.459,Gal,4.239=
-,57.05,,10.476,,,"Chevron","Optima","Track",,,0<br>20216.0,167.0,"2008-6-1=
-1",9.816,Gal,4.189,41.12,,17.013,,,"Chevron","Optima",,,,0<br>20436.0,220.=
-0,"2008-6-14",11.434,Gal,4.169,47.67,,19.241,,,"Exxon","Optima",,,,0<br>20=
-647.0,211.0,"2008-6-15",12.052,Gal,4.209,50.73,,17.507,,,"Chevron","Optima=
-",,,,0<br>20845.0,198.0,"2008-6-22",14.088,Gal,4.199,59.16,,14.055,,,"Exxo=
-n","Optima",,,,0<br>21100.0,255.0,"2008-6-26",14.475,Gal,4.279,61.94,,17.6=
-17,,,"Exxon","Optima",,,,0<br>21235.0,135.0,"2008-6-29",8.772,Gal,4.169,36=
-.57,,15.390,,,"Tetco","Optima",,,,0<br>21367.0,132.0,"2008-7-01",14.508,Ga=
-l,4.249,61.64,,9.098,,,"Raceway","Chase","Track",,,0<br>21549.0,182.0,"200=
-8-7-06",12.239,Gal,4.239,51.88,,14.870,,,"Chevron","Optima",,,,0<br>22040.=
-0,491.0,"2008-7-13",11.865,Gal,4.229,50.18,,41.382,,,"Chevron","Optima",,,=
-,0<br>22307.0,267.0,"2008-7-19",15.130,Gal,4.189,63.38,,17.647,,,"HEB","Op=
-tima",,,,0<br>22573.0,266.0,"2008-7-22",15.405,Gal,4.159,64.07,,17.267,,,"=
-Valero","Optima",,,,0<br>22727.0,154.0,"2008-8-04",8.994,Gal,4.039,36.33,,=
-17.123,,,"Exxon","Optima",,,,0<br>22884.0,157.0,"2008-8-08",13.299,Gal,3.9=
-49,52.52,,11.805,,,"Chevron","Optima",,,,0<br>23072.0,188.0,"2008-8-09",15=
-.744,Gal,4.039,63.59,,11.941,,,"Exxon","Optima",,,,0<br>23270.0,198.0,"200=
-8-8-10",11.478,Gal,3.989,45.79,,17.250,,,"Chevron","Optima",,,,0<br>23527.=
-0,257.0,"2008-8-12",14.529,Gal,3.999,58.10,,17.689,,,"Exxon","Optima",,,,0=
-<br>23665.0,138.0,"2008-8-20",8.706,Gal,3.959,34.47,,15.851,,,"Chevron","O=
-ptima",,,,0<br>23880.0,215.0,"2008-8-23",11.252,Gal,3.879,43.65,,19.108,,,=
-"Shell","Optima",,,,0<br>24093.0,213.0,"2008-8-26",11.124,Gal,3.739,41.59,=
-,19.148,,,"Exxon","Optima",,,,0<br>24322.0,229.0,"2008-8-29",12.113,Gal,3.=
-859,46.74,,18.905,,,"Chevron","Optima",,,,0<br>24471.0,149.0,"2008-8-30",7=
-.336,Gal,3.849,28.24,,20.311,,,"Chevron","Optima",,,,0<br>24666.0,195.0,"2=
-008-9-12",13.678,Gal,3.889,53.19,,14.256,,,"Shell","Optima",,,,0<br>24886.=
-0,220.0,"2008-9-27",14.820,Gal,3.829,56.75,,14.845,,,"Exxon","Optima",,,,0=
-<br>24994.0,108.0,"2008-9-28",7.180,Gal,3.809,27.35,,15.042,,,"Chevron","O=
-ptima",,,,0<br>25189.0,195.0,"2008-10-21",13.500,Gal,3.479,46.97,,14.444,,=
-,"Chevron","Optima",,,,0<br>25309.0,120.0,"2008-10-29",8.798,Gal,2.629,23.=
-13,,13.639,,,"Chevron","Optima",,,,0<br>25546.0,237.0,"2008-11-01",12.221,=
-Gal,2.379,29.07,,19.393,,,"Exxon","Optima",,,,0<br>25792.0,246.0,"2008-11-=
-10",14.568,Gal,2.379,34.66,,16.886,,,"Texaco","Optima",,,,0<br>25997.0,205=
-.0,"2008-11-15",11.146,Gal,2.399,26.74,,18.392,,,"Shell","Optima",,,,0<br>=
-26395.0,398.0,"2008-11-22",13.000,Gal,2.313,30.07,,30.615,,,"Chevron","Opt=
-ima",,,,0<br>26541.0,146.0,"2008-12-06",7.000,Gal,2.197,15.38,,20.857,,,"H=
-EB","Optima",,,,0<br>26725.0,184.0,"2008-12-07",11.029,Gal,2.159,23.81,,16=
-.683,,,"Texaco","Optima",,,,0<br>26841.0,116.0,"2008-12-08",12.778,Gal,2.1=
-59,27.59,,9.078,,,"Texaco","Optima",,,,0<br>27000.0,159.0,"2008-12-08",10.=
-387,Gal,2.259,23.46,,15.308,,,"Texaco","Optima",,,,0<br>27202.0,202.0,"200=
-8-12-19",11.750,Gal,1.889,22.20,,17.191,,,"Chevron","Optima",,,,0<br>27435=
-.0,233.0,"2008-12-20",10.114,Gal,1.979,20.02,,23.037,,,"Exxon","Optima",,,=
-,0<br>27596.0,161.0,"2008-12-21",6.957,Gal,1.769,12.31,,23.142,,,"Sac n =
-Pac by =
-H2R","Optima",,,,0<br>27817.0,221.0,"2008-12-26",11.534,Gal,1.649,19.02,,1=
-9.161,,,"7 =
-Eleven","Optima",,,,0<br>27895.0,78.0,"2008-12-26",3.498,Gal,1.759,6.15,,2=
-2.298,,,"Exxon","Optima",,,,0<br>28202.0,307.0,"2008-12-31",14.828,Gal,1.7=
-19,25.49,,20.704,,,"HEB","Optima",,,,0<br>28440.0,238.0,"2009-1-10",14.485=
-,Gal,1.889,27.36,,16.431,,,"Chevron","Optima",,,,0<br>28527.0,87.0,"2009-1=
--12",5.520,Gal,1.859,10.26,,15.761,,,"Chevron","Optima",,,,0<br>28782.0,25=
-5.0,"2009-1-16",13.808,Gal,2.019,27.88,,18.468,,,"Exxon","Optima",,,,0<br>=
-29036.0,254.0,"2009-1-24",14.207,Gal,2.019,28.68,,17.879,,,"Exxon","Optima=
-",,,,0<br>29274.0,238.0,"2009-1-30",13.748,Gal,2.059,28.31,,17.312,,,"Chev=
-ron","Optima",,,,0<br>29454.0,180.0,"2009-2-03",10.278,Gal,1.999,20.55,,17=
-.513,,,"HEB","Platinum",,,,0<br>29661.0,207.0,"2009-2-05",10.213,Gal,2.159=
-,22.05,,20.268,,,"Shell","Platinum",,,,0<br>29900.0,239.0,"2009-2-21",12.6=
-71,Gal,2.099,26.60,,18.862,,,"Shell","Platinum",,,,0<br>30183.0,283.0,"200=
-9-2-21",13.375,Gal,2.099,28.07,,21.159,,,"Shell","Platinum",,,,0<br>30445.=
-0,262.0,"2009-2-25",14.002,Gal,2.009,28.13,,18.712,,,"Chevron","Platinum",=
-,,,0<br>30693.0,248.0,"2009-3-05",13.856,Gal,1.939,26.87,,17.898,,,"Citgo"=
-,"Platinum",,,,0<br>30881.0,188.0,"2009-3-15",12.951,Gal,1.999,25.89,,14.5=
-16,,,"Sunmart =
-Sealy","Platinum",,,,0<br>31130.0,249.0,"2009-3-16",13.408,Gal,2.219,29.75=
-,,18.571,,,"Chevron","Platinum",,,,0<br>31407.0,277.0,"2009-3-21",13.708,G=
-al,2.199,30.14,,20.207,,,"Exxon","Platinum",,,,0<br>31684.0,277.0,"2009-3-=
-24",14.018,Gal,2.259,31.67,,19.760,,,"Shell","Platinum",,,,0<br>31904.0,22=
-0.0,"2009-3-28",12.432,Gal,2.209,27.46,,17.696,,,"Tetco","Platinum",,,,0<b=
-r>32146.0,242.0,"2009-4-10",14.993,Gal,2.359,35.37,,16.141,,,"Exxon","Plat=
-inum",,,,0<br>32432.0,286.0,"2009-4-18",10.163,Gal,2.239,22.75,,28.141,,,"=
-Sac n Pac by =
-H2R","Platinum","Track",,,0<br>32556.0,124.0,"2009-4-26",13.974,Gal,2.239,=
-31.29,,8.874,,,"Sac n Pac by =
-H2R","Platinum","Track",,,0<br><br><br>MAINTENANCE =
-RECORDS<br>Description,Date,Odometer =
+</a> for detailed backup and restore instructions.</p><p></p><h4><i>---- =
+Begin Copy and Paste here.  File: RoadTrip.csv ----</i></h4><p><tt>ROAD =
+TRIP CSV ",."<br>Version,Language<br>150,en<br><br><br>FUEL =
+RECORDS<br>Odometer (mi),Trip Distance,Date,Fill Amount,Fill Units,Price =
+per Unit,Total Price,Partial =
+Fill,MPG,Note,Octane,Location,Payment,Conditions,Reset,Categories,Flags,Cu=
+rrency Code,Currency =
+Rate,Latitude,Longitude<br>4567,4567,"2009-9-05",9.357,Gal,2.809,26.28,,,"=
+First tank ever","Premium","BP Franklin =
+TN","Platinum",,Reset,,9,,1,,<br>4699,132,"2009-9-05",7.782,Gal,2.859,22.2=
+5,,16.962,,"Premium","Chevron Cherokee, =
+AL","Platinum","Highway",,"Vacation",0,,1,,<br>4934,235,"2009-9-06",11.112=
+,Gal,2.569,28.55,,21.148,,"Premium","Fleet Way Jackson, =
+MS","Platinum","Highway",,,0,,1,,<br>5168,234,"2009-9-06",11.713,Gal,2.799=
+,32.78,,19.978,,"Premium","Citgo Pitkin, =
+LA","Platinum","Highway",,,0,,1,,<br>5459,291,"2009-9-11",15.64,Gal,2.539,=
+39.71,,18.606,,"Premium","Citgo","Platinum",,,,0,,1,,<br>5682,223,"2009-9-=
+12",11.575,Gal,2.699,31.24,,19.266,,"Premium","Texaco","Platinum",,,,0,,1,=
+,<br>5922,240,"2009-9-15",15.541,Gal,2.459,38.22,,15.443,,"Premium","Citgo=
+","Platinum",,,,0,,1,,<br>5976,54,"2009-9-20",4.82,Gal,2.76,13.3,,11.203,,=
+"Premium","Exxon","Platinum",,,,0,,1,,<br>6193,217,"2009-9-20",12.94,Gal,2=
+.699,34.93,,16.77,,"Premium","Sac n Pac by =
+H2R","Platinum",,,,0,,1,,<br>6295,102,"2009-9-20",11.666,Gal,2.699,31.49,,=
+8.743,,"Premium","Sac n Pac by =
+H2R","Platinum","Track",,,0,,1,,<br>6527,232,"2009-9-28",12.825,Gal,2.439,=
+31.28,,18.09,,"Premium","Citgo","Platinum",,,,0,,1,,<br>6669,142,"2009-10-=
+03",10.254,Gal,2.599,26.65,,13.848,,"Premium","Citgo","Platinum",,,,0,,1,,=
+<br>6799,130,"2009-10-04",11.43,Gal,2.631,30.07,,11.374,,"Premium","Citgo"=
+,"Platinum","Track",,"Track",0,,1,,<br>6962,163,"2009-10-29",14.526,Gal,2.=
+699,39.21,,11.221,,"Premium","Citgo","Platinum","City",,,0,,1,,<br>7113,15=
+1,"2009-11-07",10.41,Gal,2.859,29.76,,14.505,,"Premium","Shell","Platinum"=
+,,,,0,,1,,<br>7171,58,"2009-11-07",6.8,Gal,3.325,22.61,,8.529,,"Premium","=
+Texas World =
+Speedway","Platinum","Track",,,0,,1,,<br>7247,76,"2009-11-08",7.571,Gal,2.=
+86,21.65,,10.038,,"Premium","Shell","Platinum",,,,0,,1,,<br>7325,78,"2009-=
+11-08",8.4,Gal,3.3,27.72,,9.286,,"Premium","Texas World =
+Speedway","Platinum","Track",,,0,,1,,<br>7491,166,"2009-11-23",13.789,Gal,=
+2.879,39.7,,12.039,,"Premium","Exxon","Platinum","City",,,0,,1,,<br>7665,1=
+74,"2009-12-08",14.363,Gal,2.879,41.35,,12.114,,"Premium","Shell","Platinu=
+m","City",,,0,,1,,<br>7806,141,"2009-12-24",12.025,Gal,2.899,34.86,,11.726=
+,,"Premium","Shell","Platinum","City",,,0,,1,,<br>8084,278,"2009-12-25",13=
+.501,Gal,2.959,39.95,,20.591,,"Premium","Shell","Platinum","Highway",,,0,,=
+1,,<br>8285,201,"2009-12-27",10.789,Gal,2.879,31.06,,18.63,,"Premium","Exx=
+on","Platinum","Highway",,,0,,1,,<br>8490,205,"2010-1-11",14.291,Gal,2.799=
+,40,,14.345,,"Premium","Citgo","Platinum",,,,0,,1,,<br>8656,166,"2010-1-19=
+",14.124,Gal,2.779,39.25,,11.753,,"Premium","Exxon","Platinum","City",,,0,=
+,1,,<br>8849,193,"2010-1-22",9.693,Gal,3.122,30.26,,19.911,,"Premium","Sac=
+ n Pac by =
+H2R","Platinum",,,,0,,1,,<br>8944,95,"2010-1-22",11.735,Gal,2.779,32.61,,8=
+.095,,"Premium","Raceway","MasterCard",,,,0,,1,,<br>9049,105,"2010-1-23",1=
+1.631,Gal,2.579,30,,9.028,,"Premium","Shell","Platinum","Track",,,0,,1,,<b=
+r>9121,72,"2010-1-24",9.144,Gal,2.841,25.98,,7.874,,"Premium","Shell","Pla=
+tinum","Track",,,0,,1,,<br>9182,61,"2010-1-24",7.329,Gal,2.839,20.81,,8.32=
+3,,"Premium","Shell","Platinum","Track",,,0,,1,,<br>9389,207,"2010-1-30",1=
+2.292,Gal,2.939,36.13,,16.84,,"Premium","Exxon","Platinum",,,,0,,1,,<br>95=
+43,154,"2010-1-30",7.982,Gal,2.799,22.34,,19.293,,"Premium","Citgo","Plati=
+num",,,,0,,1,,<br>9644,101,"2010-1-30",10.75,Gal,2.986,32.1,,9.395,"With =
+paulf and =
+kevin","Premium","Shell","Platinum","Track",,,0,,1,,<br>9727,83,"2010-1-30=
+",8.038,Gal,2.799,22.5,,10.326,,"Premium","Texaco",,"Track",,,0,,1,,<br>99=
+39,212,"2010-2-12",14.295,Gal,2.959,42.3,,14.83,,"Premium","Shell","Platin=
+um","City",,,0,,1,,<br>10146,207,"2010-2-24",14.855,Gal,2.799,41.58,,13.93=
+5,,"Premium","Exxon","Platinum","City",,,0,,1,,<br>10319,173,"2010-2-27",7=
+.842,Gal,2.799,21.95,,22.061,,"Premium","Texaco","Platinum","Hauling =
+Ass",,,0,,1,,<br>10454,135,"2010-2-27",13.936,Gal,2.799,39.01,,9.687,,"Pre=
+mium","Valero","Platinum","Track",,,0,,1,,<br>10658,204,"2010-3-12",14.01,=
+Gal,2.829,39.63,,14.561,,"Premium","Citgo","Platinum",,,,0,,1,,<br>10757,9=
+9,"2010-3-13",5.045,Gal,2.9,14.63,,19.623,,"Premium","Exxon","Platinum","H=
+ighway",,,0,,1,,<br>10856,99,"2010-3-14",12.8,Gal,3.316,42.44,,7.734,,"Pre=
+mium","Texas World =
+Speedway","Platinum","Track",,"Track",0,,1,,<br>10916,60,"2010-3-14",8.4,G=
+al,3.3,27.72,,7.143,,"Premium","Texas World =
+Speedway","Platinum","Track",,"Track",0,,1,,<br>10999,83,"2010-3-14",6.798=
+,Gal,3.099,21.07,,12.209,,"Premium","Exxon","Platinum",,,,0,,1,,<br>11234,=
+235,"2010-3-15",12.341,Gal,2.889,35.65,,19.042,,"Premium","Exxon","Platinu=
+m","Highway",,,0,,1,,<br>11469,235,"2010-3-26",14.829,Gal,2.999,44.47,,15.=
+847,,"Premium","Exxon","Platinum","City",,,0,,1,,<br>11635,166,"2010-3-27"=
+,7.948,Gal,2.899,23.04,,20.886,,"Premium","Texaco","Platinum",,,,0,,1,,<br=
+>11719,84,"2010-3-27",10.912,Gal,2.919,31.85,,7.698,,"Premium","Shell","Pl=
+atinum","Track",,"Track",0,,1,,<br>11857,138,"2010-3-27",12.571,Gal,2.899,=
+36.44,,10.978,,"Premium","Valero","Platinum",,,,0,,1,,<br>12079,222,"2010-=
+4-13",14.918,Gal,2.959,44.14,,14.881,,"Premium","Citgo","Platinum",,,,0,,1=
+,,<br>12150,71,"2010-4-17",6.503,Gal,3.609,23.47,,10.918,,"Premium","Motor=
+sport Ranch =
+Houston","Platinum",,,,0,,1,,<br>12233,83,"2010-4-17",10.791,Gal,3.609,38.=
+94,,7.692,,"Premium","Motorsport Ranch =
+Houston","Platinum","Track",,"Track",0,,1,,<br>12291,58,"2010-4-18",11.688=
+,Gal,3.609,42.18,,4.962,,"Premium","Motorsport Ranch =
+Houston","Platinum","Track",,"Track",0,,1,29.277542,-95.422501<br><br><br>=
+MAINTENANCE RECORDS<br>Description,Date,Odometer =
 (mi.),Cost,Note,Location,Type,Subtype,Payment,Categories,Reminder =
-Interval,Reminder Distance,Flags<br>"Installed V1 Radar =
-Detector","2007-2-24",600.0,10.00,,"NuggetHaus",Service,"Accessory","Cash"=
-,,,0.0,0<br>"Denison Gateway =
-500","2007-4-15",1531.0,516.00,,"NuggetHaus",Service,"Accessory","Platinum=
-",,,0.0,0<br>"SmartTop","2007-6-09",4500.0,479.00,,,Service,"Accessory","P=
-latinum",,,0.0,0<br>"Topped Off =
-Oil","2007-6-25",5153.0,6.00,,,Service,"Maintenance","Platinum",,,0.0,0<br=
->"Repaint Trunk Lid","2007-6-27",5334.0,676.00,,"Jeff's Auto =
-Body",Service,"Repair","Optima",,,0.0,0<br>"Oil =
-Change","2007-7-09",6275.0,264.00,,"Roger Beasley =
-Porsche",Service,"Maintenance","Optima",,,0.0,0<br>"Windshield Chip =
-Repair","2007-7-09",6275.0,60.00,,"NuggetHaus",Service,"Repair","Cash",,,0=
-.0,0<br>"Rear Tires","2007-10-18",9100.0,1165.00,,"Discount =
-Tire",Service,"Maintenance","Optima",,,0.0,0<br>"Topped Off =
-Oil","2007-11-12",10377.0,0.00,,"NuggetHaus",Service,"Maintenance",,,,0.0,=
-0<br>"Repair Rattle In Top","2007-11-14",10504.0,0.00,,"Roger Beasley =
-Porsche",Service,"Repair",,,,0.0,0<br>"Front =
-Tires","2008-2-06",13999.0,958.00,,"Discount =
-Tire",Service,"Maintenance","Optima",,,0.0,0<br>"Alignment","2008-2-06",13=
-999.0,20.00,,"JC Auto =
-Spec",Service,"Maintenance","Cash",,,0.0,0<br>"Rear =
-Tires","2008-4-11",16789.0,1067.00,,"Discount =
-Tire",Service,"Maintenance","Optima",,,0.0,0<br>"Brake Fluid _ Tech =
-Inspection","2008-4-14",16962.0,466.00,,"Colvin =
-Automotive",Service,"Maintenance","Optima","Track",,0.0,0<br>"Oil Change =
-_ 20K Service","2008-5-16",19035.0,598.00,,"Roger Beasley =
-Porsche",Service,"Maintenance","Optima",,,0.0,0<br>"New Tires _ Nav =
-Update","2008-8-11",23450.0,2754.32,,"Roger Beasley =
-Porsche",Service,"Maintenance","Optima",,,0.0,0<br>"Rear Wheel =
-Damage","2008-9-26",25199.0,2237.00,,"Roger Beasley =
-Porsche",Service,"Repair","Optima","Track",,0.0,0<br><br><br>ROAD =
+Interval,Reminder Distance,Flags,Currency Code,Currency =
+Rate,Latitude,Longitude<br>"Bought Vehicle","2009-8-31",4382,,"Bought =
+sight unseen.","Porsche Of Nashville",Other,,,,,,0,,1,,<br>"Added =
+Cargraphic Front Screen =
+Kit","2009-9-01",4382,380,,"SharkWerks",Service,"Accessory","Platinum",,,,=
+0,,1,,<br>"Switch To Original Style GT3 RS Steering =
+Wheel","2009-9-01",4382,879.83,,"Suncoast Porsche =
+Parts",Expense,,"Platinum",,,,0,,1,,<br>"State =
+Inspection","2009-9-09",5226,41.75,,"Momentum =
+Porsche",Service,"Inspection","Platinum",,,,0,,1,,<br>"GT3 Mk2 Rear =
+Brake Cooling Ducts","2009-9-11",5459,217.61,,"Suncoast Porsche =
+Parts",Expense,"Track - =
+Equipment","Platinum","Track",,,0,,1,,<br>"Remove Window =
+Tint","2009-9-25",6509,116.18,,"Momentum =
+Porsche",Service,,"Platinum",,,,0,,1,,<br>"Replace Side Window After =
+Theft","2009-11-05",6990,1101.31,"Thief smashed out driver side window =
+and stole radar detector.","Momentum =
+Porsche",Service,"Repair","Platinum",,,,0,,1,,<br>"Add 1 qt =
+Oil","2009-11-08",7325,,"Oil reading low mid-day at track so I added a =
+full quart, bringing indicator to top-of-full mark.","Texas World =
+Speedway",Service,,,"Track",,,0,,1,,<br>"New Tires All =
+Around","2009-12-17",7760,1565.33,"Unhappy with OEM PS2 Cup tires, I =
+replaced with four Bridgestone RE-11 in stock sizes.  Very pleased, I =
+like them a lot more for street driving.  Will be running dedicated =
+track wheels an tires (Hoosier R6) from here on out.","Discount =
+Tire",Service,"Maintenance","American Express",,,,0,,1,,<br>"Track =
+Wheels And Slicks","2009-12-21",7781,3584.2,"Dedicated track wheels.  =
+O.Z. Alleggerita 18x8.5 and 18x12.  Hoosier R6 and TPMS sensors","Tire =
+Rack",Expense,"Track - Equipment","American =
+Express","Track",,,0,,1,,<br>"General =
+Maintenance","2010-1-12",8505,555.57,"Oil change, brake fluid flush, =
+alignment.","Momentum =
+Porsche",Service,"Maintenance","Platinum",,,,0,,1,,<br>"Hoosier R6 =
+Set","2010-3-05",10454,1609.26,"Set number two","Discount =
+Tire",Expense,"Track - Equipment","American =
+Express","Track",,,0,,1,,<br>"Rear Brake =
+Pads","2010-3-05",10454,299.95,,"Suncoast Porsche =
+Parts",Service,"Maintenance","Platinum",,,,0,,1,,<br><br><br>ROAD =
 TRIPS<br>Name,Start Date,Start Odometer (mi.),End Date,End =
-Odometer,Note,Distance<br><br><br>VEHICLE<br>Name,Odometer,Units,Notes<br>=
-"2007 Porsche 911 C2S","mi","MPG","License Plate: =
-TX-BOFH<br>VIN:WP0CB29937S776108<br><br>Insurance Name:<br>Policy =
-No.:<br>Phone:<br>Notes:<br>"<br></pre><p><i>---- End Copy and Paste =
-----</i></p></div><div></div><div><br><br>Sent from my =
-iPhone</div></body></html>=
+Odometer,Note,Distance<br>"Spring =
+2009","2009-1-01",4567,"2009-4-30",4567,,<br>"Summer =
+2009","2009-5-01",4567,"2009-8-31",4567,,<br>"Bringing the car home to =
+Texas","2009-9-04",4382,"2009-9-06",5386,"Straight down the Natchez =
+Trace Parkway and then back roads the rest of the way.",1004<br>"HPDE: =
+H2R","2009-9-12",5465,"2009-9-12",5493,"H2R sponsored HPDE.  I didn't =
+formally participate, I just snuck out on track a few times during the =
+instructor sessions.",28<br>"Open day: =
+H2R","2009-9-20",6145,"2009-9-20",6293,,148<br>"HPDE: TWS =
+CCW","2009-10-03",6676,"2009-10-04",6780,"Horrible rain",104<br>"HPDE: =
+TWS CW","2009-11-07",7116,"2009-11-08",7451,,335<br>"Open Day: =
+H2R","2010-1-22",8851,"2010-1-22",8942,"Hoosier R6",91<br>"HPDE: =
+H2R","2010-1-23",8946,"2010-1-24",9174,"Hoosier R6.  Kicked ass in red =
+group.",228<br>"Open Day: H2R","2010-1-30",9551,"2010-1-30",9718,"New =
+personal best time! 1:27.2 lap clockwise.  Instructed paulf and Kevin in =
+car for three sessions.",167<br>"HPDE: H2R (Boxers and =
+Boxsters)","2010-2-27",10324,"2010-2-27",10372,"...and that's the end of =
+the first set of Hoosiers.  They're cooked.",48<br>"HPDE: TWS =
+CCW","2010-3-13",10766,"2010-3-14",10959,,193<br>"HPDE: =
+H2R","2010-3-27",11640,"2010-3-27",11783,"1:26.6! I'm getting =
+faster",143<br>"HPDE: MSR =
+Houston","2010-4-17",12150,"2010-4-18",12329,"First time at this track =
+and I loved it.  Torrential rain on Sunday but we still =
+ran.",179<br><br><br>VEHICLE<br>Name,Odometer,Units,Notes,Tank =
+Capacity,Tank Units,Home Currency,Flags<br>"2007 GT3 =
+RS","mi","MPG","License Plate:<br>VIN:<br><br>Insurance Name:<br>Policy =
+No.:<br>Phone:<br>Notes:<br>",17.700001,gal,USD,0<br><br><br>TIRE =
+LOG<br>Name,Start Date,Start Odometer (mi.),Size,Size =
+Adjustment,Distance,Age,Note,Flags<br>"Pilot Sport =
+Cups","2009-8-31",4382,,,3378,"3 Months",,0<br>"Potenza =
+RE-11","2009-12-17",7760,,,4531,"4 Months",,0<br></tt></p><h4><i>---- =
+End Copy and Paste =
+----</i></h4></div><div></div><div><br><br></div></body></html>=
 
---Apple-Mail-1-722008715--
+--Apple-Mail-2--795369947
+Content-Disposition: attachment;
+	filename="RoadTrip-2007 GT3 RS-2010-4-19.csv"
+Content-Type: application/octet-stream;
+	name="RoadTrip-2007 GT3 RS-2010-4-19.csv"
+Content-Transfer-Encoding: 7bit
+
+ROAD TRIP CSV ",."
+Version,Language
+150,en
+
+
+FUEL RECORDS
+Odometer (mi),Trip Distance,Date,Fill Amount,Fill Units,Price per Unit,Total Price,Partial Fill,MPG,Note,Octane,Location,Payment,Conditions,Reset,Categories,Flags,Currency Code,Currency Rate,Latitude,Longitude
+4567,4567,"2009-9-05",9.357,Gal,2.809,26.28,,,"First tank ever","Premium","BP Franklin TN","Platinum",,Reset,,9,,1,,
+4699,132,"2009-9-05",7.782,Gal,2.859,22.25,,16.962,,"Premium","Chevron Cherokee, AL","Platinum","Highway",,"Vacation",0,,1,,
+4934,235,"2009-9-06",11.112,Gal,2.569,28.55,,21.148,,"Premium","Fleet Way Jackson, MS","Platinum","Highway",,,0,,1,,
+5168,234,"2009-9-06",11.713,Gal,2.799,32.78,,19.978,,"Premium","Citgo Pitkin, LA","Platinum","Highway",,,0,,1,,
+5459,291,"2009-9-11",15.64,Gal,2.539,39.71,,18.606,,"Premium","Citgo","Platinum",,,,0,,1,,
+5682,223,"2009-9-12",11.575,Gal,2.699,31.24,,19.266,,"Premium","Texaco","Platinum",,,,0,,1,,
+5922,240,"2009-9-15",15.541,Gal,2.459,38.22,,15.443,,"Premium","Citgo","Platinum",,,,0,,1,,
+5976,54,"2009-9-20",4.82,Gal,2.76,13.3,,11.203,,"Premium","Exxon","Platinum",,,,0,,1,,
+6193,217,"2009-9-20",12.94,Gal,2.699,34.93,,16.77,,"Premium","Sac n Pac by H2R","Platinum",,,,0,,1,,
+6295,102,"2009-9-20",11.666,Gal,2.699,31.49,,8.743,,"Premium","Sac n Pac by H2R","Platinum","Track",,,0,,1,,
+6527,232,"2009-9-28",12.825,Gal,2.439,31.28,,18.09,,"Premium","Citgo","Platinum",,,,0,,1,,
+6669,142,"2009-10-03",10.254,Gal,2.599,26.65,,13.848,,"Premium","Citgo","Platinum",,,,0,,1,,
+6799,130,"2009-10-04",11.43,Gal,2.631,30.07,,11.374,,"Premium","Citgo","Platinum","Track",,"Track",0,,1,,
+6962,163,"2009-10-29",14.526,Gal,2.699,39.21,,11.221,,"Premium","Citgo","Platinum","City",,,0,,1,,
+7113,151,"2009-11-07",10.41,Gal,2.859,29.76,,14.505,,"Premium","Shell","Platinum",,,,0,,1,,
+7171,58,"2009-11-07",6.8,Gal,3.325,22.61,,8.529,,"Premium","Texas World Speedway","Platinum","Track",,,0,,1,,
+7247,76,"2009-11-08",7.571,Gal,2.86,21.65,,10.038,,"Premium","Shell","Platinum",,,,0,,1,,
+7325,78,"2009-11-08",8.4,Gal,3.3,27.72,,9.286,,"Premium","Texas World Speedway","Platinum","Track",,,0,,1,,
+7491,166,"2009-11-23",13.789,Gal,2.879,39.7,,12.039,,"Premium","Exxon","Platinum","City",,,0,,1,,
+7665,174,"2009-12-08",14.363,Gal,2.879,41.35,,12.114,,"Premium","Shell","Platinum","City",,,0,,1,,
+7806,141,"2009-12-24",12.025,Gal,2.899,34.86,,11.726,,"Premium","Shell","Platinum","City",,,0,,1,,
+8084,278,"2009-12-25",13.501,Gal,2.959,39.95,,20.591,,"Premium","Shell","Platinum","Highway",,,0,,1,,
+8285,201,"2009-12-27",10.789,Gal,2.879,31.06,,18.63,,"Premium","Exxon","Platinum","Highway",,,0,,1,,
+8490,205,"2010-1-11",14.291,Gal,2.799,40,,14.345,,"Premium","Citgo","Platinum",,,,0,,1,,
+8656,166,"2010-1-19",14.124,Gal,2.779,39.25,,11.753,,"Premium","Exxon","Platinum","City",,,0,,1,,
+8849,193,"2010-1-22",9.693,Gal,3.122,30.26,,19.911,,"Premium","Sac n Pac by H2R","Platinum",,,,0,,1,,
+8944,95,"2010-1-22",11.735,Gal,2.779,32.61,,8.095,,"Premium","Raceway","MasterCard",,,,0,,1,,
+9049,105,"2010-1-23",11.631,Gal,2.579,30,,9.028,,"Premium","Shell","Platinum","Track",,,0,,1,,
+9121,72,"2010-1-24",9.144,Gal,2.841,25.98,,7.874,,"Premium","Shell","Platinum","Track",,,0,,1,,
+9182,61,"2010-1-24",7.329,Gal,2.839,20.81,,8.323,,"Premium","Shell","Platinum","Track",,,0,,1,,
+9389,207,"2010-1-30",12.292,Gal,2.939,36.13,,16.84,,"Premium","Exxon","Platinum",,,,0,,1,,
+9543,154,"2010-1-30",7.982,Gal,2.799,22.34,,19.293,,"Premium","Citgo","Platinum",,,,0,,1,,
+9644,101,"2010-1-30",10.75,Gal,2.986,32.1,,9.395,"With paulf and kevin","Premium","Shell","Platinum","Track",,,0,,1,,
+9727,83,"2010-1-30",8.038,Gal,2.799,22.5,,10.326,,"Premium","Texaco",,"Track",,,0,,1,,
+9939,212,"2010-2-12",14.295,Gal,2.959,42.3,,14.83,,"Premium","Shell","Platinum","City",,,0,,1,,
+10146,207,"2010-2-24",14.855,Gal,2.799,41.58,,13.935,,"Premium","Exxon","Platinum","City",,,0,,1,,
+10319,173,"2010-2-27",7.842,Gal,2.799,21.95,,22.061,,"Premium","Texaco","Platinum","Hauling Ass",,,0,,1,,
+10454,135,"2010-2-27",13.936,Gal,2.799,39.01,,9.687,,"Premium","Valero","Platinum","Track",,,0,,1,,
+10658,204,"2010-3-12",14.01,Gal,2.829,39.63,,14.561,,"Premium","Citgo","Platinum",,,,0,,1,,
+10757,99,"2010-3-13",5.045,Gal,2.9,14.63,,19.623,,"Premium","Exxon","Platinum","Highway",,,0,,1,,
+10856,99,"2010-3-14",12.8,Gal,3.316,42.44,,7.734,,"Premium","Texas World Speedway","Platinum","Track",,"Track",0,,1,,
+10916,60,"2010-3-14",8.4,Gal,3.3,27.72,,7.143,,"Premium","Texas World Speedway","Platinum","Track",,"Track",0,,1,,
+10999,83,"2010-3-14",6.798,Gal,3.099,21.07,,12.209,,"Premium","Exxon","Platinum",,,,0,,1,,
+11234,235,"2010-3-15",12.341,Gal,2.889,35.65,,19.042,,"Premium","Exxon","Platinum","Highway",,,0,,1,,
+11469,235,"2010-3-26",14.829,Gal,2.999,44.47,,15.847,,"Premium","Exxon","Platinum","City",,,0,,1,,
+11635,166,"2010-3-27",7.948,Gal,2.899,23.04,,20.886,,"Premium","Texaco","Platinum",,,,0,,1,,
+11719,84,"2010-3-27",10.912,Gal,2.919,31.85,,7.698,,"Premium","Shell","Platinum","Track",,"Track",0,,1,,
+11857,138,"2010-3-27",12.571,Gal,2.899,36.44,,10.978,,"Premium","Valero","Platinum",,,,0,,1,,
+12079,222,"2010-4-13",14.918,Gal,2.959,44.14,,14.881,,"Premium","Citgo","Platinum",,,,0,,1,,
+12150,71,"2010-4-17",6.503,Gal,3.609,23.47,,10.918,,"Premium","Motorsport Ranch Houston","Platinum",,,,0,,1,,
+12233,83,"2010-4-17",10.791,Gal,3.609,38.94,,7.692,,"Premium","Motorsport Ranch Houston","Platinum","Track",,"Track",0,,1,,
+12291,58,"2010-4-18",11.688,Gal,3.609,42.18,,4.962,,"Premium","Motorsport Ranch Houston","Platinum","Track",,"Track",0,,1,29.277542,-95.422501
+
+
+MAINTENANCE RECORDS
+Description,Date,Odometer (mi.),Cost,Note,Location,Type,Subtype,Payment,Categories,Reminder Interval,Reminder Distance,Flags,Currency Code,Currency Rate,Latitude,Longitude
+"Bought Vehicle","2009-8-31",4382,,"Bought sight unseen.","Porsche Of Nashville",Other,,,,,,0,,1,,
+"Added Cargraphic Front Screen Kit","2009-9-01",4382,380,,"SharkWerks",Service,"Accessory","Platinum",,,,0,,1,,
+"Switch To Original Style GT3 RS Steering Wheel","2009-9-01",4382,879.83,,"Suncoast Porsche Parts",Expense,,"Platinum",,,,0,,1,,
+"State Inspection","2009-9-09",5226,41.75,,"Momentum Porsche",Service,"Inspection","Platinum",,,,0,,1,,
+"GT3 Mk2 Rear Brake Cooling Ducts","2009-9-11",5459,217.61,,"Suncoast Porsche Parts",Expense,"Track - Equipment","Platinum","Track",,,0,,1,,
+"Remove Window Tint","2009-9-25",6509,116.18,,"Momentum Porsche",Service,,"Platinum",,,,0,,1,,
+"Replace Side Window After Theft","2009-11-05",6990,1101.31,"Thief smashed out driver side window and stole radar detector.","Momentum Porsche",Service,"Repair","Platinum",,,,0,,1,,
+"Add 1 qt Oil","2009-11-08",7325,,"Oil reading low mid-day at track so I added a full quart, bringing indicator to top-of-full mark.","Texas World Speedway",Service,,,"Track",,,0,,1,,
+"New Tires All Around","2009-12-17",7760,1565.33,"Unhappy with OEM PS2 Cup tires, I replaced with four Bridgestone RE-11 in stock sizes.  Very pleased, I like them a lot more for street driving.  Will be running dedicated track wheels an tires (Hoosier R6) from here on out.","Discount Tire",Service,"Maintenance","American Express",,,,0,,1,,
+"Track Wheels And Slicks","2009-12-21",7781,3584.2,"Dedicated track wheels.  O.Z. Alleggerita 18x8.5 and 18x12.  Hoosier R6 and TPMS sensors","Tire Rack",Expense,"Track - Equipment","American Express","Track",,,0,,1,,
+"General Maintenance","2010-1-12",8505,555.57,"Oil change, brake fluid flush, alignment.","Momentum Porsche",Service,"Maintenance","Platinum",,,,0,,1,,
+"Hoosier R6 Set","2010-3-05",10454,1609.26,"Set number two","Discount Tire",Expense,"Track - Equipment","American Express","Track",,,0,,1,,
+"Rear Brake Pads","2010-3-05",10454,299.95,,"Suncoast Porsche Parts",Service,"Maintenance","Platinum",,,,0,,1,,
+
+
+ROAD TRIPS
+Name,Start Date,Start Odometer (mi.),End Date,End Odometer,Note,Distance
+"Spring 2009","2009-1-01",4567,"2009-4-30",4567,,
+"Summer 2009","2009-5-01",4567,"2009-8-31",4567,,
+"Bringing the car home to Texas","2009-9-04",4382,"2009-9-06",5386,"Straight down the Natchez Trace Parkway and then back roads the rest of the way.",1004
+"HPDE: H2R","2009-9-12",5465,"2009-9-12",5493,"H2R sponsored HPDE.  I didn't formally participate, I just snuck out on track a few times during the instructor sessions.",28
+"Open day: H2R","2009-9-20",6145,"2009-9-20",6293,,148
+"HPDE: TWS CCW","2009-10-03",6676,"2009-10-04",6780,"Horrible rain",104
+"HPDE: TWS CW","2009-11-07",7116,"2009-11-08",7451,,335
+"Open Day: H2R","2010-1-22",8851,"2010-1-22",8942,"Hoosier R6",91
+"HPDE: H2R","2010-1-23",8946,"2010-1-24",9174,"Hoosier R6.  Kicked ass in red group.",228
+"Open Day: H2R","2010-1-30",9551,"2010-1-30",9718,"New personal best time! 1:27.2 lap clockwise.  Instructed paulf and Kevin in car for three sessions.",167
+"HPDE: H2R (Boxers and Boxsters)","2010-2-27",10324,"2010-2-27",10372,"...and that's the end of the first set of Hoosiers.  They're cooked.",48
+"HPDE: TWS CCW","2010-3-13",10766,"2010-3-14",10959,,193
+"HPDE: H2R","2010-3-27",11640,"2010-3-27",11783,"1:26.6! I'm getting faster",143
+"HPDE: MSR Houston","2010-4-17",12150,"2010-4-18",12329,"First time at this track and I loved it.  Torrential rain on Sunday but we still ran.",179
+
+
+VEHICLE
+Name,Odometer,Units,Notes,Tank Capacity,Tank Units,Home Currency,Flags
+"2007 GT3 RS","mi","MPG","License Plate:
+VIN:
+
+Insurance Name:
+Policy No.:
+Phone:
+Notes:
+",17.700001,gal,USD,0
+
+
+TIRE LOG
+Name,Start Date,Start Odometer (mi.),Size,Size Adjustment,Distance,Age,Note,Flags
+"Pilot Sport Cups","2009-8-31",4382,,,3378,"3 Months",,0
+"Potenza RE-11","2009-12-17",7760,,,4531,"4 Months",,0
+
+--Apple-Mail-2--795369947
+Content-Type: text/html;
+	charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+<html><body bgcolor="#FFFFFF"><div></div><div><br><br>Sent from my iPhone</div></body></html>
+--Apple-Mail-2--795369947--
+
+--Apple-Mail-1--795369970--
 
