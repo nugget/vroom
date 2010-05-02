@@ -31,7 +31,7 @@ proc process_wbuf {section wbuf} {
 		}
 
 		"FUEL RECORDS" {
-			lassign [::csv::split $wbuf] data(odometer) data(trip_odometer) data(fillup_date) data(fill_amount) data(fill_units) data(unit_price) data(total_price) data(partial_fill) data(mpg) data(note) data(octane) data(location) data(payment) data(conditions) data(reset) data(categories) data(flags) data(currency_code) data(currency_rate) data(lat) data(long)
+			lassign [::csv::split $wbuf] data(odometer) data(trip_odometer) data(fillup_date) data(fill_amount) data(fill_units) data(unit_price) data(total_price) data(partial_fill) data(mpg) data(note) data(octane) data(location) data(payment) data(conditions) data(reset) data(categories) data(flags) data(currency_code) data(currency_rate) data(lat) data(lon)
 			set data(vehicle_id) $vehicle_id
 
 			set id [add_fillup [array get data]]
@@ -39,7 +39,7 @@ proc process_wbuf {section wbuf} {
 		}
 
 		"MAINTENANCE RECORDS" {
-			lassign [::csv::split $wbuf] data(name) data(service_date) data(odometer) data(cost) data(note) data(location) data(type) data(subtype) data(payment) data(categories) data(reminder_interval) data(reminder_distance) data(flags) data(currency_code) data(currency_rate) data(lat) data(long)
+			lassign [::csv::split $wbuf] data(name) data(service_date) data(odometer) data(cost) data(note) data(location) data(type) data(subtype) data(payment) data(categories) data(reminder_interval) data(reminder_distance) data(flags) data(currency_code) data(currency_rate) data(lat) data(lon)
 			set data(vehicle_id) $vehicle_id
 			set id [add_expense [array get data]]
 			incr records(expenses)
