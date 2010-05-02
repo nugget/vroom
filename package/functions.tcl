@@ -133,7 +133,9 @@ proc sql_value_list { type field_list hash_data } {
 	array set data $hash_data
 
 	foreach field $field_list {
-		if {$type == "numeric"} {
+		if {![info exists data($field)]} {
+			append outbuf "NULL, "
+		} elseif {$type == "numeric"} {
 			append outbuf "[sanitize_number $data($field)], "
 		} else {
 			if {$data($field) == ""} {
