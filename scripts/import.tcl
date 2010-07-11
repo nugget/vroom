@@ -21,6 +21,7 @@ proc process_wbuf {section wbuf} {
 	global vehicle_id
 	global records
 
+
 	if {[regexp "^\$|$section|,Note,|,Start Date,|,Odometer," $wbuf]} {
 		return
 	}
@@ -41,6 +42,7 @@ proc process_wbuf {section wbuf} {
 		"MAINTENANCE RECORDS" {
 			lassign [::csv::split $wbuf] data(name) data(service_date) data(odometer) data(cost) data(note) data(location) data(type) data(subtype) data(payment) data(categories) data(reminder_interval) data(reminder_distance) data(flags) data(currency_code) data(currency_rate) data(lat) data(lon)
 			set data(vehicle_id) $vehicle_id
+
 			set id [add_expense [array get data]]
 			incr records(expenses)
 		}
@@ -124,21 +126,32 @@ proc main {} {
 	set partial 0
 	set wrap_it_up 0
 
-	set wbuf ""
+	set seek_start	"---- Begin Copy and Paste here*"
+	set seek_end	"---- End Copy and Paste*"
 
+	set seek_start	{filename="RoadTrip}
+	set seek_end	{--Apple-Mail}
+
+	set wbuf ""
 	foreach line [split $data "\n"] {
 		# puts "$live/$partial/$wrap_it_up:$line"
-		if {[string match "---- Begin Copy and Paste here*" $line]} {
+		if {[regexp $seek_start $line]} {
 			set live 1
 		}
 		if {[regexp {^(ROAD TRIP CSV|FUEL RECORDS|MAINTENANCE RECORDS|ROAD TRIPS|VEHICLE|TIRE LOG)$} $line]} {
 			set wbuf ""
 			set section $line
+			if {$::debug} {
+				puts "2: Section $section"
+			}
 		}
-		if {[string match "---- End Copy and Paste*" $line]} {
+		if {[regexp $seek_end $line]} {
 			set live 0
 		}
 
+		if {$::debug} {
+			puts "$live: $line"
+		}
 		if {$live && [info exists section]} {
 			if {[regexp {[^ ]$} $line]} {
 				regsub { $} $wbuf "" wbuf
