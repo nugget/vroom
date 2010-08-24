@@ -216,6 +216,9 @@ proc add_expense { hash_data } {
 	set id [simplesqlquery $vroomdb "SELECT expense_id FROM expenses WHERE name = [pg_quote $data(name)] AND odometer = [sanitize_number $data(odometer)]"]
 
 	if {$id == ""} {
+		if {$data(cost) == ""} {
+			set data(cost) 0.00
+		}
 		set sql "INSERT INTO expenses ([sql_field_list $fields_varchar], [sql_field_list $fields_numeric]) "
 		append sql "VALUES ([sql_value_list varchar $fields_varchar [array get data]], [sql_value_list numeric $fields_numeric [array get data]]);"
 
