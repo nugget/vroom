@@ -16,6 +16,7 @@ CREATE TABLE vehicles (
   tank_units varchar NOT NULL DEFAULT 'gal',
   home_currency varchar NOT NULL DEFAULT 'USD',
   uuid varchar,
+  dropbox_url varchar,
   PRIMARY KEY(vehicle_id)
 );
 
