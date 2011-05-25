@@ -15,6 +15,7 @@ CREATE TABLE vehicles (
   tank_capacity numeric(5,2),
   tank_units varchar NOT NULL DEFAULT 'gal',
   home_currency varchar NOT NULL DEFAULT 'USD',
+  uuid varchar,
   PRIMARY KEY(vehicle_id)
 );
 

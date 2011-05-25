@@ -16,6 +16,9 @@ proc sanitize_number { value } {
 }
 
 proc sql_boolean { value } {
+	if {$value == 0 || $value == 1} {
+		return $value
+	}
 	if {$value == ""} {
 		return "f"
 	} else {
@@ -51,12 +54,14 @@ proc update_if_changed {db table key id data_hash} {
 	set sql "UPDATE $table SET "
 	pg_select $db "SELECT * FROM $table WHERE $key = $id" old_data {
 		foreach field [array names new_data] {
-			if {[regexp {_date$} $field]} {
-				set new_data($field) [simplesqlquery $db "SELECT [pg_quote $new_data($field)]::date"]
-			}
-			if {$new_data($field) != $old_data($field)} {
-				set changed 1
-				append sql "$field = [pg_quote $new_data($field)], "
+			if {$field != "rowtype"} {
+				if {[regexp {_date$} $field]} {
+					set new_data($field) [simplesqlquery $db "SELECT [pg_quote $new_data($field)]::date"]
+				}
+				if {$new_data($field) != $old_data($field)} {
+					set changed 1
+					append sql "$field = [pg_quote $new_data($field)], "
+				}
 			}
 		}
 	}
@@ -155,7 +160,7 @@ proc add_vehicle { hash_data } {
 
 	array set data $hash_data
 
-	set fields_varchar [list name units_odometer units_economy notes tank_units home_currency]
+	set fields_varchar [list name units_odometer units_economy notes tank_units home_currency uuid]
 	set fields_numeric [list tank_capacity]
 
 	set id [simplesqlquery $vroomdb "SELECT vehicle_id FROM vehicles WHERE name = [pg_quote $data(name)]"]
@@ -183,6 +188,18 @@ proc add_fillup { hash_data } {
 
 	set fields_varchar [list fillup_date fill_units partial_fill note octane location payment conditions reset categories currency_code]
 	set fields_numeric [list odometer trip_odometer total_price unit_price fill_amount mpg flags vehicle_id currency_rate lat lon]
+
+	if {![info exists data(flags)]} {
+		set data(flags) 0
+	}
+
+	if {[info exists data(filled)]} {
+		if {$data(filled) == 1} {
+			set data(partial_fill) 0
+		} else {
+			set data(partial_fill) 1
+		}
+	}
 
 	set data(partial_fill) [sql_boolean $data(partial_fill)]
 	set data(reset)        [sql_boolean $data(reset)]

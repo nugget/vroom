@@ -1,11 +1,13 @@
-namespace eval ::macnugget {
+namespace eval ::vroom {
 
-	array set database {
+	array set DB {
 		dbname		vroom
 		host		localhost
 		port		5432
-		user		username
+		user		dbuser
 		password	password
 		connect_timeout	5
 	}
 }
+
+package provide vroom 1.0

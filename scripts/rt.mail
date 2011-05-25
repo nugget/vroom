@@ -1,45 +1,45 @@
-From nugget@macnugget.org  Mon Apr 19 17:44:58 2010
+From nugget@macnugget.org  Sun May  2 07:58:06 2010
 Return-Path: <nugget@macnugget.org>
 X-Spam-Checker-Version: SpamAssassin 3.2.5 (2008-06-10) on
 	carrera.macnugget.org
 X-Spam-Level: 
-X-Spam-Status: No, score=-0.3 required=5.0 tests=ALL_TRUSTED,AWL,BAYES_50,
+X-Spam-Status: No, score=-0.2 required=5.0 tests=ALL_TRUSTED,AWL,BAYES_50,
 	DKIM_SIGNED,DKIM_VERIFIED,FH_DATE_PAST_20XX,HTML_MESSAGE autolearn=no
 	version=3.2.5
 X-Original-To: nugget@macnugget.org
 Delivered-To: nugget@macnugget.org
 Received: from carrera.macnugget.org (localhost [127.0.0.1])
-	by carrera.macnugget.org (Postfix) with ESMTP id 9B0EF4ACD8
-	for <nugget@macnugget.org>; Mon, 19 Apr 2010 17:44:58 -0500 (CDT)
+	by carrera.macnugget.org (Postfix) with ESMTP id 1BF874ACCC
+	for <nugget@macnugget.org>; Sun,  2 May 2010 07:58:06 -0500 (CDT)
 DKIM-Signature: v=1; a=rsa-sha1; c=relaxed; d=macnugget.org; h=
 	message-id:from:to:content-type:content-transfer-encoding
-	:mime-version:subject:date; s=selector1; bh=jWvsoB4Er421il2rfFAA
-	tcOkZi0=; b=KO1Hwq4ZGGotQi5o7gd0Jg5NBdfJ0+lkzRRbCcYwKM4j9jmsMPka
-	2u5U/nfPN2/1ig+eWuvZf5AKyPuqbhjQ3hK3E1N6tc6BANubvf4Q79+sJ8MGt4nG
-	EuOkuBMe2nzlY42VgJcqmArI4wd0nVqS10MdhSFloYUJBxn3W7+f0RY=
+	:mime-version:subject:date; s=selector1; bh=19E17csl1D0MJREUYn7B
+	jbV7gzQ=; b=na6LOcRdvQzbg99zHxJjtgpZyXiJ74g1EHkt4q85X0lu2zgkqFJ6
+	np1UpepNd7xIR+1ZYS7A+uqXNGOOb/z8DWL8PNnEVorq30a5eSDYVgFxAkpYYUpQ
+	+qYlN/v1NAo1g3V4Dlhtqo8rXUHNPmdOJ1slNoj5NvffdGqZ0wszAyQ=
 DomainKey-Signature: a=rsa-sha1; c=nofws; d=macnugget.org; h=message-id
 	:from:to:content-type:content-transfer-encoding:mime-version
-	:subject:date; q=dns; s=selector1; b=ilE7ECDQJjcRwgqRRuwrZFEwnLe
-	43u4Y0abiX8btHNHMznFyEZDwSmdYbVNz4sFajRWXwfVNZqpV7nWh6Iss4HfOONP
-	dsQ39x6RAy8WiS1Ld2l2n/IvHRP7eHJGG+xFUNI/2DLxVkv40BAgKXMTssAWRm4F
-	IC1Ew0/O0QZRq13I=
+	:subject:date; q=dns; s=selector1; b=eKBpyUq8F70zCNbQx2x6BP93gKl
+	a0eyH6wFxB0V164cilsQp+WPXAbEDQsq5Y6kiyDo1gJ4mpPJtdR//8K3BiPLHRp+
+	YAXSdBCSNK+lN0ZhEebg8ZefTnfEKBURimQK+NLIvlmWnRWbU7cQqQGXWnuKIkGe
+	7RB/yd7Nzy+HJk8I=
 Received: from [10.0.42.2] (99-53-250-214.lightspeed.hstntx.sbcglobal.net [99.53.250.214])
 	(using TLSv1 with cipher AES128-SHA (128/128 bits))
 	(Client did not present a certificate)
-	by carrera.macnugget.org (Postfix) with ESMTPSA id E75444ACBA
-	for <nugget@macnugget.org>; Mon, 19 Apr 2010 17:44:57 -0500 (CDT)
-Message-Id: <C30B9C6C-246C-4955-BE9A-E487869E549A@macnugget.org>
+	by carrera.macnugget.org (Postfix) with ESMTPSA id 1FB944ACBA
+	for <nugget@macnugget.org>; Sun,  2 May 2010 07:58:05 -0500 (CDT)
+Message-Id: <C8B9A1F1-4F45-47CD-9FD2-8AFF6E132ED6@macnugget.org>
 From: David McNett <nugget@macnugget.org>
 To: "nugget@macnugget.org" <nugget@macnugget.org>
-Content-Type: multipart/alternative; boundary=Apple-Mail-1--795369970
+Content-Type: multipart/alternative; boundary=Apple-Mail-1-292583484
 Content-Transfer-Encoding: 7bit
 Mime-Version: 1.0 (iPhone Mail 7E18)
-Subject: Road Trip Export Data for '2007 GT3 RS' on Apr 19, 2010
-Date: Mon, 19 Apr 2010 17:44:48 -0500
+Subject: Road Trip Export Data for '2007 GT3 RS' on May 2, 2010
+Date: Sun, 2 May 2010 07:57:22 -0500
 X-Mailer: iPhone Mail (7E18)
 
 
---Apple-Mail-1--795369970
+--Apple-Mail-1-292583484
 Content-Type: text/plain;
 	charset=us-ascii;
 	format=flowed;
@@ -189,10 +189,13 @@ Speedway","Platinum","Track",,"Track",0,,1,,
 Houston","Platinum",,,,0,,1,,
 12233,83,"2010-4-17",10.791,Gal, 
 3.609,38.94,,7.692,,"Premium","Motorsport Ranch  
-Houston","Platinum","Track",,"Track",0,,1,,
+Houston","Platinum","Track",,"Track",0,,1,29.277733,-95.422829
 12291,58,"2010-4-18",11.688,Gal, 
 3.609,42.18,,4.962,,"Premium","Motorsport Ranch  
-Houston","Platinum","Track",,"Track",0,,1,29.277542,-95.422501
+Houston","Platinum","Track",,"Track",0,,1,29.277733,-95.422829
+12450,159,"2010-5-01",14.962,Gal, 
+3.079,46.07,,10.627,,"Premium","Shell","Platinum",,,, 
+0,,1,29.727806,-95.440529
 
 
 MAINTENANCE RECORDS
@@ -234,12 +237,13 @@ Porsche",Service,"Maintenance","Platinum",,,,0,,1,,
 Tire",Expense,"Track - Equipment","American Express","Track",,,0,,1,,
 "Rear Brake Pads","2010-3-05",10454,299.95,,"Suncoast Porsche  
 Parts",Service,"Maintenance","Platinum",,,,0,,1,,
+"Hoosier R6 Set","2010-5-02",12450,1517.76,,"Motorsport Ranch  
+Houston",Expense,"Track - Equipment","American Express","Track",,, 
+0,,1,29.277733,-95.422829
 
 
 ROAD TRIPS
 Name,Start Date,Start Odometer (mi.),End Date,End Odometer,Note,Distance
-"Spring 2009","2009-1-01",4567,"2009-4-30",4567,,
-"Summer 2009","2009-5-01",4567,"2009-8-31",4567,,
 "Bringing the car home to Texas","2009-9-04",4382,"2009-9-06", 
 5386,"Straight down the Natchez Trace Parkway and then back roads the  
 rest of the way.",1004
@@ -282,7 +286,7 @@ TIRE LOG
 Name,Start Date,Start Odometer (mi.),Size,Size  
 Adjustment,Distance,Age,Note,Flags
 "Pilot Sport Cups","2009-8-31",4382,,,3378,"3 Months",,0
-"Potenza RE-11","2009-12-17",7760,,,4531,"4 Months",,0
+"Potenza RE-11","2009-12-17",7760,,,4690,"4 Months",,0
 
 ---- End Copy and Paste ----
 
@@ -292,13 +296,13 @@ Adjustment,Distance,Age,Note,Flags
 
 
 Sent from my iPhone
---Apple-Mail-1--795369970
+--Apple-Mail-1-292583484
 Content-Type: multipart/mixed;
-	boundary=Apple-Mail-2--795369947
+	boundary=Apple-Mail-2-292583494
 Content-Transfer-Encoding: 7bit
 
 
---Apple-Mail-2--795369947
+--Apple-Mail-2-292583494
 Content-Type: text/html;
 	charset=utf-8
 Content-Transfer-Encoding: quoted-printable
@@ -311,7 +315,7 @@ forward this email to your iPhone or iPod, then <b><a =
 href=3D"desroadtrip://roadtrip.darrenstone.ca/import?version=3D150%26forma=
 t=3D1#Um9hZFRyaXAsMTUwCkNhck1vZGVsLDIwMDclMjBHVDMlMjBSUywwLDAsMCxMaWNlbnNl=
 JTIwUGxhdGU6JTBBVklOOiUwQSUwQUluc3VyYW5jZSUyME5hbWU6JTBBUG9saWN5JTIwTm8uOi=
-UwQVBob25lOiUwQU5vdGVzOiUwQSwxNy43MCwwLFVTRCwwCkZ1ZWxSZWNvcmRzLDE1MCw1Mgpm=
+UwQVBob25lOiUwQU5vdGVzOiUwQSwxNy43MCwwLFVTRCwwCkZ1ZWxSZWNvcmRzLDE1MCw1Mwpm=
 LDQ1NjcuMCwyMDA5LTktNSw5LjM1NywwLDIuODA5LDEsRmlyc3QlMjB0YW5rJTIwZXZlcixQcm=
 VtaXVtLEJQJTIwRnJhbmtsaW4lMjBUTixQbGF0aW51bSwsOSwsMC4wLCwsLApmLDQ2OTkuMCwy=
 MDA5LTktNSw3Ljc4MiwwLDIuODU5LDEsLFByZW1pdW0sQ2hldnJvbiUyMENoZXJva2VlJTJDJT=
@@ -387,80 +391,83 @@ xDaXRnbyxQbGF0aW51bSwsMCwsMC4wLCwsLApmLDEyMTUwLjAsMjAxMC00LTE3LDYuNTAzLDAs=
 My42MDksMSwsUHJlbWl1bSxNb3RvcnNwb3J0JTIwUmFuY2glMjBIb3VzdG9uLFBsYXRpbnVtLC=
 wwLCwwLjAsLCwsCmYsMTIyMzMuMCwyMDEwLTQtMTcsMTAuNzkxLDAsMy42MDksMSwsUHJlbWl1=
 bSxNb3RvcnNwb3J0JTIwUmFuY2glMjBIb3VzdG9uLFBsYXRpbnVtLFRyYWNrLDAsVHJhY2ssMC=
-4wLCwsLApmLDEyMjkxLjAsMjAxMC00LTE4LDExLjY4OCwwLDMuNjA5LDEsLFByZW1pdW0sTW90=
-b3JzcG9ydCUyMFJhbmNoJTIwSG91c3RvbixQbGF0aW51bSxUcmFjaywwLFRyYWNrLDAuMCwsLD=
-I5LjI3NzU0MSwtOTUuNDIyNDk4Ck1haW50ZW5hbmNlUmVjb3JkcywxNTAsMTMKbSw0MzgyLjAs=
-MjAwOS04LTMxLEJvdWdodCUyMFZlaGljbGUsMC4wMCxCb3VnaHQlMjBzaWdodCUyMHVuc2Vlbi=
-4sUG9yc2NoZSUyME9mJTIwTmFzaHZpbGxlLDIsLCwsLDAuMCwwLCwsLAptLDQzODIuMCwyMDA5=
-LTktMSxBZGRlZCUyMENhcmdyYXBoaWMlMjBGcm9udCUyMFNjcmVlbiUyMEtpdCwzODAuMDAsLF=
-NoYXJrV2Vya3MsMCxBY2Nlc3NvcnksUGxhdGludW0sLCwwLjAsMCwsLCwKbSw0MzgyLjAsMjAw=
-OS05LTEsU3dpdGNoJTIwVG8lMjBPcmlnaW5hbCUyMFN0eWxlJTIwR1QzJTIwUlMlMjBTdGVlcm=
-luZyUyMFdoZWVsLDg3OS44MywsU3VuY29hc3QlMjBQb3JzY2hlJTIwUGFydHMsMSwsUGxhdGlu=
-dW0sLCwwLjAsMCwsLCwKbSw1MjI2LjAsMjAwOS05LTksU3RhdGUlMjBJbnNwZWN0aW9uLDQxLj=
-c1LCxNb21lbnR1bSUyMFBvcnNjaGUsMCxJbnNwZWN0aW9uLFBsYXRpbnVtLCwsMC4wLDAsLCws=
-Cm0sNTQ1OS4wLDIwMDktOS0xMSxHVDMlMjBNazIlMjBSZWFyJTIwQnJha2UlMjBDb29saW5nJT=
-IwRHVjdHMsMjE3LjYxLCxTdW5jb2FzdCUyMFBvcnNjaGUlMjBQYXJ0cywxLFRyYWNrJTIwLSUy=
-MEVxdWlwbWVudCxQbGF0aW51bSxUcmFjaywsMC4wLDAsLCwsCm0sNjUwOS4wLDIwMDktOS0yNS=
-xSZW1vdmUlMjBXaW5kb3clMjBUaW50LDExNi4xOCwsTW9tZW50dW0lMjBQb3JzY2hlLDAsLFBs=
-YXRpbnVtLCwsMC4wLDAsLCwsCm0sNjk5MC4wLDIwMDktMTEtNSxSZXBsYWNlJTIwU2lkZSUyMF=
-dpbmRvdyUyMEFmdGVyJTIwVGhlZnQsMTEwMS4zMSxUaGllZiUyMHNtYXNoZWQlMjBvdXQlMjBk=
-cml2ZXIlMjBzaWRlJTIwd2luZG93JTIwYW5kJTIwc3RvbGUlMjByYWRhciUyMGRldGVjdG9yLi=
-xNb21lbnR1bSUyMFBvcnNjaGUsMCxSZXBhaXIsUGxhdGludW0sLCwwLjAsMCwsLCwKbSw3MzI1=
-LjAsMjAwOS0xMS04LEFkZCUyMDElMjBxdCUyME9pbCwwLjAwLE9pbCUyMHJlYWRpbmclMjBsb3=
-clMjBtaWQtZGF5JTIwYXQlMjB0cmFjayUyMHNvJTIwSSUyMGFkZGVkJTIwYSUyMGZ1bGwlMjBx=
-dWFydCUyQyUyMGJyaW5naW5nJTIwaW5kaWNhdG9yJTIwdG8lMjB0b3Atb2YtZnVsbCUyMG1hcm=
-suLFRleGFzJTIwV29ybGQlMjBTcGVlZHdheSwwLCwsVHJhY2ssLDAuMCwwLCwsLAptLDc3NjAu=
-MCwyMDA5LTEyLTE3LE5ldyUyMFRpcmVzJTIwQWxsJTIwQXJvdW5kLDE1NjUuMzMsVW5oYXBweS=
-UyMHdpdGglMjBPRU0lMjBQUzIlMjBDdXAlMjB0aXJlcyUyQyUyMEklMjByZXBsYWNlZCUyMHdp=
-dGglMjBmb3VyJTIwQnJpZGdlc3RvbmUlMjBSRS0xMSUyMGluJTIwc3RvY2slMjBzaXplcy4lMj=
-AlMjBWZXJ5JTIwcGxlYXNlZCUyQyUyMEklMjBsaWtlJTIwdGhlbSUyMGElMjBsb3QlMjBtb3Jl=
-JTIwZm9yJTIwc3RyZWV0JTIwZHJpdmluZy4lMjAlMjBXaWxsJTIwYmUlMjBydW5uaW5nJTIwZG=
-VkaWNhdGVkJTIwdHJhY2slMjB3aGVlbHMlMjBhbiUyMHRpcmVzJTIwKEhvb3NpZXIlMjBSNikl=
-MjBmcm9tJTIwaGVyZSUyMG9uJTIwb3V0LixEaXNjb3VudCUyMFRpcmUsMCxNYWludGVuYW5jZS=
-xBbWVyaWNhbiUyMEV4cHJlc3MsLCwwLjAsMCwsLCwKbSw3NzgxLjAsMjAwOS0xMi0yMSxUcmFj=
-ayUyMFdoZWVscyUyMEFuZCUyMFNsaWNrcywzNTg0LjIwLERlZGljYXRlZCUyMHRyYWNrJTIwd2=
-hlZWxzLiUyMCUyME8uWi4lMjBBbGxlZ2dlcml0YSUyMDE4eDguNSUyMGFuZCUyMDE4eDEyLiUy=
-MCUyMEhvb3NpZXIlMjBSNiUyMGFuZCUyMFRQTVMlMjBzZW5zb3JzLFRpcmUlMjBSYWNrLDEsVH=
-JhY2slMjAtJTIwRXF1aXBtZW50LEFtZXJpY2FuJTIwRXhwcmVzcyxUcmFjaywsMC4wLDAsLCws=
-Cm0sODUwNS4wLDIwMTAtMS0xMixHZW5lcmFsJTIwTWFpbnRlbmFuY2UsNTU1LjU3LE9pbCUyMG=
-NoYW5nZSUyQyUyMGJyYWtlJTIwZmx1aWQlMjBmbHVzaCUyQyUyMGFsaWdubWVudC4sTW9tZW50=
-dW0lMjBQb3JzY2hlLDAsTWFpbnRlbmFuY2UsUGxhdGludW0sLCwwLjAsMCwsLCwKbSwxMDQ1NC=
-4wLDIwMTAtMy01LEhvb3NpZXIlMjBSNiUyMFNldCwxNjA5LjI2LFNldCUyMG51bWJlciUyMHR3=
-byxEaXNjb3VudCUyMFRpcmUsMSxUcmFjayUyMC0lMjBFcXVpcG1lbnQsQW1lcmljYW4lMjBFeH=
-ByZXNzLFRyYWNrLCwwLjAsMCwsLCwKbSwxMDQ1NC4wLDIwMTAtMy01LFJlYXIlMjBCcmFrZSUy=
-MFBhZHMsMjk5Ljk1LCxTdW5jb2FzdCUyMFBvcnNjaGUlMjBQYXJ0cywwLE1haW50ZW5hbmNlLF=
-BsYXRpbnVtLCwsMC4wLDAsLCwsClJvYWRUcmlwUmVjb3JkcywxNTAsMTQKcixTcHJpbmclMjAy=
-MDA5LDIwMDktMS0xLDAuMCwyMDA5LTQtMzAsMC4wLApyLFN1bW1lciUyMDIwMDksMjAwOS01LT=
-EsMC4wLDIwMDktOC0zMSwwLjAsCnIsQnJpbmdpbmclMjB0aGUlMjBjYXIlMjBob21lJTIwdG8l=
-MjBUZXhhcywyMDA5LTktNCw0MzgyLjAsMjAwOS05LTYsNTM4Ni4wLFN0cmFpZ2h0JTIwZG93bi=
-UyMHRoZSUyME5hdGNoZXolMjBUcmFjZSUyMFBhcmt3YXklMjBhbmQlMjB0aGVuJTIwYmFjayUy=
-MHJvYWRzJTIwdGhlJTIwcmVzdCUyMG9mJTIwdGhlJTIwd2F5LgpyLEhQREU6JTIwSDJSLDIwMD=
-ktOS0xMiw1NDY1LjAsMjAwOS05LTEyLDU0OTMuMCxIMlIlMjBzcG9uc29yZWQlMjBIUERFLiUy=
-MCUyMEklMjBkaWRuJ3QlMjBmb3JtYWxseSUyMHBhcnRpY2lwYXRlJTJDJTIwSSUyMGp1c3QlMj=
-BzbnVjayUyMG91dCUyMG9uJTIwdHJhY2slMjBhJTIwZmV3JTIwdGltZXMlMjBkdXJpbmclMjB0=
-aGUlMjBpbnN0cnVjdG9yJTIwc2Vzc2lvbnMuCnIsT3BlbiUyMGRheTolMjBIMlIsMjAwOS05LT=
-IwLDYxNDUuMCwyMDA5LTktMjAsNjI5My4wLApyLEhQREU6JTIwVFdTJTIwQ0NXLDIwMDktMTAt=
-Myw2Njc2LjAsMjAwOS0xMC00LDY3ODAuMCxIb3JyaWJsZSUyMHJhaW4KcixIUERFOiUyMFRXUy=
-UyMENXLDIwMDktMTEtNyw3MTE2LjAsMjAwOS0xMS04LDc0NTEuMCwKcixPcGVuJTIwRGF5OiUy=
-MEgyUiwyMDEwLTEtMjIsODg1MS4wLDIwMTAtMS0yMiw4OTQyLjAsSG9vc2llciUyMFI2CnIsSF=
-BERTolMjBIMlIsMjAxMC0xLTIzLDg5NDYuMCwyMDEwLTEtMjQsOTE3NC4wLEhvb3NpZXIlMjBS=
-Ni4lMjAlMjBLaWNrZWQlMjBhc3MlMjBpbiUyMHJlZCUyMGdyb3VwLgpyLE9wZW4lMjBEYXk6JT=
-IwSDJSLDIwMTAtMS0zMCw5NTUxLjAsMjAxMC0xLTMwLDk3MTguMCxOZXclMjBwZXJzb25hbCUy=
-MGJlc3QlMjB0aW1lISUyMDE6MjcuMiUyMGxhcCUyMGNsb2Nrd2lzZS4lMjAlMjBJbnN0cnVjdG=
-VkJTIwcGF1bGYlMjBhbmQlMjBLZXZpbiUyMGluJTIwY2FyJTIwZm9yJTIwdGhyZWUlMjBzZXNz=
-aW9ucy4KcixIUERFOiUyMEgyUiUyMChCb3hlcnMlMjBhbmQlMjBCb3hzdGVycyksMjAxMC0yLT=
-I3LDEwMzI0LjAsMjAxMC0yLTI3LDEwMzcyLjAsLi4uYW5kJTIwdGhhdCdzJTIwdGhlJTIwZW5k=
-JTIwb2YlMjB0aGUlMjBmaXJzdCUyMHNldCUyMG9mJTIwSG9vc2llcnMuJTIwJTIwVGhleSdyZS=
-UyMGNvb2tlZC4KcixIUERFOiUyMFRXUyUyMENDVywyMDEwLTMtMTMsMTA3NjYuMCwyMDEwLTMt=
-MTQsMTA5NTkuMCwKcixIUERFOiUyMEgyUiwyMDEwLTMtMjcsMTE2NDAuMCwyMDEwLTMtMjcsMT=
-E3ODMuMCwxOjI2LjYhJTIwSSdtJTIwZ2V0dGluZyUyMGZhc3RlcgpyLEhQREU6JTIwTVNSJTIw=
-SG91c3RvbiwyMDEwLTQtMTcsMTIxNTAuMCwyMDEwLTQtMTgsMTIzMjkuMCxGaXJzdCUyMHRpbW=
-UlMjBhdCUyMHRoaXMlMjB0cmFjayUyMGFuZCUyMEklMjBsb3ZlZCUyMGl0LiUyMCUyMFRvcnJl=
-bnRpYWwlMjByYWluJTIwb24lMjBTdW5kYXklMjBidXQlMjB3ZSUyMHN0aWxsJTIwcmFuLgpUaX=
-JlUmVjb3JkcywxNTAsMgp0LFBpbG90JTIwU3BvcnQlMjBDdXBzLDIwMDktOC0zMSw0MzgyLjAs=
-LDAuMDAwMCwsMAp0LFBvdGVuemElMjBSRS0xMSwyMDA5LTEyLTE3LDc3NjAuMCwsMC4wMDAwLC=
-wwCg=3D=3D">click this link from your device.</a></b></p><p>If the link =
-does not work, you can use the <b><a =
+4wLCwsMjkuMjc3NzMzLC05NS40MjI4MjYKZiwxMjI5MS4wLDIwMTAtNC0xOCwxMS42ODgsMCwz=
+LjYwOSwxLCxQcmVtaXVtLE1vdG9yc3BvcnQlMjBSYW5jaCUyMEhvdXN0b24sUGxhdGludW0sVH=
+JhY2ssMCxUcmFjaywwLjAsLCwyOS4yNzc3MzMsLTk1LjQyMjgyNgpmLDEyNDUwLjAsMjAxMC01=
+LTEsMTQuOTYyLDAsMy4wNzksMSwsUHJlbWl1bSxTaGVsbCxQbGF0aW51bSwsMCwsMC4wLCwsMj=
+kuNzI3ODA2LC05NS40NDA1MjgKTWFpbnRlbmFuY2VSZWNvcmRzLDE1MCwxNAptLDQzODIuMCwy=
+MDA5LTgtMzEsQm91Z2h0JTIwVmVoaWNsZSwwLjAwLEJvdWdodCUyMHNpZ2h0JTIwdW5zZWVuLi=
+xQb3JzY2hlJTIwT2YlMjBOYXNodmlsbGUsMiwsLCwsMC4wLDAsLCwsCm0sNDM4Mi4wLDIwMDkt=
+OS0xLEFkZGVkJTIwQ2FyZ3JhcGhpYyUyMEZyb250JTIwU2NyZWVuJTIwS2l0LDM4MC4wMCwsU2=
+hhcmtXZXJrcywwLEFjY2Vzc29yeSxQbGF0aW51bSwsLDAuMCwwLCwsLAptLDQzODIuMCwyMDA5=
+LTktMSxTd2l0Y2glMjBUbyUyME9yaWdpbmFsJTIwU3R5bGUlMjBHVDMlMjBSUyUyMFN0ZWVyaW=
+5nJTIwV2hlZWwsODc5LjgzLCxTdW5jb2FzdCUyMFBvcnNjaGUlMjBQYXJ0cywxLCxQbGF0aW51=
+bSwsLDAuMCwwLCwsLAptLDUyMjYuMCwyMDA5LTktOSxTdGF0ZSUyMEluc3BlY3Rpb24sNDEuNz=
+UsLE1vbWVudHVtJTIwUG9yc2NoZSwwLEluc3BlY3Rpb24sUGxhdGludW0sLCwwLjAsMCwsLCwK=
+bSw1NDU5LjAsMjAwOS05LTExLEdUMyUyME1rMiUyMFJlYXIlMjBCcmFrZSUyMENvb2xpbmclMj=
+BEdWN0cywyMTcuNjEsLFN1bmNvYXN0JTIwUG9yc2NoZSUyMFBhcnRzLDEsVHJhY2slMjAtJTIw=
+RXF1aXBtZW50LFBsYXRpbnVtLFRyYWNrLCwwLjAsMCwsLCwKbSw2NTA5LjAsMjAwOS05LTI1LF=
+JlbW92ZSUyMFdpbmRvdyUyMFRpbnQsMTE2LjE4LCxNb21lbnR1bSUyMFBvcnNjaGUsMCwsUGxh=
+dGludW0sLCwwLjAsMCwsLCwKbSw2OTkwLjAsMjAwOS0xMS01LFJlcGxhY2UlMjBTaWRlJTIwV2=
+luZG93JTIwQWZ0ZXIlMjBUaGVmdCwxMTAxLjMxLFRoaWVmJTIwc21hc2hlZCUyMG91dCUyMGRy=
+aXZlciUyMHNpZGUlMjB3aW5kb3clMjBhbmQlMjBzdG9sZSUyMHJhZGFyJTIwZGV0ZWN0b3IuLE=
+1vbWVudHVtJTIwUG9yc2NoZSwwLFJlcGFpcixQbGF0aW51bSwsLDAuMCwwLCwsLAptLDczMjUu=
+MCwyMDA5LTExLTgsQWRkJTIwMSUyMHF0JTIwT2lsLDAuMDAsT2lsJTIwcmVhZGluZyUyMGxvdy=
+UyMG1pZC1kYXklMjBhdCUyMHRyYWNrJTIwc28lMjBJJTIwYWRkZWQlMjBhJTIwZnVsbCUyMHF1=
+YXJ0JTJDJTIwYnJpbmdpbmclMjBpbmRpY2F0b3IlMjB0byUyMHRvcC1vZi1mdWxsJTIwbWFyay=
+4sVGV4YXMlMjBXb3JsZCUyMFNwZWVkd2F5LDAsLCxUcmFjaywsMC4wLDAsLCwsCm0sNzc2MC4w=
+LDIwMDktMTItMTcsTmV3JTIwVGlyZXMlMjBBbGwlMjBBcm91bmQsMTU2NS4zMyxVbmhhcHB5JT=
+Iwd2l0aCUyME9FTSUyMFBTMiUyMEN1cCUyMHRpcmVzJTJDJTIwSSUyMHJlcGxhY2VkJTIwd2l0=
+aCUyMGZvdXIlMjBCcmlkZ2VzdG9uZSUyMFJFLTExJTIwaW4lMjBzdG9jayUyMHNpemVzLiUyMC=
+UyMFZlcnklMjBwbGVhc2VkJTJDJTIwSSUyMGxpa2UlMjB0aGVtJTIwYSUyMGxvdCUyMG1vcmUl=
+MjBmb3IlMjBzdHJlZXQlMjBkcml2aW5nLiUyMCUyMFdpbGwlMjBiZSUyMHJ1bm5pbmclMjBkZW=
+RpY2F0ZWQlMjB0cmFjayUyMHdoZWVscyUyMGFuJTIwdGlyZXMlMjAoSG9vc2llciUyMFI2KSUy=
+MGZyb20lMjBoZXJlJTIwb24lMjBvdXQuLERpc2NvdW50JTIwVGlyZSwwLE1haW50ZW5hbmNlLE=
+FtZXJpY2FuJTIwRXhwcmVzcywsLDAuMCwwLCwsLAptLDc3ODEuMCwyMDA5LTEyLTIxLFRyYWNr=
+JTIwV2hlZWxzJTIwQW5kJTIwU2xpY2tzLDM1ODQuMjAsRGVkaWNhdGVkJTIwdHJhY2slMjB3aG=
+VlbHMuJTIwJTIwTy5aLiUyMEFsbGVnZ2VyaXRhJTIwMTh4OC41JTIwYW5kJTIwMTh4MTIuJTIw=
+JTIwSG9vc2llciUyMFI2JTIwYW5kJTIwVFBNUyUyMHNlbnNvcnMsVGlyZSUyMFJhY2ssMSxUcm=
+FjayUyMC0lMjBFcXVpcG1lbnQsQW1lcmljYW4lMjBFeHByZXNzLFRyYWNrLCwwLjAsMCwsLCwK=
+bSw4NTA1LjAsMjAxMC0xLTEyLEdlbmVyYWwlMjBNYWludGVuYW5jZSw1NTUuNTcsT2lsJTIwY2=
+hhbmdlJTJDJTIwYnJha2UlMjBmbHVpZCUyMGZsdXNoJTJDJTIwYWxpZ25tZW50LixNb21lbnR1=
+bSUyMFBvcnNjaGUsMCxNYWludGVuYW5jZSxQbGF0aW51bSwsLDAuMCwwLCwsLAptLDEwNDU0Lj=
+AsMjAxMC0zLTUsSG9vc2llciUyMFI2JTIwU2V0LDE2MDkuMjYsU2V0JTIwbnVtYmVyJTIwdHdv=
+LERpc2NvdW50JTIwVGlyZSwxLFRyYWNrJTIwLSUyMEVxdWlwbWVudCxBbWVyaWNhbiUyMEV4cH=
+Jlc3MsVHJhY2ssLDAuMCwwLCwsLAptLDEwNDU0LjAsMjAxMC0zLTUsUmVhciUyMEJyYWtlJTIw=
+UGFkcywyOTkuOTUsLFN1bmNvYXN0JTIwUG9yc2NoZSUyMFBhcnRzLDAsTWFpbnRlbmFuY2UsUG=
+xhdGludW0sLCwwLjAsMCwsLCwKbSwxMjQ1MC4wLDIwMTAtNS0yLEhvb3NpZXIlMjBSNiUyMFNl=
+dCwxNTE3Ljc2LCxNb3RvcnNwb3J0JTIwUmFuY2glMjBIb3VzdG9uLDEsVHJhY2slMjAtJTIwRX=
+F1aXBtZW50LEFtZXJpY2FuJTIwRXhwcmVzcyxUcmFjaywsMC4wLDAsLCwyOS4yNzc3MzMsLTk1=
+LjQyMjgyNgpSb2FkVHJpcFJlY29yZHMsMTUwLDEyCnIsQnJpbmdpbmclMjB0aGUlMjBjYXIlMj=
+Bob21lJTIwdG8lMjBUZXhhcywyMDA5LTktNCw0MzgyLjAsMjAwOS05LTYsNTM4Ni4wLFN0cmFp=
+Z2h0JTIwZG93biUyMHRoZSUyME5hdGNoZXolMjBUcmFjZSUyMFBhcmt3YXklMjBhbmQlMjB0aG=
+VuJTIwYmFjayUyMHJvYWRzJTIwdGhlJTIwcmVzdCUyMG9mJTIwdGhlJTIwd2F5LgpyLEhQREU6=
+JTIwSDJSLDIwMDktOS0xMiw1NDY1LjAsMjAwOS05LTEyLDU0OTMuMCxIMlIlMjBzcG9uc29yZW=
+QlMjBIUERFLiUyMCUyMEklMjBkaWRuJ3QlMjBmb3JtYWxseSUyMHBhcnRpY2lwYXRlJTJDJTIw=
+SSUyMGp1c3QlMjBzbnVjayUyMG91dCUyMG9uJTIwdHJhY2slMjBhJTIwZmV3JTIwdGltZXMlMj=
+BkdXJpbmclMjB0aGUlMjBpbnN0cnVjdG9yJTIwc2Vzc2lvbnMuCnIsT3BlbiUyMGRheTolMjBI=
+MlIsMjAwOS05LTIwLDYxNDUuMCwyMDA5LTktMjAsNjI5My4wLApyLEhQREU6JTIwVFdTJTIwQ0=
+NXLDIwMDktMTAtMyw2Njc2LjAsMjAwOS0xMC00LDY3ODAuMCxIb3JyaWJsZSUyMHJhaW4KcixI=
+UERFOiUyMFRXUyUyMENXLDIwMDktMTEtNyw3MTE2LjAsMjAwOS0xMS04LDc0NTEuMCwKcixPcG=
+VuJTIwRGF5OiUyMEgyUiwyMDEwLTEtMjIsODg1MS4wLDIwMTAtMS0yMiw4OTQyLjAsSG9vc2ll=
+ciUyMFI2CnIsSFBERTolMjBIMlIsMjAxMC0xLTIzLDg5NDYuMCwyMDEwLTEtMjQsOTE3NC4wLE=
+hvb3NpZXIlMjBSNi4lMjAlMjBLaWNrZWQlMjBhc3MlMjBpbiUyMHJlZCUyMGdyb3VwLgpyLE9w=
+ZW4lMjBEYXk6JTIwSDJSLDIwMTAtMS0zMCw5NTUxLjAsMjAxMC0xLTMwLDk3MTguMCxOZXclMj=
+BwZXJzb25hbCUyMGJlc3QlMjB0aW1lISUyMDE6MjcuMiUyMGxhcCUyMGNsb2Nrd2lzZS4lMjAl=
+MjBJbnN0cnVjdGVkJTIwcGF1bGYlMjBhbmQlMjBLZXZpbiUyMGluJTIwY2FyJTIwZm9yJTIwdG=
+hyZWUlMjBzZXNzaW9ucy4KcixIUERFOiUyMEgyUiUyMChCb3hlcnMlMjBhbmQlMjBCb3hzdGVy=
+cyksMjAxMC0yLTI3LDEwMzI0LjAsMjAxMC0yLTI3LDEwMzcyLjAsLi4uYW5kJTIwdGhhdCdzJT=
+IwdGhlJTIwZW5kJTIwb2YlMjB0aGUlMjBmaXJzdCUyMHNldCUyMG9mJTIwSG9vc2llcnMuJTIw=
+JTIwVGhleSdyZSUyMGNvb2tlZC4KcixIUERFOiUyMFRXUyUyMENDVywyMDEwLTMtMTMsMTA3Nj=
+YuMCwyMDEwLTMtMTQsMTA5NTkuMCwKcixIUERFOiUyMEgyUiwyMDEwLTMtMjcsMTE2NDAuMCwy=
+MDEwLTMtMjcsMTE3ODMuMCwxOjI2LjYhJTIwSSdtJTIwZ2V0dGluZyUyMGZhc3RlcgpyLEhQRE=
+U6JTIwTVNSJTIwSG91c3RvbiwyMDEwLTQtMTcsMTIxNTAuMCwyMDEwLTQtMTgsMTIzMjkuMCxG=
+aXJzdCUyMHRpbWUlMjBhdCUyMHRoaXMlMjB0cmFjayUyMGFuZCUyMEklMjBsb3ZlZCUyMGl0Li=
+UyMCUyMFRvcnJlbnRpYWwlMjByYWluJTIwb24lMjBTdW5kYXklMjBidXQlMjB3ZSUyMHN0aWxs=
+JTIwcmFuLgpUaXJlUmVjb3JkcywxNTAsMgp0LFBpbG90JTIwU3BvcnQlMjBDdXBzLDIwMDktOC=
+0zMSw0MzgyLjAsLDAuMDAwMCwsMAp0LFBvdGVuemElMjBSRS0xMSwyMDA5LTEyLTE3LDc3NjAu=
+MCwsMC4wMDAwLCwwCg=3D=3D">click this link from your =
+device.</a></b></p><p>If the link does not work, you can use the <b><a =
 href=3D"http://darrensoft.ca/roadtrip/csvimport/">CSV Import =
 Website</a></b> to import the attached CSV file.</p><h3>Transfer to =
 Excel</h3><p>To transfer this data to Excel, simply open the attached =
@@ -553,10 +560,12 @@ atinum","Track",,"Track",0,,1,,<br>11857,138,"2010-3-27",12.571,Gal,2.899,=
 sport Ranch =
 Houston","Platinum",,,,0,,1,,<br>12233,83,"2010-4-17",10.791,Gal,3.609,38.=
 94,,7.692,,"Premium","Motorsport Ranch =
-Houston","Platinum","Track",,"Track",0,,1,,<br>12291,58,"2010-4-18",11.688=
-,Gal,3.609,42.18,,4.962,,"Premium","Motorsport Ranch =
-Houston","Platinum","Track",,"Track",0,,1,29.277542,-95.422501<br><br><br>=
-MAINTENANCE RECORDS<br>Description,Date,Odometer =
+Houston","Platinum","Track",,"Track",0,,1,29.277733,-95.422829<br>12291,58=
+,"2010-4-18",11.688,Gal,3.609,42.18,,4.962,,"Premium","Motorsport Ranch =
+Houston","Platinum","Track",,"Track",0,,1,29.277733,-95.422829<br>12450,15=
+9,"2010-5-01",14.962,Gal,3.079,46.07,,10.627,,"Premium","Shell","Platinum"=
+,,,,0,,1,29.727806,-95.440529<br><br><br>MAINTENANCE =
+RECORDS<br>Description,Date,Odometer =
 (mi.),Cost,Note,Location,Type,Subtype,Payment,Categories,Reminder =
 Interval,Reminder Distance,Flags,Currency Code,Currency =
 Rate,Latitude,Longitude<br>"Bought Vehicle","2009-8-31",4382,,"Bought =
@@ -595,11 +604,12 @@ Set","2010-3-05",10454,1609.26,"Set number two","Discount =
 Tire",Expense,"Track - Equipment","American =
 Express","Track",,,0,,1,,<br>"Rear Brake =
 Pads","2010-3-05",10454,299.95,,"Suncoast Porsche =
-Parts",Service,"Maintenance","Platinum",,,,0,,1,,<br><br><br>ROAD =
+Parts",Service,"Maintenance","Platinum",,,,0,,1,,<br>"Hoosier R6 =
+Set","2010-5-02",12450,1517.76,,"Motorsport Ranch =
+Houston",Expense,"Track - Equipment","American =
+Express","Track",,,0,,1,29.277733,-95.422829<br><br><br>ROAD =
 TRIPS<br>Name,Start Date,Start Odometer (mi.),End Date,End =
-Odometer,Note,Distance<br>"Spring =
-2009","2009-1-01",4567,"2009-4-30",4567,,<br>"Summer =
-2009","2009-5-01",4567,"2009-8-31",4567,,<br>"Bringing the car home to =
+Odometer,Note,Distance<br>"Bringing the car home to =
 Texas","2009-9-04",4382,"2009-9-06",5386,"Straight down the Natchez =
 Trace Parkway and then back roads the rest of the way.",1004<br>"HPDE: =
 H2R","2009-9-12",5465,"2009-9-12",5493,"H2R sponsored HPDE.  I didn't =
@@ -627,15 +637,15 @@ No.:<br>Phone:<br>Notes:<br>",17.700001,gal,USD,0<br><br><br>TIRE =
 LOG<br>Name,Start Date,Start Odometer (mi.),Size,Size =
 Adjustment,Distance,Age,Note,Flags<br>"Pilot Sport =
 Cups","2009-8-31",4382,,,3378,"3 Months",,0<br>"Potenza =
-RE-11","2009-12-17",7760,,,4531,"4 Months",,0<br></tt></p><h4><i>---- =
+RE-11","2009-12-17",7760,,,4690,"4 Months",,0<br></tt></p><h4><i>---- =
 End Copy and Paste =
 ----</i></h4></div><div></div><div><br><br></div></body></html>=
 
---Apple-Mail-2--795369947
+--Apple-Mail-2-292583494
 Content-Disposition: attachment;
-	filename="RoadTrip-2007 GT3 RS-2010-4-19.csv"
+	filename="RoadTrip-2007 GT3 RS-2010-5-02.csv"
 Content-Type: application/octet-stream;
-	name="RoadTrip-2007 GT3 RS-2010-4-19.csv"
+	name="RoadTrip-2007 GT3 RS-2010-5-02.csv"
 Content-Transfer-Encoding: 7bit
 
 ROAD TRIP CSV ",."
@@ -695,8 +705,9 @@ Odometer (mi),Trip Distance,Date,Fill Amount,Fill Units,Price per Unit,Total Pri
 11857,138,"2010-3-27",12.571,Gal,2.899,36.44,,10.978,,"Premium","Valero","Platinum",,,,0,,1,,
 12079,222,"2010-4-13",14.918,Gal,2.959,44.14,,14.881,,"Premium","Citgo","Platinum",,,,0,,1,,
 12150,71,"2010-4-17",6.503,Gal,3.609,23.47,,10.918,,"Premium","Motorsport Ranch Houston","Platinum",,,,0,,1,,
-12233,83,"2010-4-17",10.791,Gal,3.609,38.94,,7.692,,"Premium","Motorsport Ranch Houston","Platinum","Track",,"Track",0,,1,,
-12291,58,"2010-4-18",11.688,Gal,3.609,42.18,,4.962,,"Premium","Motorsport Ranch Houston","Platinum","Track",,"Track",0,,1,29.277542,-95.422501
+12233,83,"2010-4-17",10.791,Gal,3.609,38.94,,7.692,,"Premium","Motorsport Ranch Houston","Platinum","Track",,"Track",0,,1,29.277733,-95.422829
+12291,58,"2010-4-18",11.688,Gal,3.609,42.18,,4.962,,"Premium","Motorsport Ranch Houston","Platinum","Track",,"Track",0,,1,29.277733,-95.422829
+12450,159,"2010-5-01",14.962,Gal,3.079,46.07,,10.627,,"Premium","Shell","Platinum",,,,0,,1,29.727806,-95.440529
 
 
 MAINTENANCE RECORDS
@@ -714,12 +725,11 @@ Description,Date,Odometer (mi.),Cost,Note,Location,Type,Subtype,Payment,Categori
 "General Maintenance","2010-1-12",8505,555.57,"Oil change, brake fluid flush, alignment.","Momentum Porsche",Service,"Maintenance","Platinum",,,,0,,1,,
 "Hoosier R6 Set","2010-3-05",10454,1609.26,"Set number two","Discount Tire",Expense,"Track - Equipment","American Express","Track",,,0,,1,,
 "Rear Brake Pads","2010-3-05",10454,299.95,,"Suncoast Porsche Parts",Service,"Maintenance","Platinum",,,,0,,1,,
+"Hoosier R6 Set","2010-5-02",12450,1517.76,,"Motorsport Ranch Houston",Expense,"Track - Equipment","American Express","Track",,,0,,1,29.277733,-95.422829
 
 
 ROAD TRIPS
 Name,Start Date,Start Odometer (mi.),End Date,End Odometer,Note,Distance
-"Spring 2009","2009-1-01",4567,"2009-4-30",4567,,
-"Summer 2009","2009-5-01",4567,"2009-8-31",4567,,
 "Bringing the car home to Texas","2009-9-04",4382,"2009-9-06",5386,"Straight down the Natchez Trace Parkway and then back roads the rest of the way.",1004
 "HPDE: H2R","2009-9-12",5465,"2009-9-12",5493,"H2R sponsored HPDE.  I didn't formally participate, I just snuck out on track a few times during the instructor sessions.",28
 "Open day: H2R","2009-9-20",6145,"2009-9-20",6293,,148
@@ -749,15 +759,15 @@ Notes:
 TIRE LOG
 Name,Start Date,Start Odometer (mi.),Size,Size Adjustment,Distance,Age,Note,Flags
 "Pilot Sport Cups","2009-8-31",4382,,,3378,"3 Months",,0
-"Potenza RE-11","2009-12-17",7760,,,4531,"4 Months",,0
+"Potenza RE-11","2009-12-17",7760,,,4690,"4 Months",,0
 
---Apple-Mail-2--795369947
+--Apple-Mail-2-292583494
 Content-Type: text/html;
 	charset=utf-8
 Content-Transfer-Encoding: 7bit
 
 <html><body bgcolor="#FFFFFF"><div></div><div><br><br>Sent from my iPhone</div></body></html>
---Apple-Mail-2--795369947--
+--Apple-Mail-2-292583494--
 
---Apple-Mail-1--795369970--
+--Apple-Mail-1-292583484--
 
