@@ -20,14 +20,26 @@ proc main {} {
 
 	::vroom::init
 
+    set infile [lindex $::argv 0]
+
+	if {$infile != ""} {
+		if {![file exists $infile]} {
+			puts "$infile does not exist"
+			exit -1
+		}
+		set fh [open $infile "r"]
+	} else {
+		set fh "stdin"
+	}
+
 	while {1} {
-		set line [gets stdin]
+		set line [gets $fh]
 
 		if {[regexp {Data:(.*)} $line _ bbuf]} {
 			append csvbuf [::base64::decode $bbuf]
 		}
 
-		if {[eof stdin]} {
+		if {[eof $fh]} {
 			break
 		}
 	}
