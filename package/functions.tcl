@@ -55,7 +55,7 @@ proc update_if_changed {db table key id data_hash} {
 	pg_select $db "SELECT * FROM $table WHERE $key = $id" old_data {
 		foreach field [array names new_data] {
 			if {$field != "rowtype"} {
-				if {[regexp {_date$} $field]} {
+				if {[regexp {_date$} $field] && $new_data($field) != ""} {
 					set new_data($field) [simplesqlquery $db "SELECT [pg_quote $new_data($field)]::date"]
 				}
 				if {$new_data($field) != $old_data($field)} {

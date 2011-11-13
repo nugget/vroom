@@ -67,6 +67,9 @@ proc main {} {
 
 	if {[array exists ::expected_count]} {
 		foreach e [array names ::expected_count] {
+			if {![info exists ::count($e)]} {
+				set ::count($e) 0
+			}
 			logmsg "[format "%20s" $e] expected [format "%4d" $::count($e)] saw [format "%4d" $::expected_count($e)]"
 		}
 	}

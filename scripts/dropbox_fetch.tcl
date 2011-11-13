@@ -24,7 +24,7 @@ proc main {} {
 	if {[info exists urllist]} {
 		foreach u $urllist {
 			if {[regexp {([^/]+$)} $u _ fn]} {
-				set fn [file join $::env(TEMP) [::vroom::urldecode $fn]]
+				set fn [file join $::env(TMP) [::vroom::urldecode $fn]]
 
 				if {[file exists $fn]} {
 					set size [file size $fn]
