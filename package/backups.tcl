@@ -1,5 +1,5 @@
 namespace eval ::vroom {
-	set expected_version(default) 160
+	set expected_version(default) 180
 
 	proc parse_backup_line {line} {
 		set fields(RoadTrip)			{version}
