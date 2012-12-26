@@ -4,5 +4,5 @@ all:
 	echo "pkg_mkIndex -verbose -- ." | tclsh8.5
 
 install:
-	mkdir -p $(TARGET)
-	install -C -m 644 -o root -g wheel * $(TARGET)
+	install -m 0755 -o root -g wheel -d $(TARGET)
+	install -C -m 0644 -o root -g wheel * $(TARGET)
