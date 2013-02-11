@@ -75,7 +75,6 @@ proc update_if_changed {db table key id data_hash} {
 	return $changed
 }
 
-
 proc is_line_incomplete {line} {
 	# if there's a trailing space it's a partial line
 	if {[regexp { $} $line]} {
