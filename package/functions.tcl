@@ -180,10 +180,11 @@ proc add_vehicle { hash_data } {
 	return 0
 }
 
-proc add_fillup { hash_data } {
-	global vroomdb
-
+proc add_fillup {hash_data} {
 	array set data $hash_data
+
+	set diff_varchar [list ]
+	set diff_numeric [list lat lon]
 
 	set fields_varchar [list fillup_date fill_units partial_fill note octane location payment conditions reset categories currency_code]
 	set fields_numeric [list odometer trip_odometer total_price unit_price fill_amount mpg flags vehicle_id currency_rate lat lon]
@@ -203,19 +204,49 @@ proc add_fillup { hash_data } {
 	set data(partial_fill) [sql_boolean $data(partial_fill)]
 	set data(reset)        [sql_boolean $data(reset)]
 
-	set id [simplesqlquery $vroomdb "SELECT fillup_id FROM fillups WHERE odometer = [sanitize_number $data(odometer)]"]
+	unset -nocomplain oldrow
+	pg_select $::vroomdb "SELECT * FROM fillups WHERE vehicle_id = [sanitize_number $data(vehicle_id)] AND odometer = [sanitize_number $data(odometer)]" buf {
+		array set oldrow [array get buf]
+	}
 
-	if {$id == ""} {
+	if {[info exists oldrow(fillup_id)]} {
+		unset -nocomplain changes
+		foreach f $diff_numeric {
+			if {$oldrow($f) ne ""} {
+				set oldrow($f) [format "%f" $oldrow($f)]
+			}
+			if {$data($f) ne ""} {
+				set data($f) [format "%f" $data($f)]
+			}
+			if {$oldrow($f) ne $data($f)} {
+				# puts "$f $oldrow($f) -> $data($f)"
+				lappend changes "$f = [sanitize_number $data($f)]"
+			}
+		}
+		foreach f $diff_varchar {
+			if {$oldrow($f) ne $data($f)} {
+				puts "$f $oldrow($f) -> $data($f)"
+				lappend changes "$f = [pg_quote $data($f)]"
+			}
+		}
+		if {[info exists changes]} {
+			set sql "UPDATE fillups SET [join $changes ", "] WHERE fillup_id = $oldrow(fillup_id)"
+
+			if {[pg_exec_or_exception $::vroomdb $sql]} {
+				puts "Updated fillup $oldrow(fillup_id): [join $changes ", "]"
+			}
+		}
+	} else {
 		set sql "INSERT INTO fillups ([sql_field_list $fields_varchar], [sql_field_list $fields_numeric]) "
-		append sql "VALUES ([sql_value_list varchar $fields_varchar [array get data]], [sql_value_list numeric $fields_numeric [array get data]]);"
+		append sql " SELECT [sql_value_list varchar $fields_varchar [array get data]], [sql_value_list numeric $fields_numeric [array get data]] RETURNING fillup_id"
 
-		if {[pg_exec_or_exception $vroomdb $sql]} {
-			set id [simplesqlquery $vroomdb "SELECT fillup_id FROM fillups WHERE odometer = [sanitize_number $data(odometer)]"]
-			puts "Added new fillup id $id ($data(fillup_date) $data(note))"
+		pg_select $::vroomdb $sql ins {
+			puts "Added new fillup id $ins(fillup_id) ($data(fillup_date) $data(note))"
 		}
 	}
-	if {$id != ""} {
-		return $id
+
+	if {[info exists ins(fillup_id)]} {
+		return $ins(fillup_id)
 	}
 
 	return 0
