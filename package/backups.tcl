@@ -9,8 +9,8 @@ namespace eval ::vroom {
 		set fields(TireRecords)			{version rowcount}
 
 		set fields(CarModel)	{name units_odometer units_economy _ notes tank_capacity tank_units home_currency _ _ fill_units _ uuid}
-		set fields(f)			{odometer fillup_date fill_amount fill_units unit_price filled note octane location payment conditions reset categories _ _ _ lat long}
-		set fields(m)			{odometer service_date name cost note location type subtype payment categories reminder_interval reminder_distance flags currency_code currency_rate lat long}
+		set fields(f)			{odometer fillup_date fill_amount fill_units unit_price filled note octane location payment conditions reset categories _ _ _ lat lon}
+		set fields(m)			{odometer service_date name cost note location type subtype payment categories reminder_interval reminder_distance flags currency_code currency_rate lat lon}
 		set fields(r)			{name start_date start_odometer end_date end_odometer note}
 		set fields(t)			{_ _ _ _ _ _ _ _ _}
 
