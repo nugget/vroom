@@ -12,6 +12,8 @@ proc main {} {
 
 	set url [lindex $::argv 0]
 
+	set dbpath /var/db/vroom
+
 	unset -nocomplain urllist
 	if {[regexp {^http} $url]} {
 		lappend urllist $url
@@ -24,7 +26,7 @@ proc main {} {
 	if {[info exists urllist]} {
 		foreach u $urllist {
 			if {[regexp {([^/]+$)} $u _ fn]} {
-				set fn [file join $::env(TMP) [::vroom::urldecode $fn]]
+				set fn [file join $dbpath [::vroom::urldecode $fn]]
 
 				if {[file exists $fn]} {
 					set size [file size $fn]
