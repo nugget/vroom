@@ -1,8 +1,8 @@
-#!/usr/local/bin/tclsh8.5
+#!/usr/local/bin/tclsh8.6
 
 set ::debug 0
 
-package require Pgtcl 
+package require Pgtcl
 package require Tclx
 package require csv
 package require vroom
@@ -80,7 +80,7 @@ proc main {} {
 	::vroom::init
 
 	set vehicle_id 1
-	
+
 	sprit_out $vehicle_id
 
 }
