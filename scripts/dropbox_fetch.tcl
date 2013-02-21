@@ -45,12 +45,23 @@ proc main {} {
 				::http::cleanup $rh
 
 				if {$size != $dbsize} {
-					puts "$u updated ($size != $dbsize)"
-					set fh [open $fn "w"]
-					puts "Downloading to $fn on channel $fh"
+					# puts "Old file size ($size) != header totalsize ($dbsize)"
+					set tempfile "/tmp/vroom.download"
+					catch {file delete -force $tempfile} err
+					set fh [open $tempfile "w"]
 					set rh [::http::geturl $u -channel $fh]
 					close $fh
 					::http::cleanup $rh
+					# puts "Downloaded new copy to tempfile"
+
+					set newsize [file size $tempfile]
+					if {$size == $newsize} {
+						# puts "Same Size, exiting"
+						file delete -force $tempfile
+						exit 0
+					}
+
+					puts "New database from Dropbox is $newsize bytes and the old one was $size bytes"
 
 					set fh [open "|[file join [file dirname [info script]] import_backup.tcl] \"$fn\"" "r"]
 					while {1} {
