@@ -34,7 +34,7 @@ proc main {} {
 					set size 0
 				}
 
-				set rh [::http::geturl $u -validate 1]
+				set rh [::http::geturl $u -validate 1 -headers {Accept-Encoding ""}]
 				upvar #0 $rh state
 
 				if {[info exists state(totalsize)]} {
@@ -45,14 +45,14 @@ proc main {} {
 				::http::cleanup $rh
 
 				if {$size != $dbsize} {
-					# puts "Old file size ($size) != header totalsize ($dbsize)"
+					puts "Old file size ($size) != header totalsize ($dbsize)"
 					set tempfile "/tmp/vroom.download"
 					catch {file delete -force $tempfile} err
 					set fh [open $tempfile "w"]
 					set rh [::http::geturl $u -channel $fh]
 					close $fh
 					::http::cleanup $rh
-					# puts "Downloaded new copy to tempfile"
+					puts "Downloaded new copy to tempfile"
 
 					set newsize [file size $tempfile]
 					if {$size == $newsize} {
