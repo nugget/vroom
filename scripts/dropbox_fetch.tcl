@@ -60,6 +60,7 @@ proc main {} {
 						file delete -force $tempfile
 						exit 0
 					}
+					file rename -force $tempfile $fn
 
 					puts "New database from Dropbox is $newsize bytes and the old one was $size bytes"
 
