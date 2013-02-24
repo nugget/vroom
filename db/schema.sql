@@ -1,9 +1,12 @@
+CREATE ROLE wwwuser WITH LOGIN ENCRYPTED PASSWORD 'password';
+
 CREATE TABLE versions (
   version_id integer NOT NULL,
   created timestamp(0) NOT NULL DEFAULT (current_timestamp at time zone 'utc'),
   language varchar NOT NULL DEFAULT 'en',
   PRIMARY KEY(version_id)
 );
+GRANT SELECT,INSERT ON versions TO wwwuser;
 
 CREATE TABLE vehicles (
   vehicle_id serial NOT NULL,
@@ -19,6 +22,8 @@ CREATE TABLE vehicles (
   dropbox_url varchar,
   PRIMARY KEY(vehicle_id)
 );
+GRANT SELECT,INSERT ON vehicles TO wwwuser;
+GRANT ALL ON vehicles_vehicle_id_seq TO wwwuser;
 
 CREATE TABLE trips (
   trip_id serial NOT NULL,
@@ -32,6 +37,8 @@ CREATE TABLE trips (
   distance numeric(8,1),
   PRIMARY KEY(trip_id)
 );
+GRANT SELECT,INSERT,UPDATE ON trips TO wwwuser;
+GRANT ALL ON trips_trip_id_seq TO wwwuser;
 
 CREATE TABLE expenses (
   expense_id serial NOT NULL,
@@ -53,6 +60,8 @@ CREATE TABLE expenses (
   currency_rate numeric(10,6) NOT NULL DEFAULT 1,
   PRIMARY KEY(expense_id)
 );
+GRANT SELECT,INSERT,UPDATE ON expenses TO wwwuser;
+GRANT ALL ON expenses_expense_id_seq TO wwwuser;
 
 CREATE TABLE fillups (
   fillup_id serial NOT NULL,
@@ -78,6 +87,8 @@ CREATE TABLE fillups (
   currency_rate numeric(10,6) NOT NULL DEFAULT 1,
   PRIMARY KEY(fillup_id)
 );
+GRANT SELECT,INSERT,UPDATE ON fillups TO wwwuser;
+GRANT ALL ON fillups_fillup_id_seq TO wwwuser;
 
 CREATE OR REPLACE FUNCTION fillup_calcs() RETURNS trigger AS $$
   BEGIN
