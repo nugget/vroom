@@ -10,6 +10,8 @@ GRANT SELECT,INSERT ON versions TO wwwuser;
 
 CREATE TABLE vehicles (
   vehicle_id serial NOT NULL,
+  added timestamp(0) without time zone NOT NULL DEFAULT (current_timestamp at time zone 'utc'),
+  changed timestamp(0) without time zone NOT NULL DEFAULT (current_timestamp at time zone 'utc'),
   name varchar NOT NULL,
   units_odometer varchar NOT NULL DEFAULT 'mi',
   units_economy varchar NOT NULL DEFAULT 'MPG',
@@ -27,6 +29,8 @@ GRANT ALL ON vehicles_vehicle_id_seq TO wwwuser;
 
 CREATE TABLE trips (
   trip_id serial NOT NULL,
+  added timestamp(0) without time zone NOT NULL DEFAULT (current_timestamp at time zone 'utc'),
+  changed timestamp(0) without time zone NOT NULL DEFAULT (current_timestamp at time zone 'utc'),
   vehicle_id integer NOT NULL REFERENCES vehicles(vehicle_id),
   name varchar NOT NULL,
   start_date date NOT NULL,
@@ -35,10 +39,15 @@ CREATE TABLE trips (
   end_odometer numeric(8,1),
   note text,
   distance numeric(8,1),
+  heat_cycles integer,
+  flags integer,
+  categories varchar,
+  uuid varchar,
   PRIMARY KEY(trip_id)
 );
 GRANT SELECT,INSERT,UPDATE ON trips TO wwwuser;
 GRANT ALL ON trips_trip_id_seq TO wwwuser;
+CREATE TRIGGER onupdate BEFORE UPDATE ON trips FOR EACH ROW EXECUTE PROCEDURE onupdate_changed();
 
 CREATE TABLE expenses (
   expense_id serial NOT NULL,

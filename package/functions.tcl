@@ -58,9 +58,11 @@ proc update_if_changed {db table key id data_hash} {
 				if {[regexp {_date$} $field] && $new_data($field) != ""} {
 					set new_data($field) [simplesqlquery $db "SELECT [pg_quote $new_data($field)]::date"]
 				}
-				if {$new_data($field) != $old_data($field)} {
-					set changed 1
-					append sql "$field = [pg_quote $new_data($field)], "
+				if {[info exists old_data($field)]} {
+					if {$new_data($field) != $old_data($field)} {
+						set changed 1
+						append sql "$field = [pg_quote $new_data($field)], "
+					}
 				}
 			}
 		}
@@ -281,32 +283,51 @@ proc add_expense { hash_data } {
 	return 0
 }
 
-proc add_trip { hash_data } {
-	global vroomdb
+proc lookup_by_uuid_with_fallback {idfield tablename uuidVar where} {
+	upvar 1 $uuidVar uuid
 
+	set id ""
+	if {[info exists uuid] && $uuid ne ""} {
+		#
+		# Try to find our trip from the uuid if we can
+		#
+		set id [simplesqlquery $::vroomdb "SELECT $idfield FROM $tablename WHERE uuid = [pg_quote $uuid]"]
+	}
+	if {![info exists id] || $id == ""} {
+		#
+		# uuid lookup failed, try the fallback where clause
+		#
+		set id [simplesqlquery $::vroomdb "SELECT $idfield FROM $tablename WHERE $where"]
+	}
+
+	return $id
+}
+
+proc add_trip { hash_data } {
 	array set data $hash_data
 
-	set fields_varchar [list name start_date end_date note]
-	set fields_numeric [list start_odometer end_odometer distance vehicle_id]
+	set fields_varchar [list name start_date end_date note categories uuid]
+	set fields_numeric [list start_odometer end_odometer distance vehicle_id flags]
 
-	set id [simplesqlquery $vroomdb "SELECT trip_id FROM trips WHERE name = [pg_quote $data(name)] AND start_odometer = [sanitize_number $data(start_odometer)]"]
+	unset -nocomplain id
+	set id [lookup_by_uuid_with_fallback trip_id trips data(uuid) "name = [pg_quote $data(name)] AND start_odometer = [sanitize_number $data(start_odometer)]"]
 
 	if {$id == ""} {
 		set sql "INSERT INTO trips ([sql_field_list $fields_varchar], [sql_field_list $fields_numeric]) "
 		append sql "VALUES ([sql_value_list varchar $fields_varchar [array get data]], [sql_value_list numeric $fields_numeric [array get data]]);"
 
-		if {[pg_exec_or_exception $vroomdb $sql]} {
-			set id [simplesqlquery $vroomdb "SELECT trip_id FROM trips WHERE name = [pg_quote $data(name)] AND start_odometer = [sanitize_number $data(start_odometer)]"]
+		if {[pg_exec_or_exception $::vroomdb $sql]} {
+			set id [simplesqlquery $::vroomdb "SELECT trip_id FROM trips WHERE name = [pg_quote $data(name)] AND start_odometer = [sanitize_number $data(start_odometer)]"]
 			puts "Added new trip id $id ($data(name) on $data(start_date))"
 		}
 	} else {
-		if {[update_if_changed $vroomdb trips trip_id $id [array get data]]} {
+		if {[update_if_changed $::vroomdb trips trip_id $id [array get data]]} {
 			puts "Updated trip id $id"
 		}
 
 		#set sql "UPDATE trips SET end_date = [pg_quote $data(end_date)], end_odometer = [sanitize_number $data(end_odometer)], note = [pg_quote $data(note)], distance = [sanitize_number $data(distance)]
 		#		 WHERE trip_id = $id AND (end_date != [pg_quote $data(end_date)] OR end_odometer != [sanitize_number $data(end_odometer)] OR note != [pg_quote $data(note)] OR distance != [sanitize_number $data(distance)])"
-		#pg_exec_or_exception $vroomdb $sql
+		#pg_exec_or_exception $::vroomdb $sql
 	}
 	if {$id != ""} {
 		return $id
