@@ -18,15 +18,16 @@ proc main {} {
 	if {[regexp {^http} $url]} {
 		lappend urllist $url
 	} else {
-		pg_select $vroomdb "SELECT dropbox_url FROM vehicles WHERE dropbox_url IS NOT NULL" buf {
+		pg_select $vroomdb "SELECT tag,dropbox_url FROM vehicles WHERE dropbox_url IS NOT NULL" buf {
 			lappend urllist $buf(dropbox_url)
+			set tag($buf(dropbox_url)) $buf(tag)
 		}
 	}
 
 	if {[info exists urllist]} {
 		foreach u $urllist {
 			if {[regexp {([^/]+$)} $u _ fn]} {
-				set fn [file join $dbpath [::vroom::urldecode $fn]]
+				set fn [file join $dbpath "$tag($u).roadtrip"]
 
 				if {[file exists $fn]} {
 					set size [file size $fn]
