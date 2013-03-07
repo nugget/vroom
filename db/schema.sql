@@ -51,6 +51,8 @@ CREATE TRIGGER onupdate BEFORE UPDATE ON trips FOR EACH ROW EXECUTE PROCEDURE on
 
 CREATE TABLE expenses (
   expense_id serial NOT NULL,
+  added timestamp(0) without time zone NOT NULL DEFAULT (current_timestamp at time zone 'utc'),
+  changed timestamp(0) without time zone NOT NULL DEFAULT (current_timestamp at time zone 'utc'),
   vehicle_id integer NOT NULL REFERENCES vehicles(vehicle_id),
   name varchar NOT NULL,
   service_date date NOT NULL,
@@ -71,9 +73,12 @@ CREATE TABLE expenses (
 );
 GRANT SELECT,INSERT,UPDATE ON expenses TO wwwuser;
 GRANT ALL ON expenses_expense_id_seq TO wwwuser;
+CREATE TRIGGER onupdate BEFORE UPDATE ON expenses FOR EACH ROW EXECUTE PROCEDURE onupdate_changed();
 
 CREATE TABLE fillups (
   fillup_id serial NOT NULL,
+  added timestamp(0) without time zone NOT NULL DEFAULT (current_timestamp at time zone 'utc'),
+  changed timestamp(0) without time zone NOT NULL DEFAULT (current_timestamp at time zone 'utc'),
   vehicle_id integer NOT NULL REFERENCES vehicles(vehicle_id),
   odometer numeric(8,1) NOT NULL,
   trip_odometer numeric(5,1),
@@ -98,6 +103,7 @@ CREATE TABLE fillups (
 );
 GRANT SELECT,INSERT,UPDATE ON fillups TO wwwuser;
 GRANT ALL ON fillups_fillup_id_seq TO wwwuser;
+CREATE TRIGGER onupdate BEFORE UPDATE ON fillups FOR EACH ROW EXECUTE PROCEDURE onupdate_changed();
 
 CREATE OR REPLACE FUNCTION fillup_calcs() RETURNS trigger AS $$
   BEGIN
