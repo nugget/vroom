@@ -9,19 +9,20 @@ namespace eval ::vroom {
 		set fields(TireRecords)			{version rowcount}
 
 		set fields(CarModel)	{name units_odometer units_economy _ notes tank_capacity tank_units home_currency _ _ fill_units _ uuid}
-		set fields(f)			{odometer fillup_date fill_amount fill_units unit_price filled note octane location payment conditions reset categories _ _ _ lat lon}
-		set fields(m)			{odometer service_date name cost note location type subtype payment categories reminder_interval reminder_distance flags currency_code currency_rate lat lon}
+		set fields(f)			{odometer fillup_date fill_amount fill_units unit_price filled note octane location payment conditions reset categories _ _ _ lat lon _ _ _ uuid}
+		set fields(m)			{odometer service_date name cost note location type subtype payment categories reminder_interval reminder_distance flags currency_code currency_rate lat lon uuid}
 		set fields(r)			{name start_date start_odometer end_date end_odometer note flags categories uuid}
 		set fields(t)			{_ _ _ _ _ _ _ _ _}
 
 		set plist [split $line ","]
 		set buf(rowtype) [lindex $plist 0]
 
-		set i 1
-		foreach f $plist {
-			# puts -nonewline "[format "%2d" $i]:[::vroom::urldecode [lindex $plist $i]] "
-			incr i
-		}
+		# set i 1
+		# puts -nonewline "$buf(rowtype): "
+		# foreach f $plist {
+		# 	puts -nonewline "[format "%2d" $i]:[::vroom::urldecode [lindex $plist $i]] "
+		# 	incr i
+		# }
 		# puts ""
 
 		if {[info exists buf(rowtype)] && [info exists fields($buf(rowtype))]} {

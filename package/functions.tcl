@@ -51,10 +51,12 @@ proc update_if_changed {db table key id data_hash} {
 	set changed 0
 	array set new_data $data_hash
 
+	set ignore_fields {reset}
+
 	set sql "UPDATE $table SET "
 	pg_select $db "SELECT * FROM $table WHERE $key = $id" old_data {
 		foreach field [array names new_data] {
-			if {$field != "rowtype"} {
+			if {$field != "rowtype" && [lsearch -exact $ignore_fields $field] == -1} {
 				if {[regexp {_date$} $field] && $new_data($field) != ""} {
 					set new_data($field) [simplesqlquery $db "SELECT [pg_quote $new_data($field)]::date"]
 				}
@@ -71,6 +73,7 @@ proc update_if_changed {db table key id data_hash} {
 		set sql [regsub {, $} $sql ""]
 		append sql " WHERE $key = $id;"
 
+		puts $sql
 		pg_exec_or_exception $db $sql
 	}
 
@@ -156,6 +159,26 @@ proc sql_value_list { type field_list hash_data } {
 	return $outbuf
 }
 
+proc lookup_by_uuid_with_fallback {idfield tablename uuidVar where} {
+	upvar 1 $uuidVar uuid
+
+	set id ""
+	if {[info exists uuid] && $uuid ne ""} {
+		#
+		# Try to find our trip from the uuid if we can
+		#
+		set id [simplesqlquery $::vroomdb "SELECT $idfield FROM $tablename WHERE uuid = [pg_quote $uuid]"]
+	}
+	if {![info exists id] || $id == ""} {
+		#
+		# uuid lookup failed, try the fallback where clause
+		#
+		set id [simplesqlquery $::vroomdb "SELECT $idfield FROM $tablename WHERE $where"]
+	}
+
+	return $id
+}
+
 proc add_vehicle { hash_data } {
 	global vroomdb
 
@@ -182,7 +205,7 @@ proc add_vehicle { hash_data } {
 	return 0
 }
 
-proc add_fillup {hash_data} {
+proc old_add_fillup {hash_data} {
 	array set data $hash_data
 
 	set diff_varchar [list ]
@@ -254,15 +277,13 @@ proc add_fillup {hash_data} {
 	return 0
 }
 
-proc add_expense { hash_data } {
-	global vroomdb
-
+proc add_fillup { hash_data } {
 	array set data $hash_data
 
-	set fields_varchar [list name service_date note location type subtype payment categories reminder_interval currency_code]
-	set fields_numeric [list odometer cost reminder_distance flags vehicle_id currency_rate lat lon]
+	set fields_varchar [list fillup_date fill_units partial_fill note octane location payment conditions reset categories currency_code uuid]
+	set fields_numeric [list odometer trip_odometer total_price unit_price fill_amount mpg flags vehicle_id currency_rate lat lon]
 
-	set id [simplesqlquery $vroomdb "SELECT expense_id FROM expenses WHERE name = [pg_quote $data(name)] AND odometer = [sanitize_number $data(odometer)]"]
+	set id [lookup_by_uuid_with_fallback fillup_id fillups data(uuid) "vehicle_id = [sanitize_number $data(vehicle_id)] AND odometer = [sanitize_number $data(odometer)]"]
 
 	if {$id == ""} {
 		if {$data(cost) == ""} {
@@ -271,11 +292,16 @@ proc add_expense { hash_data } {
 		set sql "INSERT INTO expenses ([sql_field_list $fields_varchar], [sql_field_list $fields_numeric]) "
 		append sql "VALUES ([sql_value_list varchar $fields_varchar [array get data]], [sql_value_list numeric $fields_numeric [array get data]]);"
 
-		if {[pg_exec_or_exception $vroomdb $sql]} {
-			set id [simplesqlquery $vroomdb "SELECT expense_id FROM expenses WHERE name = [pg_quote $data(name)] AND odometer = [sanitize_number $data(odometer)]"]
-			puts "Added new expense id $id ($data(name) on $data(service_date))"
+		if {[pg_exec_or_exception $::vroomdb $sql]} {
+			set id [simplesqlquery $::vroomdb "SELECT expense_id FROM expenses WHERE name = [pg_quote $data(name)] AND odometer = [sanitize_number $data(odometer)]"]
+			puts "Added new fillup id $id ($data(name) on $data(service_date))"
+		}
+	} else {
+		if {[update_if_changed $::vroomdb fillups fillup_id $id [array get data]]} {
+			puts "Updated fillup id $id"
 		}
 	}
+
 	if {$id != ""} {
 		return $id
 	}
@@ -283,24 +309,36 @@ proc add_expense { hash_data } {
 	return 0
 }
 
-proc lookup_by_uuid_with_fallback {idfield tablename uuidVar where} {
-	upvar 1 $uuidVar uuid
+proc add_expense { hash_data } {
+	array set data $hash_data
 
-	set id ""
-	if {[info exists uuid] && $uuid ne ""} {
-		#
-		# Try to find our trip from the uuid if we can
-		#
-		set id [simplesqlquery $::vroomdb "SELECT $idfield FROM $tablename WHERE uuid = [pg_quote $uuid]"]
-	}
-	if {![info exists id] || $id == ""} {
-		#
-		# uuid lookup failed, try the fallback where clause
-		#
-		set id [simplesqlquery $::vroomdb "SELECT $idfield FROM $tablename WHERE $where"]
+	set fields_varchar [list name service_date note location type subtype payment categories reminder_interval currency_code uuid]
+	set fields_numeric [list odometer cost reminder_distance flags vehicle_id currency_rate lat lon]
+
+	set id [lookup_by_uuid_with_fallback expense_id expenses data(uuid) "name = [pg_quote $data(name)] AND odometer = [sanitize_number $data(odometer)]"]
+
+	if {$id == ""} {
+		if {$data(cost) == ""} {
+			set data(cost) 0.00
+		}
+		set sql "INSERT INTO expenses ([sql_field_list $fields_varchar], [sql_field_list $fields_numeric]) "
+		append sql "VALUES ([sql_value_list varchar $fields_varchar [array get data]], [sql_value_list numeric $fields_numeric [array get data]]);"
+
+		if {[pg_exec_or_exception $::vroomdb $sql]} {
+			set id [simplesqlquery $::vroomdb "SELECT expense_id FROM expenses WHERE name = [pg_quote $data(name)] AND odometer = [sanitize_number $data(odometer)]"]
+			puts "Added new expense id $id ($data(name) on $data(service_date))"
+		}
+	} else {
+		if {[update_if_changed $::vroomdb expenses expense_id $id [array get data]]} {
+			puts "Updated expense id $id"
+		}
 	}
 
-	return $id
+	if {$id != ""} {
+		return $id
+	}
+
+	return 0
 }
 
 proc add_trip { hash_data } {
@@ -324,10 +362,6 @@ proc add_trip { hash_data } {
 		if {[update_if_changed $::vroomdb trips trip_id $id [array get data]]} {
 			puts "Updated trip id $id"
 		}
-
-		#set sql "UPDATE trips SET end_date = [pg_quote $data(end_date)], end_odometer = [sanitize_number $data(end_odometer)], note = [pg_quote $data(note)], distance = [sanitize_number $data(distance)]
-		#		 WHERE trip_id = $id AND (end_date != [pg_quote $data(end_date)] OR end_odometer != [sanitize_number $data(end_odometer)] OR note != [pg_quote $data(note)] OR distance != [sanitize_number $data(distance)])"
-		#pg_exec_or_exception $::vroomdb $sql
 	}
 	if {$id != ""} {
 		return $id
