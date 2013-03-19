@@ -16,10 +16,7 @@ proc sanitize_number { value } {
 }
 
 proc sql_boolean { value } {
-	if {$value == 0 || $value == 1} {
-		return $value
-	}
-	if {$value == ""} {
+	if {[string is false -strict $value]} {
 		return "f"
 	} else {
 		return "t"
@@ -283,13 +280,28 @@ proc add_fillup { hash_data } {
 	set fields_varchar [list fillup_date fill_units partial_fill note octane location payment conditions reset categories currency_code uuid]
 	set fields_numeric [list odometer trip_odometer total_price unit_price fill_amount mpg flags vehicle_id currency_rate lat lon]
 
+	if {![info exists data(flags)]} {
+		set data(flags) 0
+	}
+
+	if {[info exists data(filled)]} {
+		if {$data(filled) == 1} {
+			set data(partial_fill) f
+		} else {
+			set data(partial_fill) t
+		}
+	}
+
+	set data(partial_fill) [sql_boolean $data(partial_fill)]
+	set data(reset)        [sql_boolean $data(reset)]
+
 	set id [lookup_by_uuid_with_fallback fillup_id fillups data(uuid) "vehicle_id = [sanitize_number $data(vehicle_id)] AND odometer = [sanitize_number $data(odometer)]"]
 
 	if {$id == ""} {
-		if {$data(cost) == ""} {
-			set data(cost) 0.00
+		if {![info exists data(total_price)]} {
+			set data(total_price) [format "%.02f" [expr $data(unit_price) * $data(fill_amount)]]
 		}
-		set sql "INSERT INTO expenses ([sql_field_list $fields_varchar], [sql_field_list $fields_numeric]) "
+		set sql "INSERT INTO fillups ([sql_field_list $fields_varchar], [sql_field_list $fields_numeric]) "
 		append sql "VALUES ([sql_value_list varchar $fields_varchar [array get data]], [sql_value_list numeric $fields_numeric [array get data]]);"
 
 		if {[pg_exec_or_exception $::vroomdb $sql]} {

@@ -14,16 +14,21 @@ namespace eval ::vroom {
 		set fields(r)			{name start_date start_odometer end_date end_odometer note flags categories uuid}
 		set fields(t)			{_ _ _ _ _ _ _ _ _}
 
+		# puts "-- "
+		# puts $line
+
 		set plist [split $line ","]
 		set buf(rowtype) [lindex $plist 0]
 
-		# set i 1
-		# puts -nonewline "$buf(rowtype): "
-		# foreach f $plist {
-		# 	puts -nonewline "[format "%2d" $i]:[::vroom::urldecode [lindex $plist $i]] "
-		# 	incr i
-		# }
-		# puts ""
+		if {0} {
+			set i 1
+			puts -nonewline "$buf(rowtype): "
+			foreach f $plist {
+				puts -nonewline "[format "%2d" $i]:[::vroom::urldecode [lindex $plist $i]] "
+				incr i
+			}
+			puts ""
+		}
 
 		if {[info exists buf(rowtype)] && [info exists fields($buf(rowtype))]} {
 			set i 1
@@ -128,8 +133,11 @@ namespace eval ::vroom {
 
 		set buf(currency_rate) 1.000000
 
-		set id [add_fillup [array get buf]]
-		incr ::count(FuelRecords)
+		if {[catch {set id [add_fillup [array get buf]]} err]} {
+			puts "\nERROR adding fillup:\n  $err\n  [array get buf]"
+		} else {
+			incr ::count(FuelRecords)
+		}
 	}
 
 	proc import_row_m {hash_data} {
@@ -144,16 +152,22 @@ namespace eval ::vroom {
 
 		set buf(currency_rate) 1.000000
 
-		set id [add_expense [array get buf]]
-		incr ::count(MaintenanceRecords)
+		if {[catch {set id [add_expense [array get buf]]} err]} {
+			puts "\nERROR adding expense:\n  $err\n  [array get buf]"
+		} else {
+			incr ::count(MaintenanceRecords)
+		}
 	}
 
 	proc import_row_r {hash_data} {
 		array set buf $hash_data
 		check_vehicle buf
 
-		set id [add_trip [array get buf]]
-		incr ::count(RoadTripRecords)
+		if {[catch {set id [add_trip [array get buf]]} err]} {
+			puts "\nERROR adding trip:\n  $err\n  [array get buf]"
+		} else {
+			incr ::count(RoadTripRecords)
+		}
 	}
 
 	proc import_row_t {hash_data} {
