@@ -45,7 +45,7 @@ proc main {} {
 				}
 				::http::cleanup $rh
 
-				if {$size != $dbsize} {
+				if {$dbsize > 0 && $size != $dbsize} {
 					puts "Old file size ($size) != header totalsize ($dbsize)"
 					set tempfile "/tmp/vroom.download"
 					catch {file delete -force $tempfile} err
