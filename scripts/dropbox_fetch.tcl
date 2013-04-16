@@ -32,7 +32,7 @@ proc main {} {
 				if {[file exists $fn]} {
 					set size [file size $fn]
 				} else {
-					set size 0
+					set size -1
 				}
 
 				set rh [::http::geturl $u -validate 1 -headers {Accept-Encoding ""}]
