@@ -302,11 +302,10 @@ proc add_fillup { hash_data } {
 			set data(total_price) [format "%.02f" [expr $data(unit_price) * $data(fill_amount)]]
 		}
 		set sql "INSERT INTO fillups ([sql_field_list $fields_varchar], [sql_field_list $fields_numeric]) "
-		append sql "VALUES ([sql_value_list varchar $fields_varchar [array get data]], [sql_value_list numeric $fields_numeric [array get data]]);"
+		append sql " SELECT [sql_value_list varchar $fields_varchar [array get data]], [sql_value_list numeric $fields_numeric [array get data]] RETURNING fillup_id"
 
-		if {[pg_exec_or_exception $::vroomdb $sql]} {
-			set id [simplesqlquery $::vroomdb "SELECT expense_id FROM expenses WHERE name = [pg_quote $data(name)] AND odometer = [sanitize_number $data(odometer)]"]
-			puts "Added new fillup id $id ($data(name) on $data(service_date))"
+		pg_select $::vroomdb $sql ins {
+			puts "Added new fillup id $ins(fillup_id) ($data(fillup_date) $data(note))"
 		}
 	} else {
 		if {[update_if_changed $::vroomdb fillups fillup_id $id [array get data]]} {
