@@ -1,12 +1,16 @@
-VROOM - Road Trip backup file toolkit
+## VROOM - Road Trip backup file toolkit
 
 This is Tcl and PostgreSQL code I use to process backup files from the Road
 Trip iPhone app by Darren Stone.
 
 http://darrensoft.ca/roadtrip/
 
-The iPhone app uses email to send CSV backups of its data file to an email
-address.  I capture those emails as they arrive (via procmail) and parse them
-with this code and dump the data into a pgsql database.
+The application syncs its data to Dropbox, and this code will scrape the
+Dropbox-stored data files and sync them with a PostgreSQL database.
+Includes Tcl packages for manipulating and processing the data, which 
+I use on my website to publish car statistics.
 
-This is the data back end I use to publish the data on my website.
+http://macnugget.org/cars/
+
+This stuff was written just to scratch my own itch, but if you're willing
+to embrace Tcl and PostgreSQL it should be fairly reusable for other purposes.
