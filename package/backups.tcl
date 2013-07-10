@@ -1,5 +1,5 @@
 namespace eval ::vroom {
-	set expected_version(default) 190
+	set expected_version(default) 1100
 
 	proc parse_backup_line {line} {
 		set fields(RoadTrip)			{version}
@@ -52,7 +52,7 @@ namespace eval ::vroom {
 			}
 		}
 
-		logmsg "Version mismatch"
+		logmsg "Version mismatch (Saw $buf(version) but I was expecting $::vroom::expected_version(default))"
 		exit -1
 	}
 
