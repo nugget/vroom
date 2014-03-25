@@ -58,7 +58,7 @@ namespace eval ::vroom {
 			set vehicle(months) [expr round($buf(days)/30)]
 		}
 
-		set vehicle(miles)  [expr $vehicle(min_odometer) - $vehicle(max_odometer)]
+		set vehicle(miles)  [expr $vehicle(max_odometer) - $vehicle(min_odometer)]
 
 		return [array get vehicle]
 	}
