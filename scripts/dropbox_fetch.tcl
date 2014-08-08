@@ -4,8 +4,14 @@ package require http
 package require vroom
 package require tls
 
+proc logmsg {buf} {
+	return
+	puts "$buf"
+}
+
 proc main {} {
 	global vroomdb
+	logmsg "Drobox Fetcher Thingey"
 	::vroom::init
 
 	::http::register https 443 ::tls::socket
@@ -26,14 +32,18 @@ proc main {} {
 
 	if {[info exists urllist]} {
 		foreach u $urllist {
+			logmsg "Fetching $u"
+
 			if {[regexp {([^/]+$)} $u _ fn]} {
 				set fn [file join $dbpath "$tag($u).roadtrip"]
+				logmsg " -> $fn"
 
 				if {[file exists $fn]} {
 					set size [file size $fn]
 				} else {
 					set size -1
 				}
+				logmsg "Current copy: $size bytes"
 
 				set rh [::http::geturl $u -validate 1 -headers {Accept-Encoding ""}]
 				upvar #0 $rh state
@@ -43,7 +53,9 @@ proc main {} {
 				} else {
 					set dbsize 0
 				}
+				logmsg "Downloaded  : $size bytes ($state(http))"
 				::http::cleanup $rh
+
 
 				if {$dbsize > 0 && $size != $dbsize} {
 					puts "Old file size ($size) != header totalsize ($dbsize)"
