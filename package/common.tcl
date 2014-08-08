@@ -53,12 +53,19 @@ namespace eval ::vroom {
 		pg_select $::vroomdb "SELECT [join $stats_sql ", "]" buf {
 			array set vehicle [concat [array get vehicle] [array get buf]]
 		}
-		pg_select $::vroomdb "SELECT [pg_quote $vehicle(max_date)]::date - [pg_quote $vehicle(min_date)]::date as days" buf {
-			set vehicle(days)	[expr round($buf(days))]
-			set vehicle(months)	[expr round($buf(days)/30)]
+
+		if {$vehicle(max_date) eq "" || $vehicle(min_date) eq ""} {
+			set vehicle(days)		0
+			set vehicle(months)		0
+			set vehicle(miles)		0
+		} else {
+			pg_select $::vroomdb "SELECT [pg_quote $vehicle(max_date)]::date - [pg_quote $vehicle(min_date)]::date as days" buf {
+				set vehicle(days)	[expr round($buf(days))]
+				set vehicle(months)	[expr round($buf(days)/30)]
+			}
+			set vehicle(miles)  [expr round($vehicle(max_odometer) - $vehicle(min_odometer))]
 		}
 
-		set vehicle(miles)  [expr round($vehicle(max_odometer) - $vehicle(min_odometer))]
 
 		return [array get vehicle]
 	}
