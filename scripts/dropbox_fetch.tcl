@@ -5,7 +5,7 @@ package require vroom
 package require tls
 
 proc logmsg {buf} {
-	return
+	# return
 	puts "$buf"
 }
 
@@ -14,7 +14,8 @@ proc main {} {
 	logmsg "Drobox Fetcher Thingey"
 	::vroom::init
 
-	set ::tls::defaults {-ssl3 0 -tls1 1}
+	# set ::tls::defaults {-ssl3 0 -tls1 1}
+	::tls::init -ssl2 0 -ssl3 0 -tls1 1
 	::http::register https 443 ::tls::socket
 
 	set url [lindex $::argv 0]
